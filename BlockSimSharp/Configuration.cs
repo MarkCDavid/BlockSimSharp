@@ -17,6 +17,7 @@ public class AppSettings
     public int TransactionsPerSecond { get; set; }
     public float AverageTransactionFee { get; set; }
     public float AverageTransactionSizeInMb { get; set; }
+    public float BlockReward { get; set; }
 }
 
 public static class Configuration

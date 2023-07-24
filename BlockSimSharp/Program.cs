@@ -55,8 +55,21 @@ foreach (var node in nodes)
 }
 
 //  5. Resolve forks
+consensus.ForkResolution();
+
+Console.WriteLine("\nGlobal consensus");
+foreach (var block in consensus.GlobalBlockChain)
+{
+    Console.WriteLine($"\tBlock {block.BlockId} ({block.Depth}) mined by {block.MinerId} at {block.Timestamp}");
+}
+
+
 //  6. Distribute rewards
+var incentives = new BitcoinIncentives();
+incentives.DistributeRewards(context);
+
 //  7. Calculate Statistics
+
 
 
 
