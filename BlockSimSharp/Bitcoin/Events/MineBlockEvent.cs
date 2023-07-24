@@ -45,6 +45,11 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
 
         miner.BlockChain.Add(Block);
 
+        if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "light")
+        {
+            context.TransactionContext.CreateTransactions(context);
+        }
+
         var receiveBlockEvents = GenerateReceiveBlockEvents(context);
         if (receiveBlockEvents.Any())
             futureEvents.AddRange(receiveBlockEvents);

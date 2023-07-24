@@ -16,17 +16,21 @@ var consensus = new BitcoinConsensus(nodes);
 
 var transactionContext = new LightTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
 
+
 var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>(nodes, consensus, network, transactionContext);
+
+//  1. Create Transactions
+transactionContext.CreateTransactions(context);
+
 var eventQueue = new EventQueue<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
 
+//  3. Create initial events (creation of block for all nodes)
 foreach (var node in nodes)
 {
     eventQueue.Enqueue(new MineBlockEvent(node, 0));
 }
 
-//
-// var consensus = new BitcoinConsensus();
-//
+//  4. Handle events until end of simulation
 var clock = 0f;
 while (clock < Configuration.Instance.SimulationLengthInSeconds && !eventQueue.IsEmpty())
 {
@@ -50,14 +54,11 @@ foreach (var node in nodes)
     }
 }
 
-
-
-//  1. Create Transactions
-//  2. Add Genesis Block to all Nodes
-//  3. Create initial events (creation of block for all nodes)
-//  4. Handle events until end of simulation
-//      4.1. Handle Create Block Event
-//      4.2. Handle Receive Block Event
 //  5. Resolve forks
 //  6. Distribute rewards
 //  7. Calculate Statistics
+
+
+
+
+

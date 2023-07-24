@@ -13,6 +13,10 @@ public class AppSettings
     public bool TransactionsEnabled { get; set; }
     
     public float BlockSizeInMb { get; set; }
+    public string TransactionContextType { get; set; }
+    public int TransactionsPerSecond { get; set; }
+    public float AverageTransactionFee { get; set; }
+    public float AverageTransactionSizeInMb { get; set; }
 }
 
 public static class Configuration

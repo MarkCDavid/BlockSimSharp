@@ -12,7 +12,8 @@ public abstract class BaseNode<TBlock, TTransaction>
     protected BaseNode(int id)
     {
         Id = id;
-        BlockChain = new List<TBlock> { new() } ;
+        //  2. Add Genesis Block to all Nodes
+        BlockChain = new List<TBlock> { new() };
         Blocks = 0;
         Balance = 0.0f;
     }
