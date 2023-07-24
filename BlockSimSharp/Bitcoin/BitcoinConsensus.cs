@@ -2,7 +2,7 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin;
 
-public class BitcoinConsensus: BaseConsensus<BitcoinBlock, BitcoinNode>
+public class BitcoinConsensus: BaseConsensus<BitcoinBlock, BitcoinNode, BitcoinTransaction>
 {
     private readonly IList<BitcoinNode> _nodes;
 

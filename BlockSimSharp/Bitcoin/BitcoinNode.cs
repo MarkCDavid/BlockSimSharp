@@ -2,7 +2,7 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin;
 
-public class BitcoinNode: BaseNode<BitcoinBlock>
+public class BitcoinNode: BaseNode<BitcoinBlock, BitcoinTransaction>
 {
     public float HashPower { get; }
 

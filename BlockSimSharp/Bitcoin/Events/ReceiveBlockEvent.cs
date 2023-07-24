@@ -2,11 +2,11 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin.Events;
 
-public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
+public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>
 {
-    public override List<BaseEvent<BitcoinNode, BitcoinBlock>> Handle(SimulationContext<BitcoinNode, BitcoinBlock> context)
+    public override List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>> Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
     {
-        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock>>();
+        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>>();
         
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Block.MinerId);
         
@@ -60,7 +60,7 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
         return futureEvents;
     }
     
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock> context, BitcoinNode miner)
+    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
     {
         if (miner.HashPower <= 0)
             return null;

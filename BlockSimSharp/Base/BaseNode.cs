@@ -1,7 +1,8 @@
 namespace BlockSimSharp.Base;
 
-public abstract class BaseNode<TBlock>
-    where TBlock: BaseBlock, new()
+public abstract class BaseNode<TBlock, TTransaction>
+    where TBlock: BaseBlock<TTransaction>, new()
+    where TTransaction: BaseTransaction
 {
     public int Id { get; }
     public List<TBlock> BlockChain { get; }
@@ -17,9 +18,9 @@ public abstract class BaseNode<TBlock>
     }
 
     public int BlockChainLength => BlockChain.Count - 1;
-    public BaseBlock LastBlock => BlockChain[BlockChainLength];
+    public BaseBlock<TTransaction> LastBlock => BlockChain[BlockChainLength];
 
-    public virtual void UpdateLocalBlockChain(BaseNode<TBlock> sourceNode, int depth)
+    public virtual void UpdateLocalBlockChain(BaseNode<TBlock, TTransaction> sourceNode, int depth)
     {
         // Say NodeA has a BlockChain of [b0, b1, b2] and then they mine Block b3.
         // A receive event for NodeB is scheduled some time in the future.

@@ -2,7 +2,7 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin.Events;
 
-public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
+public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>
 {
     public MineBlockEvent(BitcoinNode node, float eventTime)
     {
@@ -18,9 +18,9 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
         };
     }
 
-    public override List<BaseEvent<BitcoinNode, BitcoinBlock>> Handle(SimulationContext<BitcoinNode, BitcoinBlock> context)
+    public override List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>> Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
     {
-        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock>>();
+        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>>();
         
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Node.Id);
 
@@ -35,10 +35,14 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
             return futureEvents;
         
         // Update statistics
-        
-        // If Transactions are Enabled
-        //   Collect transactions
-        
+
+        if (Configuration.Instance.TransactionsEnabled)
+        {
+            var (transactions, sizeInMb) = context.TransactionContext.CollectTransactions(miner, EventTime);
+            Block.Transactions = transactions;
+            Block.UsedGas = sizeInMb;
+        }
+
         miner.BlockChain.Add(Block);
 
         var receiveBlockEvents = GenerateReceiveBlockEvents(context);
@@ -52,7 +56,7 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
         return futureEvents;
     }
 
-    private List<ReceiveBlockEvent> GenerateReceiveBlockEvents(SimulationContext<BitcoinNode, BitcoinBlock> context)
+    private List<ReceiveBlockEvent> GenerateReceiveBlockEvents(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
     {
         return context.Nodes
             .Where(node => node.Id != Block.MinerId)
@@ -65,7 +69,7 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock>
             .ToList();
     }
 
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock> context, BitcoinNode miner)
+    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
     {
         if (miner.HashPower <= 0)
             return null;

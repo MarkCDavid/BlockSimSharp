@@ -2,9 +2,10 @@ using BlockSimSharp.Bitcoin;
 
 namespace BlockSimSharp.Base;
 
-public abstract class BaseConsensus<TBlock, TNode>
-    where TBlock: BaseBlock, new()
-    where TNode: BaseNode<TBlock>
+public abstract class BaseConsensus<TBlock, TNode, TTransaction>
+    where TBlock: BaseBlock<TTransaction>, new()
+    where TNode: BaseNode<TBlock, TTransaction>
+    where TTransaction: BaseTransaction
 {
     protected BaseConsensus()
     {

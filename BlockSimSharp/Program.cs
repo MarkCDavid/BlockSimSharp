@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using BlockSimSharp;
-using BlockSimSharp.Base;
 using BlockSimSharp.Bitcoin;
 using BlockSimSharp.Bitcoin.Events;
 
@@ -15,8 +14,10 @@ var nodes = new List<BitcoinNode>
 var network = new Network();
 var consensus = new BitcoinConsensus(nodes);
 
-var context = new SimulationContext<BitcoinNode, BitcoinBlock>(nodes, consensus, network);
-var eventQueue = new EventQueue<BitcoinNode, BitcoinBlock>();
+var transactionContext = new LightTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
+
+var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>(nodes, consensus, network, transactionContext);
+var eventQueue = new EventQueue<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
 
 foreach (var node in nodes)
 {

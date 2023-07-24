@@ -9,6 +9,10 @@ public class AppSettings
     public int AverageBlockIntervalInSeconds { get; set; }
     public float AverageBlockPropogationDelay { get; set; }
     public float AverageTransactionPropogationDelay { get; set; }
+    
+    public bool TransactionsEnabled { get; set; }
+    
+    public float BlockSizeInMb { get; set; }
 }
 
 public static class Configuration
