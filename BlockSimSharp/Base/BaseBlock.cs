@@ -3,6 +3,11 @@ namespace BlockSimSharp.Base;
 public abstract class BaseBlock<TTransaction>
     where TTransaction: BaseTransaction
 {
+    protected BaseBlock()
+    {
+        Transactions = new List<TTransaction>();
+    }
+
     public int BlockId { get; set; }
     public int Depth { get; set;  }
     public int? PreviousBlockId { get; set; }

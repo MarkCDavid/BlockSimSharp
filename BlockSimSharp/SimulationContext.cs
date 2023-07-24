@@ -11,12 +11,14 @@ public class SimulationContext<TNode, TBlock, TTransaction>
     public BaseConsensus<TBlock, TNode, TTransaction> Consensus { get; }
     public Network Network { get; }
     public ITransactionContext<TNode, TBlock, TTransaction> TransactionContext { get; }
+    public Statistics.Statistics<TNode, TBlock, TTransaction> Statistics { get; }
 
-    public SimulationContext(IReadOnlyList<TNode> nodes, BaseConsensus<TBlock, TNode, TTransaction> consensus, Network network, ITransactionContext<TNode, TBlock, TTransaction> transactionContext)
+    public SimulationContext(IReadOnlyList<TNode> nodes, BaseConsensus<TBlock, TNode, TTransaction> consensus, Network network, ITransactionContext<TNode, TBlock, TTransaction> transactionContext, Statistics.Statistics<TNode, TBlock, TTransaction> statistics)
     {
         Nodes = nodes;
         Consensus = consensus;
         Network = network;
         TransactionContext = transactionContext;
+        Statistics = statistics;
     }
 }

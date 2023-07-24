@@ -33,8 +33,8 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
         var blockSequenceValid = Block.PreviousBlockId == miner.LastBlock.BlockId;
         if (!blockSequenceValid)
             return futureEvents;
-        
-        // Update statistics
+
+        context.Statistics.TotalBlocks += 1;
 
         if (Configuration.Instance.TransactionsEnabled)
         {

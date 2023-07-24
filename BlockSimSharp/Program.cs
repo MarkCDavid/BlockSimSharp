@@ -1,8 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿
+using System.Text.Json;
 using BlockSimSharp;
 using BlockSimSharp.Bitcoin;
 using BlockSimSharp.Bitcoin.Events;
+using BlockSimSharp.Statistics;
 
 var nodes = new List<BitcoinNode>
 {
@@ -14,10 +15,11 @@ var nodes = new List<BitcoinNode>
 var network = new Network();
 var consensus = new BitcoinConsensus(nodes);
 
+var statistics = new Statistics<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
 var transactionContext = new LightTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
 
 
-var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>(nodes, consensus, network, transactionContext);
+var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>(nodes, consensus, network, transactionContext, statistics);
 
 //  1. Create Transactions
 transactionContext.CreateTransactions(context);
@@ -69,9 +71,16 @@ var incentives = new BitcoinIncentives();
 incentives.DistributeRewards(context);
 
 //  7. Calculate Statistics
+statistics.Calculate(context);
 
 
+var options = new JsonSerializerOptions
+{
+    WriteIndented = true,
+    PropertyNamingPolicy = null
+};
 
+File.WriteAllText("results.json", JsonSerializer.Serialize(statistics, options));
 
 
 
