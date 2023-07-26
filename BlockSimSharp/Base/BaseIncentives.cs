@@ -3,7 +3,7 @@ namespace BlockSimSharp.Base;
 public abstract class BaseIncentives<TNode, TBlock, TTransaction>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
 
     public void DistributeRewards(SimulationContext<TNode, TBlock, TTransaction> context)

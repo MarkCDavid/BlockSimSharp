@@ -1,7 +1,7 @@
 namespace BlockSimSharp.Base;
 
 public abstract class BaseBlock<TTransaction>
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     protected BaseBlock()
     {

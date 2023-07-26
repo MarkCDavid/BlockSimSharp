@@ -27,9 +27,10 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
         {
             recipient.BlockChain.Add(Block);
             
-            //     if self.transaction_context and Configuration.TRANSACTION_TECHNIQUE == "Full": 
-            //         self.update_transactionsPool(recipient, event.block)
-            
+            if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
+            {
+                recipient.UpdateTransactionPool(Block);
+            }
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
@@ -53,8 +54,10 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
                     futureEvents.Add(mineEvent);
             }
             
-            //     if self.transaction_context and Configuration.TRANSACTION_TECHNIQUE == "Full": 
-            //         self.update_transactionsPool(recipient, event.block)
+            if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
+            {
+                recipient.UpdateTransactionPool(Block);
+            }
         }
 
         return futureEvents;

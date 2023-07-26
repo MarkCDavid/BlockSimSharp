@@ -5,7 +5,7 @@ namespace BlockSimSharp;
 public class SimulationContext<TNode, TBlock, TTransaction>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     public IReadOnlyList<TNode> Nodes { get; }
     public BaseConsensus<TBlock, TNode, TTransaction> Consensus { get; }

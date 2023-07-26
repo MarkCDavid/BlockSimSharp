@@ -5,7 +5,7 @@ namespace BlockSimSharp.Statistics;
 public class Statistics<TNode, TBlock, TTransaction>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     public int TotalBlocks { get; set; } = 0;
     public int MainBlocks { get; set; } = 0;

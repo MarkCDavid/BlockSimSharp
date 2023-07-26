@@ -2,10 +2,11 @@ namespace BlockSimSharp.Base;
 
 public abstract class BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     public int Id { get; }
     public List<TBlock> BlockChain { get; }
+    public List<TTransaction> TransactionPool { get; private set; }
     public int Blocks { get; set; }
     public float Balance { get; set; } 
 
@@ -14,12 +15,13 @@ public abstract class BaseNode<TBlock, TTransaction>
         Id = id;
         //  2. Add Genesis Block to all Nodes
         BlockChain = new List<TBlock> { new() };
+        TransactionPool = new List<TTransaction>();
         Blocks = 0;
         Balance = 0.0f;
     }
 
     public int BlockChainLength => BlockChain.Count - 1;
-    public BaseBlock<TTransaction> LastBlock => BlockChain[BlockChainLength];
+    public TBlock LastBlock => BlockChain[BlockChainLength];
 
     public virtual void UpdateLocalBlockChain(BaseNode<TBlock, TTransaction> sourceNode, int depth)
     {
@@ -38,8 +40,21 @@ public abstract class BaseNode<TBlock, TTransaction>
             else
                 BlockChain.Add(sourceNode.BlockChain[index]);
         }
+
+        if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
+        {
+            UpdateTransactionPool(LastBlock);
+        }
+    }
+
+    public void UpdateTransactionPool(TBlock block)
+    {
+        var blockTransactionIds = block.Transactions
+            .Select(transaction => transaction.TransactionId)
+            .ToHashSet();
         
-        //         if Configuration.HAS_TRANSACTIONS and Configuration.TRANSACTION_TECHNIQUE == "Full": 
-        //             self.update_transactionsPool(targetNode, targetNode.blockchain[index])
+        TransactionPool = TransactionPool
+            .Where(transaction => !blockTransactionIds.Contains(transaction.TransactionId))
+            .ToList();
     }
 }

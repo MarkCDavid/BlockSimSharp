@@ -5,7 +5,7 @@ namespace BlockSimSharp;
 public class EventQueue<TNode, TBlock, TTransaction> 
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     private readonly PriorityQueue<BaseEvent<TNode, TBlock, TTransaction>, float> _queue;
     

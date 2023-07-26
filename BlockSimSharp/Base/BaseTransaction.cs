@@ -1,6 +1,7 @@
 namespace BlockSimSharp.Base;
 
-public abstract class BaseTransaction
+public abstract class BaseTransaction<TSelf>: IDeepCloneable<TSelf>
+        where TSelf: BaseTransaction<TSelf>
 {
         public int TransactionId { get; set; }
         public float TransactionCreateTime { get; set; }
@@ -13,4 +14,6 @@ public abstract class BaseTransaction
         public float Fee { get; set; }
         
         public float SizeInMb { get; set; }
+
+        public abstract TSelf DeepClone();
 }

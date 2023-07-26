@@ -5,7 +5,7 @@ namespace BlockSimSharp.Base;
 public abstract class BaseConsensus<TBlock, TNode, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
     where TNode: BaseNode<TBlock, TTransaction>
-    where TTransaction: BaseTransaction
+    where TTransaction: BaseTransaction<TTransaction>
 {
     protected BaseConsensus()
     {

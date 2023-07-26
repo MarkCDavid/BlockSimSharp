@@ -5,7 +5,7 @@ namespace BlockSimSharp;
 public class LightTransactionContext<TNode, TBlock, TTransaction>: ITransactionContext<TNode, TBlock, TTransaction>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
-    where TTransaction: BaseTransaction, new()
+    where TTransaction: BaseTransaction<TTransaction>, new()
 {
     private List<TTransaction> LocalTransactionPool { get; set; }
     public LightTransactionContext()
