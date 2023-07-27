@@ -19,6 +19,8 @@ public abstract class BaseBlock<TTransaction, TBlock, TNode>
     
     public int Depth { get; set;  }
     
+    public float SizeInMb { get; set; }
+    
     
     public float Timestamp { get; set; }
     public List<TTransaction> Transactions { get; set; }

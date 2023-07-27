@@ -34,29 +34,3 @@ public class Settings
         throw new ArgumentOutOfRangeException(key, $"No settings registered with type {key}.");
     }
 }
-
-
-
-public class AppSettings
-{
-    public int SimulationLengthInSeconds { get; set; }
-
-    public int AverageBlockIntervalInSeconds { get; set; }
-    public float AverageBlockPropogationDelay { get; set; }
-    public float AverageTransactionPropogationDelay { get; set; }
-    
-    public bool TransactionsEnabled { get; set; }
-    
-    public float BlockSizeInMb { get; set; }
-    public string TransactionContextType { get; set; }
-    public int TransactionsPerSecond { get; set; }
-    public float AverageTransactionFee { get; set; }
-    public float AverageTransactionSizeInMb { get; set; }
-    public float BlockReward { get; set; }
-    public bool UnclesEnabled { get; set; }
-    public int MaximumUncleBlocks { get; set; }
-    public int UncleGenerations { get; set; }
-
-    public float UncleInclusionReward => BlockReward / 32;
-}
-
