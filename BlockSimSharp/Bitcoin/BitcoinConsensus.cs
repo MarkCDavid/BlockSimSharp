@@ -2,16 +2,16 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin;
 
-public class BitcoinConsensus: BaseConsensus<BitcoinBlock, BitcoinNode, BitcoinTransaction>
+public class BitcoinConsensus: BaseConsensus<BitcoinBlock, BitcoinNode, BitcoinTransaction, BitcoinScheduler>
 {
-    public override float Protocol(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
+    public override float Protocol(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler> context, BitcoinNode miner)
     {
         var totalHashPower = context.Nodes.Sum(node => node.HashPower);
         var hashPower = miner.HashPower / totalHashPower;
         return Utility.Expovariate(hashPower * (1.0f / Configuration.Instance.AverageBlockIntervalInSeconds));
     }
 
-    public override void ForkResolution(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
+    public override void ForkResolution(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler> context)
     {
         var maximumBlockChainLength = context.Nodes.MaxBy(node => node.BlockChainLength).BlockChainLength;
 

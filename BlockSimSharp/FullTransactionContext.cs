@@ -2,13 +2,14 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp;
 
-public class FullTransactionContext<TNode, TBlock, TTransaction>: ITransactionContext<TNode, TBlock, TTransaction>
+public class FullTransactionContext<TNode, TBlock, TTransaction, TScheduler>: ITransactionContext<TNode, TBlock, TTransaction, TScheduler>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
     where TTransaction: BaseTransaction<TTransaction>, new()
+    where TScheduler: BaseScheduler<TBlock, TNode, TTransaction, TScheduler>
 {
 
-    public void CreateTransactions(SimulationContext<TNode, TBlock, TTransaction> context)
+    public void CreateTransactions(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         var random = new Random();
         var transactionCountDuringSimulation = Configuration.Instance.TransactionsPerSecond * Configuration.Instance.SimulationLengthInSeconds;
@@ -49,7 +50,7 @@ public class FullTransactionContext<TNode, TBlock, TTransaction>: ITransactionCo
         return (transactions, blockSizeInMb);
     }
 
-    private void PropogateTransaction(SimulationContext<TNode, TBlock, TTransaction> context, TTransaction transaction)
+    private void PropogateTransaction(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context, TTransaction transaction)
     {
         foreach (var receiverNode in context.Nodes.Where(node => node.Id != transaction.SenderNodeId))
         {

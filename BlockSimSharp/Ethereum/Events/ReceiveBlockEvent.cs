@@ -2,12 +2,10 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Ethereum.Events;
 
-public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>
+public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler>
 {
-    public override List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>> Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
+    public override void Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context)
     {
-        var futureEvents = new List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>>();
-        
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Block.MinerId);
         
         if (miner is null)
@@ -34,9 +32,7 @@ public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumT
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
-            var mineEvent = GenerateMineBlockEvent(context, recipient);
-            if (mineEvent is not null)
-                futureEvents.Add(mineEvent);
+            context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
         }
         else
         {  
@@ -49,9 +45,7 @@ public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumT
                 // As before, given that we have updated the last block of our blockchain, we have to
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
-                var mineEvent = GenerateMineBlockEvent(context, recipient);
-                if (mineEvent is not null)
-                    futureEvents.Add(mineEvent);
+                context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
             }
             else
             {
@@ -68,20 +62,5 @@ public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumT
                 recipient.UpdateTransactionPool(Block);
             }
         }
-
-        return futureEvents;
-    }
-    
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumNode miner)
-    {
-        if (miner.HashPower <= 0)
-            return null;
-
-        var eventTime = EventTime + context.Consensus.Protocol(context, miner);
-
-        if (eventTime > Configuration.Instance.SimulationLengthInSeconds)
-            return null;
-
-        return new MineBlockEvent(miner, eventTime);
     }
 }

@@ -2,16 +2,16 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Ethereum;
 
-public class EthereumConsensus: BaseConsensus<EthereumBlock, EthereumNode, EthereumTransaction>
+public class EthereumConsensus: BaseConsensus<EthereumBlock, EthereumNode, EthereumTransaction, EthereumScheduler>
 {
-    public override float Protocol(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumNode miner)
+    public override float Protocol(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context, EthereumNode miner)
     {
         var totalHashPower = context.Nodes.Sum(node => node.HashPower);
         var hashPower = miner.HashPower / totalHashPower;
         return Utility.Expovariate(hashPower * (1.0f / Configuration.Instance.AverageBlockIntervalInSeconds));
     }
 
-    public override void ForkResolution(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
+    public override void ForkResolution(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context)
     {
         var maximumBlockChainLength = context.Nodes.MaxBy(node => node.BlockChainLength).BlockChainLength;
 

@@ -2,25 +2,10 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Ethereum.Events;
 
-public class MineBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>
+public class MineBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler>
 {
-    public MineBlockEvent(EthereumNode node, float eventTime)
+    public override void Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context)
     {
-        Node = node;
-        EventTime = eventTime;
-        Block = new EthereumBlock
-        {
-            BlockId = new Random().Next(),
-            PreviousBlockId = node.LastBlock.BlockId,
-            MinerId = node.Id,
-            Depth = node.BlockChain.Count,
-            Timestamp = eventTime
-        };
-    }
-    public override List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>> Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
-    {
-        var futureEvents = new List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>>();
-        
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Node.Id);
 
         if (miner is null)
@@ -31,7 +16,7 @@ public class MineBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTran
         // meantime.
         var blockSequenceValid = Block.PreviousBlockId == miner.LastBlock.BlockId;
         if (!blockSequenceValid)
-            return futureEvents;
+            return;
         
         context.Statistics.TotalBlocks += 1;
         
@@ -55,40 +40,7 @@ public class MineBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTran
             context.TransactionContext.CreateTransactions(context);
         }
 
-        var receiveBlockEvents = GenerateReceiveBlockEvents(context);
-        if (receiveBlockEvents.Any())
-            futureEvents.AddRange(receiveBlockEvents);
-
-        var mineEvent = GenerateMineBlockEvent(context, miner);
-        if (mineEvent is not null)
-            futureEvents.Add(mineEvent);
-
-        return futureEvents;
-    }
-    
-    private List<ReceiveBlockEvent> GenerateReceiveBlockEvents(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
-    {
-        return context.Nodes
-            .Where(node => node.Id != Block.MinerId)
-            .Select(receiver => new ReceiveBlockEvent
-            {
-                Node = receiver,
-                Block = Block,
-                EventTime = EventTime + context.Network.BlockPropogationDelay(),
-            })
-            .ToList();
-    }
-
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumNode miner)
-    {
-        if (miner.HashPower <= 0)
-            return null;
-
-        var eventTime = EventTime + context.Consensus.Protocol(context, miner);
-
-        if (eventTime > Configuration.Instance.SimulationLengthInSeconds)
-            return null;
-
-        return new MineBlockEvent(miner, eventTime);
+        context.Scheduler.TryScheduleReceiveBlockEvents(context, this);
+        context.Scheduler.TryScheduleMineBlockEvent(context, this, miner);
     }
 }

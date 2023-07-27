@@ -2,9 +2,9 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Ethereum;
 
-public class EthereumIncentives: BaseIncentives<EthereumNode, EthereumBlock, EthereumTransaction>
+public class EthereumIncentives: BaseIncentives<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler>
 {
-    public override void DistributeRewards(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
+    public override void DistributeRewards(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context)
     {
         foreach (var block in context.Consensus.GlobalBlockChain)
         {
@@ -26,7 +26,7 @@ public class EthereumIncentives: BaseIncentives<EthereumNode, EthereumBlock, Eth
     }
 
 
-    private void UncleRewards(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumBlock block)
+    private void UncleRewards(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction, EthereumScheduler> context, EthereumBlock block)
     {
         foreach (var uncle in block.Uncles)
         {

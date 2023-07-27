@@ -2,10 +2,11 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp;
 
-public class LightTransactionContext<TNode, TBlock, TTransaction>: ITransactionContext<TNode, TBlock, TTransaction>
+public class LightTransactionContext<TNode, TBlock, TTransaction, TScheduler>: ITransactionContext<TNode, TBlock, TTransaction, TScheduler>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
     where TTransaction: BaseTransaction<TTransaction>, new()
+    where TScheduler: BaseScheduler<TBlock, TNode, TTransaction, TScheduler>
 {
     private List<TTransaction> LocalTransactionPool { get; set; }
     public LightTransactionContext()
@@ -13,7 +14,7 @@ public class LightTransactionContext<TNode, TBlock, TTransaction>: ITransactionC
         LocalTransactionPool = new List<TTransaction>();
     }
 
-    public void CreateTransactions(SimulationContext<TNode, TBlock, TTransaction> context)
+    public void CreateTransactions(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         var random = new Random();
         var transactionCountInBlock = Configuration.Instance.TransactionsPerSecond * Configuration.Instance.AverageBlockIntervalInSeconds;

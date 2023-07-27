@@ -1,12 +1,13 @@
 namespace BlockSimSharp.Base;
 
-public abstract class BaseIncentives<TNode, TBlock, TTransaction>
+public abstract class BaseIncentives<TNode, TBlock, TTransaction, TScheduler>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
     where TTransaction: BaseTransaction<TTransaction>
+    where TScheduler: BaseScheduler<TBlock, TNode, TTransaction, TScheduler>
 {
 
-    public virtual void DistributeRewards(SimulationContext<TNode, TBlock, TTransaction> context)
+    public virtual void DistributeRewards(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         foreach (var block in context.Consensus.GlobalBlockChain)
         {

@@ -2,12 +2,10 @@ using BlockSimSharp.Base;
 
 namespace BlockSimSharp.Bitcoin.Events;
 
-public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>
+public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>
 {
-    public override List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>> Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
+    public override void Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler> context)
     {
-        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>>();
-        
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Block.MinerId);
         
         if (miner is null)
@@ -34,9 +32,7 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
-            var mineEvent = GenerateMineBlockEvent(context, recipient);
-            if (mineEvent is not null)
-                futureEvents.Add(mineEvent);
+            context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
         }
         else
         {  
@@ -49,9 +45,8 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
                 // As before, given that we have updated the last block of our blockchain, we have to
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
-                var mineEvent = GenerateMineBlockEvent(context, recipient);
-                if (mineEvent is not null)
-                    futureEvents.Add(mineEvent);
+                
+                context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
             }
             
             if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
@@ -59,20 +54,6 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
                 recipient.UpdateTransactionPool(Block);
             }
         }
-
-        return futureEvents;
     }
     
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
-    {
-        if (miner.HashPower <= 0)
-            return null;
-
-        var eventTime = EventTime + context.Consensus.Protocol(context, miner);
-
-        if (eventTime > Configuration.Instance.SimulationLengthInSeconds)
-            return null;
-
-        return new MineBlockEvent(miner, eventTime);
-    }
 }

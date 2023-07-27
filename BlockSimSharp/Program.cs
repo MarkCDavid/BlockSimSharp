@@ -11,56 +11,57 @@ Stopwatch stopwatch = new Stopwatch();
 
 stopwatch.Start();
 
-// var nodes = new List<BitcoinNode>
-// {
-//     new(0, 50),
-//     new(1, 20),
-//     new(2, 30)
-// };
+var nodes = new List<BitcoinNode>
+{
+    new(0, 50),
+    new(1, 20),
+    new(2, 30)
+};
 // var nodes = new List<EthereumNode>
 // {
 //     new(0, 50),
 //     new(1, 20),
 //     new(2, 30)
 // };
-var random = new Random();
-var nodes = Enumerable
-    .Range(0, 500)
-    .Select(id => new EthereumNode(id, random.Next(10, 101)))
-    .ToList();
+// var random = new Random();
+// var nodes = Enumerable
+//     .Range(0, 500)
+//     .Select(id => new EthereumNode(id, random.Next(10, 101)))
+//     .ToList();
 
 var network = new Network();
-// var consensus = new BitcoinConsensus();
-var consensus = new EthereumConsensus();
+var consensus = new BitcoinConsensus();
+// var consensus = new EthereumConsensus();
 
-// var statistics = new Statistics<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
-var statistics = new Statistics<EthereumNode, EthereumBlock, EthereumTransaction>();
+var statistics = new Statistics<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>();
+// var statistics = new Statistics<EthereumNode, EthereumBlock, EthereumTransaction>();
 
-// ITransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> transactionContext 
-//     = Configuration.Instance.TransactionContextType == "light"
-//         ? new LightTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>()
-//         : new FullTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
-
-ITransactionContext<EthereumNode, EthereumBlock, EthereumTransaction> transactionContext 
+ITransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler> transactionContext 
     = Configuration.Instance.TransactionContextType == "light"
-        ? new LightTransactionContext<EthereumNode, EthereumBlock, EthereumTransaction>()
-        : new FullTransactionContext<EthereumNode, EthereumBlock, EthereumTransaction>();
+        ? new LightTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>()
+        : new FullTransactionContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>();
+//
+// ITransactionContext<EthereumNode, EthereumBlock, EthereumTransaction> transactionContext 
+//     = Configuration.Instance.TransactionContextType == "light"
+//         ? new LightTransactionContext<EthereumNode, EthereumBlock, EthereumTransaction>()
+//         : new FullTransactionContext<EthereumNode, EthereumBlock, EthereumTransaction>();
 
 
-// var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction>(nodes, consensus, network, transactionContext, statistics);
-var context = new SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction>(nodes, consensus, network, transactionContext, statistics);
+var eventQueue = new EventQueue<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>();
+// var eventQueue = new EventQueue<EthereumNode, EthereumBlock, EthereumTransaction>();
+
+var scheduler = new BitcoinScheduler(eventQueue);
+var context = new SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction, BitcoinScheduler>(nodes, consensus, network, scheduler, transactionContext, statistics);
+// var context = new SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction>(nodes, consensus, network, transactionContext, statistics);
 
 //  1. Create Transactions
 transactionContext.CreateTransactions(context);
 
-// var eventQueue = new EventQueue<BitcoinNode, BitcoinBlock, BitcoinTransaction>();
-var eventQueue = new EventQueue<EthereumNode, EthereumBlock, EthereumTransaction>();
 
 //  3. Create initial events (creation of block for all nodes)
 foreach (var node in nodes)
 {
-    // eventQueue.Enqueue(new BlockSimSharp.Bitcoin.Events.MineBlockEvent(node, 0));
-    eventQueue.Enqueue(new BlockSimSharp.Ethereum.Events.MineBlockEvent(node, 0));
+    scheduler.ScheduleMineBlockEvent(node, 0);
 }
 
 //  4. Handle events until end of simulation
@@ -68,12 +69,7 @@ var clock = 0f;
 while (clock < Configuration.Instance.SimulationLengthInSeconds && !eventQueue.IsEmpty())
 {
     var @event = eventQueue.Dequeue();  
-
-    var futureEvents = @event.Handle(context);
-    
-    foreach(var futureEvent in futureEvents)
-        eventQueue.Enqueue(futureEvent);
-    
+    @event.Handle(context);
     clock = @event.EventTime;
 }
 
@@ -98,8 +94,8 @@ consensus.ForkResolution(context);
 //
 
 //  6. Distribute rewards
-// var incentives = new BitcoinIncentives();
-var incentives = new EthereumIncentives();
+var incentives = new BitcoinIncentives();
+// var incentives = new EthereumIncentives();
 incentives.DistributeRewards(context);
 
 //  7. Calculate Statistics

@@ -3,10 +3,11 @@ using BlockSimSharp.Ethereum;
 
 namespace BlockSimSharp.Statistics;
 
-public class Statistics<TNode, TBlock, TTransaction>
+public class Statistics<TNode, TBlock, TTransaction, TScheduler>
     where TNode: BaseNode<TBlock, TTransaction>
     where TBlock: BaseBlock<TTransaction>, new()
     where TTransaction: BaseTransaction<TTransaction>
+    where TScheduler: BaseScheduler<TBlock, TNode, TTransaction, TScheduler>
 {
     public int TotalBlocks { get; set; } = 0;
     public int TotalUncles { get; set; } = 0;
@@ -28,7 +29,7 @@ public class Statistics<TNode, TBlock, TTransaction>
         ProfitResults = new List<ProfitResult>();
     }
 
-    public void Calculate(SimulationContext<TNode, TBlock, TTransaction> context)
+    public void Calculate(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         CalculateGlobalChain(context);
         CalculateBlockResults(context);
@@ -36,7 +37,7 @@ public class Statistics<TNode, TBlock, TTransaction>
     }
 
 
-    private void CalculateGlobalChain(SimulationContext<TNode, TBlock, TTransaction> context)
+    private void CalculateGlobalChain(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         foreach (var block in context.Consensus.GlobalBlockChain)
         {
@@ -55,7 +56,7 @@ public class Statistics<TNode, TBlock, TTransaction>
         }
     }
 
-    private void CalculateBlockResults(SimulationContext<TNode, TBlock, TTransaction> context)
+    private void CalculateBlockResults(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         MainBlocks = context.Consensus.GlobalBlockChain.Count - 1;
         if (context.Consensus is EthereumConsensus ethereumConsensus)
@@ -70,7 +71,7 @@ public class Statistics<TNode, TBlock, TTransaction>
         TotalTransactions = context.Consensus.GlobalBlockChain.Sum(block => block.Transactions.Count);
     }
 
-    private void CalculateProfitResults(SimulationContext<TNode, TBlock, TTransaction> context)
+    private void CalculateProfitResults(SimulationContext<TNode, TBlock, TTransaction, TScheduler> context)
     {
         foreach (var node in context.Nodes)
         {
