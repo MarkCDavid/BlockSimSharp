@@ -1,14 +1,14 @@
 using BlockSimSharp.Base;
 
-namespace BlockSimSharp.Bitcoin.Events;
+namespace BlockSimSharp.Ethereum.Events;
 
-public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>
+public class MineBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>
 {
-    public MineBlockEvent(BitcoinNode node, float eventTime)
+    public MineBlockEvent(EthereumNode node, float eventTime)
     {
         Node = node;
         EventTime = eventTime;
-        Block = new BitcoinBlock
+        Block = new EthereumBlock
         {
             BlockId = new Random().Next(),
             PreviousBlockId = node.LastBlock.BlockId,
@@ -17,10 +17,9 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
             Timestamp = eventTime
         };
     }
-
-    public override List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>> Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
+    public override List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>> Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
     {
-        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>>();
+        var futureEvents = new List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>>();
         
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Node.Id);
 
@@ -33,18 +32,24 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
         var blockSequenceValid = Block.PreviousBlockId == miner.LastBlock.BlockId;
         if (!blockSequenceValid)
             return futureEvents;
-
+        
         context.Statistics.TotalBlocks += 1;
-
+        
         if (Configuration.Instance.TransactionsEnabled)
         {
             var (transactions, sizeInMb) = context.TransactionContext.CollectTransactions(miner, EventTime);
             Block.Transactions = transactions;
             Block.UsedGas = sizeInMb;
         }
-
+        
+        if (Configuration.Instance.UnclesEnabled)
+        {
+            miner.UpdateUncleChain();
+            Block.Uncles = miner.CollectUncles();
+        }
+        
         miner.BlockChain.Add(Block);
-
+        
         if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "light")
         {
             context.TransactionContext.CreateTransactions(context);
@@ -60,8 +65,8 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
 
         return futureEvents;
     }
-
-    private List<ReceiveBlockEvent> GenerateReceiveBlockEvents(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
+    
+    private List<ReceiveBlockEvent> GenerateReceiveBlockEvents(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
     {
         return context.Nodes
             .Where(node => node.Id != Block.MinerId)
@@ -74,7 +79,7 @@ public class MineBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransac
             .ToList();
     }
 
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
+    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumNode miner)
     {
         if (miner.HashPower <= 0)
             return null;

@@ -6,7 +6,7 @@ public abstract class BaseIncentives<TNode, TBlock, TTransaction>
     where TTransaction: BaseTransaction<TTransaction>
 {
 
-    public void DistributeRewards(SimulationContext<TNode, TBlock, TTransaction> context)
+    public virtual void DistributeRewards(SimulationContext<TNode, TBlock, TTransaction> context)
     {
         foreach (var block in context.Consensus.GlobalBlockChain)
         {
@@ -24,7 +24,7 @@ public abstract class BaseIncentives<TNode, TBlock, TTransaction>
         }
     }
 
-    private float TransactionFee(TBlock block)
+    protected float TransactionFee(TBlock block)
     {
         return block.Transactions.Sum(transaction => transaction.Fee);
     }

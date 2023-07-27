@@ -1,12 +1,12 @@
 using BlockSimSharp.Base;
 
-namespace BlockSimSharp.Bitcoin.Events;
+namespace BlockSimSharp.Ethereum.Events;
 
-public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>
+public class ReceiveBlockEvent: BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>
 {
-    public override List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>> Handle(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context)
+    public override List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>> Handle(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context)
     {
-        var futureEvents = new List<BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTransaction>>();
+        var futureEvents = new List<BaseEvent<EthereumNode, EthereumBlock, EthereumTransaction>>();
         
         var miner = context.Nodes.FirstOrDefault(node => node.Id == Block.MinerId);
         
@@ -53,6 +53,15 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
                 if (mineEvent is not null)
                     futureEvents.Add(mineEvent);
             }
+            else
+            {
+                miner.UncleChain.Add(Block);
+            }
+            
+            if (Configuration.Instance.UnclesEnabled)
+            {
+                recipient.UpdateUncleChain();
+            }
             
             if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
             {
@@ -63,7 +72,7 @@ public class ReceiveBlockEvent: BaseEvent<BitcoinNode, BitcoinBlock, BitcoinTran
         return futureEvents;
     }
     
-    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<BitcoinNode, BitcoinBlock, BitcoinTransaction> context, BitcoinNode miner)
+    private MineBlockEvent? GenerateMineBlockEvent(SimulationContext<EthereumNode, EthereumBlock, EthereumTransaction> context, EthereumNode miner)
     {
         if (miner.HashPower <= 0)
             return null;

@@ -18,6 +18,11 @@ public class AppSettings
     public float AverageTransactionFee { get; set; }
     public float AverageTransactionSizeInMb { get; set; }
     public float BlockReward { get; set; }
+    public bool UnclesEnabled { get; set; }
+    public int MaximumUncleBlocks { get; set; }
+    public int UncleGenerations { get; set; }
+
+    public float UncleInclusionReward => BlockReward / 32;
 }
 
 public static class Configuration

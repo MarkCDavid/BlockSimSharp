@@ -12,8 +12,8 @@ public abstract class BaseConsensus<TBlock, TNode, TTransaction>
         GlobalBlockChain = new List<TBlock>();
     }
 
-    public abstract float Protocol(TNode miner);
-    public abstract void ForkResolution();
+    public abstract float Protocol(SimulationContext<TNode, TBlock, TTransaction> context, TNode miner);
+    public abstract void ForkResolution(SimulationContext<TNode, TBlock, TTransaction> context);
 
     public List<TBlock> GlobalBlockChain { get; protected set; }
 }
