@@ -2,7 +2,7 @@ namespace BlockSimSharp.Core.Model;
 
 public abstract class BaseNode<TTransaction, TBlock, TNode>
     where TTransaction: BaseTransaction<TTransaction>
-    where TBlock: BaseBlock<TTransaction>, new()
+    where TBlock: BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode: BaseNode<TTransaction, TBlock, TNode>
 {
     public int NodeId { get; }

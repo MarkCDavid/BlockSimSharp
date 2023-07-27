@@ -1,9 +1,8 @@
 using BlockSimSharp.Core.Model;
-using BlockSimSharp.Core.Simulation.TransactionContext;
 
-namespace BlockSimSharp.Core.Simulation;
+namespace BlockSimSharp.Core.Simulation.TransactionContext;
 
-public abstract class BaseScheduler<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
+public abstract class BaseTransactionContext<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
     where TTransaction: BaseTransaction<TTransaction>, new()
     where TBlock: BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode: BaseNode<TTransaction, TBlock, TNode>
@@ -14,12 +13,8 @@ public abstract class BaseScheduler<TTransaction, TBlock, TNode, TNetwork, TCons
     where TEvent: BaseEvent<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
     where TContext: BaseContext<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
 {
-    protected TEventQueue EventQueue { get; init; }
     
-    protected BaseScheduler(TEventQueue eventQueue)
-    {
-        EventQueue = eventQueue;
-    }
+    public abstract void CreateTransactions(TContext context);
+    public abstract (List<TTransaction>, float) CollectTransactions(TContext context, TNode node, float currentTime);
 
-    public abstract void ScheduleInitialEvents(TNode node);
 }

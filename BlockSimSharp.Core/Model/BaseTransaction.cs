@@ -15,6 +15,8 @@ public abstract class BaseTransaction<TSelf>: IDeepCloneable<TSelf>
         
         public float Value { get; set; }
         public float Fee { get; set; }
+        
+        public float SizeInMb { get; set; }
 
         public abstract TSelf DeepClone();
 }

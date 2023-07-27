@@ -3,7 +3,7 @@ using BlockSimSharp.Core.Simulation.TransactionContext;
 
 namespace BlockSimSharp.Core.Simulation;
 
-public abstract class BaseScheduler<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
+public abstract class BaseNetwork<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
     where TTransaction: BaseTransaction<TTransaction>, new()
     where TBlock: BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode: BaseNode<TTransaction, TBlock, TNode>
@@ -14,12 +14,17 @@ public abstract class BaseScheduler<TTransaction, TBlock, TNode, TNetwork, TCons
     where TEvent: BaseEvent<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
     where TContext: BaseContext<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TEventQueue, TScheduler, TContext>
 {
-    protected TEventQueue EventQueue { get; init; }
-    
-    protected BaseScheduler(TEventQueue eventQueue)
+
+    public float BlockPropogationDelay(TContext context)
     {
-        EventQueue = eventQueue;
+        return 0;
+        // return Utility.Expovariate(1.0f / Configuration.Instance.AverageBlockPropogationDelay);
     }
 
-    public abstract void ScheduleInitialEvents(TNode node);
+    public float TransactionPropogationDelay(TContext context)
+    {
+        return 0;
+        // return Utility.Expovariate(1.0f / Configuration.Instance.AverageTransactionPropogationDelay);
+    }
+
 }
