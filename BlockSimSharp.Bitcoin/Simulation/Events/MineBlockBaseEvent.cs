@@ -1,4 +1,5 @@
 using BlockSimSharp.Bitcoin.Model;
+using BlockSimSharp.Bitcoin.Simulation.Statistics;
 using BlockSimSharp.Core;
 using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Enum;
@@ -11,11 +12,7 @@ public class MineBlockBaseEvent: BaseEvent<Transaction, Block, Node>
 {
     public override void Handle(SimulationContext context)
     {
-        var settings = context.Get<Settings>();
-        var scheduler = context.Get<Scheduler>();
         var nodes = context.Get<Nodes>();
-        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
-
         var miner = nodes.FirstOrDefault(node => node.NodeId == Node.NodeId);
 
         if (miner is null)
@@ -28,9 +25,12 @@ public class MineBlockBaseEvent: BaseEvent<Transaction, Block, Node>
         if (!blockSequenceValid)
             return;
 
-        // context.Statistics.TotalBlocks += 1;
+        var simulationStatistics = context.Get<SimulationStatistics>();
+        simulationStatistics.TotalBlocks += 1;
 
+        var settings = context.Get<Settings>();
         var transactionSettings = settings.Get<TransactionSettings>();
+        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
 
         if (transactionSettings.Enabled && transactionContext is not null)
         {
@@ -46,6 +46,7 @@ public class MineBlockBaseEvent: BaseEvent<Transaction, Block, Node>
             transactionContext.CreateTransactions(context);
         }
         
+        var scheduler = context.Get<Scheduler>();
         scheduler.TryScheduleReceiveBlockEvents(context, this);
         scheduler.TryScheduleMineBlockEvent(context, this, miner);
     }

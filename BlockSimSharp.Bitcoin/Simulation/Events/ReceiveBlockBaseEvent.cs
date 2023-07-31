@@ -11,10 +11,7 @@ public class ReceiveBlockBaseEvent: BaseEvent<Transaction, Block, Node>
 {
     public override void Handle(SimulationContext context)
     {
-        var settings = context.Get<Settings>();
-        var scheduler = context.Get<Scheduler>();
         var nodes = context.Get<Nodes>();
-        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
 
         var miner = nodes.FirstOrDefault(node => node.NodeId == Block.MinerId);
         
@@ -28,7 +25,10 @@ public class ReceiveBlockBaseEvent: BaseEvent<Transaction, Block, Node>
         
         var nextBlockInRecipientBlockChain = Block.PreviousBlockId == recipient.LastBlock.BlockId;
         
+        var settings = context.Get<Settings>();
+        var scheduler = context.Get<Scheduler>();
         var transactionSettings = settings.Get<TransactionSettings>();
+        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
        
         // The last block in our block chain matches the last block that the new mined block
         // is based on. As such, we do not need to modify our local blockchain and we can simply

@@ -1,11 +1,13 @@
 ﻿using BlockSimSharp.Bitcoin.Configuration;
 using BlockSimSharp.Bitcoin.Model;
 using BlockSimSharp.Bitcoin.Simulation;
+using BlockSimSharp.Bitcoin.Simulation.Statistics;
 using BlockSimSharp.Core;
 using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Model;
 using BlockSimSharp.Core.Simulation;
 using BlockSimSharp.Core.Simulation.TransactionContext;
+using Newtonsoft.Json;
 
 var settings = new SettingsFactory().Build("appsettings.json");
 
@@ -31,7 +33,14 @@ simulationContext
 
 simulationContext.Register<BaseNetwork, Network>(new Network());
 simulationContext.Register<BaseIncentives, Incentives>(new Incentives());
-simulationContext.Register<BaseStatistics, Statistics>(new Statistics());
+simulationContext.Register<BaseStatistics, SimulationStatistics>(new SimulationStatistics());
 
 var simulator = new Simulator<Transaction, Block, Node>();
 simulator.Simulate(simulationContext);
+
+var simulationStatistics = simulationContext.Get<SimulationStatistics>();
+
+File.WriteAllText(
+    $"/home/markcdavid/git/BlockSimSharp/{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
+    JsonConvert.SerializeObject(simulationStatistics, Formatting.Indented)
+);
