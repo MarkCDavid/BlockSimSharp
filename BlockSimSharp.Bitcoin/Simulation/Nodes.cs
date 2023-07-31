@@ -1,8 +1,9 @@
+using BlockSimSharp.Bitcoin.Model;
 using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.Bitcoin.Simulation;
 
-public class Network: BaseNetwork
+public class Nodes: BaseNodes<Transaction, Block, Node>
 {
     
 }

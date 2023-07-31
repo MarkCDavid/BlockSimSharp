@@ -1,25 +1,34 @@
+using BlockSimSharp.Bitcoin.Model;
+using BlockSimSharp.Core;
+using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Enum;
 using BlockSimSharp.Core.Configuration.Model;
+using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.Bitcoin.Simulation.Events;
 
-public class ReceiveBlockEvent: Event
+public class ReceiveBlockBaseEvent: BaseEvent<Transaction, Block, Node>
 {
-    public override void Handle(Context context)
+    public override void Handle(SimulationContext context)
     {
-        var miner = context.Nodes.FirstOrDefault(node => node.NodeId == Block.MinerId);
+        var settings = context.Get<Settings>();
+        var scheduler = context.Get<Scheduler>();
+        var nodes = context.Get<Nodes>();
+        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
+
+        var miner = nodes.FirstOrDefault(node => node.NodeId == Block.MinerId);
         
         if (miner is null)
             throw new Exception($"Node with Id {Node.NodeId} does not exist!");
         
-        var recipient = context.Nodes.FirstOrDefault(node => node.NodeId == Node.NodeId);
+        var recipient = nodes.FirstOrDefault(node => node.NodeId == Node.NodeId);
         
         if (recipient is null)
             throw new Exception($"Node with Id {Block.MinerId} does not exist!");
         
         var nextBlockInRecipientBlockChain = Block.PreviousBlockId == recipient.LastBlock.BlockId;
         
-        var transactionSettings = context.Settings.Get<TransactionSettings>();
+        var transactionSettings = settings.Get<TransactionSettings>();
        
         // The last block in our block chain matches the last block that the new mined block
         // is based on. As such, we do not need to modify our local blockchain and we can simply
@@ -28,14 +37,14 @@ public class ReceiveBlockEvent: Event
         {
             recipient.BlockChain.Add(Block);
             
-            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && context.TransactionContext is not null)
+            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
             {
                 recipient.UpdateTransactionPool(Block);
             }
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
-            context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
+            scheduler.TryScheduleMineBlockEvent(context, this, recipient);
         }
         else
         {  
@@ -45,14 +54,19 @@ public class ReceiveBlockEvent: Event
             {
                 recipient.UpdateLocalBlockChain(miner, Block.Depth + 1);
                 
+                if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
+                {
+                    recipient.UpdateTransactionPool(recipient.LastBlock);
+                }
+                
                 // As before, given that we have updated the last block of our blockchain, we have to
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
                 
-                context.Scheduler.TryScheduleMineBlockEvent(context, this, recipient);
+                scheduler.TryScheduleMineBlockEvent(context, this, recipient);
             }
             
-            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && context.TransactionContext is not null)
+            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
             {
                 recipient.UpdateTransactionPool(Block);
             }

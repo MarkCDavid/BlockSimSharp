@@ -42,11 +42,7 @@ public abstract class BaseNode<TTransaction, TBlock, TNode>
                 BlockChain.Add(sourceBaseNode.BlockChain[index]);
         }
         
-        // FIXME
-        // if (Configuration.Instance.TransactionsEnabled && Configuration.Instance.TransactionContextType == "full")
-        // {
-        //     UpdateTransactionPool(LastBlock);
-        // }
+      
     }
 
     public void UpdateTransactionPool(TBlock block)

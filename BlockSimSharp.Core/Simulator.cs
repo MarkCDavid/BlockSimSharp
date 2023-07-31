@@ -1,47 +1,81 @@
+using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Model;
 using BlockSimSharp.Core.Model;
 using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.Core;
 
-public class Simulator<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext, TContextFactory>
+public class Simulator<TTransaction, TBlock, TNode>
     where TTransaction: BaseTransaction<TTransaction>, new()
     where TBlock: BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode: BaseNode<TTransaction, TBlock, TNode>
-    where TNetwork: BaseNetwork<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
-    where TConsensus: BaseConsensus<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
-    where TScheduler: BaseScheduler<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
-    where TEvent: BaseEvent<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
-    where TContext: BaseContext<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
-    where TContextFactory: BaseContextFactory<TTransaction, TBlock, TNode, TNetwork, TConsensus, TEvent, TScheduler, TContext>
 {
-    public void Simulate(TContextFactory contextFactory)
+    public void Simulate(SimulationContext context)
     {
-        var context = contextFactory.BuildContext();
-        
-        var simulationSettings = context.Settings.Get<SimulationSettings>();
-        var transactionSettings = context.Settings.Get<TransactionSettings>();
+        PrepareTransactionContext(context);
+        ScheduleInitialEvents(context);
+        RunSimulation(context);
+        ResolveForks(context);
+        DistributeRewards(context);
+        CalculateStatistics(context);
+    }
 
-        if (transactionSettings.Enabled && context.TransactionContext is not null)
-        {
-            context.TransactionContext.CreateTransactions(context);
-        }
+    private static void PrepareTransactionContext(SimulationContext context)
+    {
+        var transactionSettings = context.Get<Settings>().Get<TransactionSettings>();
+        var transactionContext = context.TryGet<BaseTransactionContext<TTransaction, TBlock, TNode>>();
         
-        foreach (var node in context.Nodes)
+        if (transactionSettings.Enabled && transactionContext is not null)
         {
-            context.Scheduler.ScheduleInitialEvents(node);
+            transactionContext.CreateTransactions(context);
         }
-        
-        var clock = 0f;
-        while (clock < simulationSettings.LengthInSeconds && context.Scheduler.HasEvents())
+    }
+
+    private static void ScheduleInitialEvents(SimulationContext context)
+    {
+        var nodes = context.Get<BaseNodes<TTransaction, TBlock, TNode>>();
+        var scheduler = context.Get<BaseScheduler<TTransaction, TBlock, TNode>>();
+
+        foreach (var node in nodes)
         {
-            var @event = context.Scheduler.NextEvent();  
+            scheduler.ScheduleInitialEvents(node);
+        }
+    }
+
+    private static void RunSimulation(SimulationContext context)
+    {
+        var simulationLengthInSeconds = context.Get<Settings>().Get<SimulationSettings>().LengthInSeconds;
+        var scheduler = context.Get<BaseScheduler<TTransaction, TBlock, TNode>>();
+        
+        while (scheduler.HasEvents())
+        {
+            var @event = scheduler.NextEvent();
+            
+            if (@event.EventTime >= simulationLengthInSeconds)
+                return;
+           
             @event.Handle(context);
-            clock = @event.EventTime;
         }
+    }
+
+    private static void ResolveForks(SimulationContext context)
+    {
+        var consensus = context.Get<BaseConsensus<TTransaction, TBlock, TNode>>();
         
-        context.Consensus.ForkResolution(context);
-        context.Incentives.DistributeRewards(context);
-        // context.Statistics.Calculate(context);
-    } 
+        consensus.ResolveForks(context);
+    }
+
+    private static void DistributeRewards(SimulationContext context)
+    {
+        var incentives = context.Get<BaseIncentives>();
+        
+        incentives.DistributeRewards(context);
+    }
+
+    private static void CalculateStatistics(SimulationContext context)
+    {
+        var statistics = context.Get<BaseStatistics>();
+        
+        statistics.Calculate(context);
+    }
 }

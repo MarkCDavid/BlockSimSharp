@@ -3,9 +3,9 @@ using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.Bitcoin.Simulation;
 
-public class Incentives: BaseIncentives
+public class Statistics: BaseStatistics
 {
-    public override void DistributeRewards(SimulationContext context)
+    public override void Calculate(SimulationContext context)
     {
         
     }

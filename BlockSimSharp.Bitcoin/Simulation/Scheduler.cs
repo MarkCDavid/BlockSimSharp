@@ -1,25 +1,29 @@
 using BlockSimSharp.Bitcoin.Model;
 using BlockSimSharp.Bitcoin.Simulation.Events;
+using BlockSimSharp.Core;
+using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Model;
 using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.Bitcoin.Simulation;
 
-public class Scheduler: BaseScheduler<Transaction, Block, Node, Network, Consensus, Event, Scheduler, Context>
+public class Scheduler: BaseScheduler<Transaction, Block, Node>
 {
-    
     public override void ScheduleInitialEvents(Node node)
     {
         ScheduleMineBlockEvent(node, 0);
     }
     
-    public void TryScheduleMineBlockEvent(Context context, Event @event, Node miner)
+    public void TryScheduleMineBlockEvent(SimulationContext context, BaseEvent<Transaction, Block, Node> baseEvent, Node miner)
     {
+        var settings = context.Get<Settings>();
+        var consensus = context.Get<Consensus>();
+        
         if (miner.HashPower <= 0)
             return;
 
-        var simulationSettings = context.Settings.Get<SimulationSettings>();
-        var eventTime = @event.EventTime + context.Consensus.Protocol(context, miner);
+        var simulationSettings = settings.Get<SimulationSettings>();
+        var eventTime = baseEvent.EventTime + consensus.Protocol(context, miner);
     
         if (eventTime > simulationSettings.LengthInSeconds)
             return;
@@ -29,7 +33,7 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node, Network, Consens
     
     public void ScheduleMineBlockEvent(Node node, float eventTime)
     {
-        Enqueue(new MineBlockEvent
+        Enqueue(new MineBlockBaseEvent
         {
             Node = node,
             EventTime = eventTime,
@@ -44,15 +48,18 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node, Network, Consens
         });
     }
     
-    public void TryScheduleReceiveBlockEvents(Context context, Event @event)
+    public void TryScheduleReceiveBlockEvents(SimulationContext context, BaseEvent<Transaction, Block, Node> baseEvent)
     {
-        foreach (var receiver in context.Nodes.Where(node => node.NodeId != @event.Block.MinerId))
+        var nodes = context.Get<Nodes>();
+        var network = context.Get<Network>();
+        
+        foreach (var receiver in nodes.Where(node => node.NodeId != baseEvent.Block.MinerId))
         {
-            Enqueue(new ReceiveBlockEvent
+            Enqueue(new ReceiveBlockBaseEvent
             {
                 Node = receiver,
-                Block = @event.Block,
-                EventTime = @event.EventTime + context.Network.BlockPropogationDelay(context),
+                Block = baseEvent.Block,
+                EventTime = baseEvent.EventTime + network.BlockPropogationDelay(context),
             });
         }
     }
