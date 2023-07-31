@@ -2,19 +2,19 @@ using BlockSimSharp.Core.Model;
 
 namespace BlockSimSharp.Bitcoin.Model;
 
-public class Transaction: BaseTransaction<Transaction>
+public class Transaction: BaseTransaction<Transaction, Block, Node>
 {
     public float UsedGas { get; set; }
     
-    public override Transaction DeepClone()
+    public override Transaction Clone()
     {
         return new Transaction
         {
              TransactionId = TransactionId,
              TransactionCreateTime = TransactionCreateTime,
              TransactionReceiveTime = TransactionReceiveTime,
-             SenderNodeId = SenderNodeId,
-             ReceiverNodeId = ReceiverNodeId,
+             SenderNode = SenderNode,
+             ReceiverNode = ReceiverNode,
              Value = Value,
              Fee = Fee,
              SizeInMb = SizeInMb,

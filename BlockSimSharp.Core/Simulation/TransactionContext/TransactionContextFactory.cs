@@ -6,7 +6,7 @@ using BlockSimSharp.Core.Model;
 namespace BlockSimSharp.Core.Simulation.TransactionContext;
 
 public class TransactionContextFactory<TTransaction, TBlock, TNode>
-    where TTransaction : BaseTransaction<TTransaction>, new()
+    where TTransaction : BaseTransaction<TTransaction, TBlock, TNode>, new()
     where TBlock : BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode : BaseNode<TTransaction, TBlock, TNode>
 {

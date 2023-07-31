@@ -21,7 +21,7 @@ public class MineBlockBaseEvent: BaseEvent<Transaction, Block, Node>
         // This check allows us to discard an event that has already been scheduled,
         // because this node has accepted a new block into the blockchain in the
         // meantime.
-        var blockSequenceValid = Block.PreviousBlockId == miner.LastBlock.BlockId;
+        var blockSequenceValid = Block.PreviousBlock?.BlockId == miner.LastBlock.BlockId;
         if (!blockSequenceValid)
             return;
 

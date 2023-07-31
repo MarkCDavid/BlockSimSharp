@@ -5,7 +5,7 @@ using BlockSimSharp.Core.Model;
 namespace BlockSimSharp.Core.Simulation.TransactionContext;
 
 public sealed class LightBaseTransactionContext<TTransaction, TBlock, TNode>: BaseTransactionContext<TTransaction, TBlock, TNode>
-    where TTransaction: BaseTransaction<TTransaction>, new()
+    where TTransaction: BaseTransaction<TTransaction, TBlock, TNode>, new()
     where TBlock: BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode: BaseNode<TTransaction, TBlock, TNode>
 {
@@ -30,8 +30,8 @@ public sealed class LightBaseTransactionContext<TTransaction, TBlock, TNode>: Ba
             .Select(_ => new TTransaction()
             {
                 TransactionId = random.Next(),
-                SenderNodeId = nodes.ElementAt(random.Next(nodes.Count)).NodeId,
-                ReceiverNodeId = nodes.ElementAt(random.Next(nodes.Count)).NodeId,
+                SenderNode = nodes.ElementAt(random.Next(nodes.Count)),
+                ReceiverNode = nodes.ElementAt(random.Next(nodes.Count)),
                 SizeInMb = Utility.Expovariate(1 / transactionSettings.AverageSizeInMb),
                 Fee = Utility.Expovariate(1 / transactionSettings.AverageFee)
             }).ToList();

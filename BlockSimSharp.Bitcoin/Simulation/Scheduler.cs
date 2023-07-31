@@ -40,8 +40,8 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
             Block = new Block
             {
                 BlockId = new Random().Next(),
-                PreviousBlockId = node.LastBlock.BlockId,
-                MinerId = node.NodeId,
+                PreviousBlock = node.LastBlock,
+                Miner = node,
                 Depth = node.BlockChain.Count,
                 Timestamp = eventTime
             }
@@ -53,7 +53,7 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
         var nodes = context.Get<Nodes>();
         var network = context.Get<Network>();
         
-        foreach (var receiver in nodes.Where(node => node.NodeId != baseEvent.Block.MinerId))
+        foreach (var receiver in nodes.Where(node => node.NodeId != baseEvent.Block.Miner.NodeId))
         {
             Enqueue(new ReceiveBlockBaseEvent
             {

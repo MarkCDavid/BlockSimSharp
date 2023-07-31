@@ -10,7 +10,6 @@ public class Incentives: BaseIncentives
 {
     public override void DistributeRewards(SimulationContext context)
     {
-        var nodes = context.Get<Nodes>();
         var consensus = context.Get<Consensus>();
         
         var settings = context.Get<Settings>();
@@ -18,12 +17,12 @@ public class Incentives: BaseIncentives
         
         foreach (var block in consensus.GlobalBlockChain)
         {
-            foreach (var node in nodes.Where(node => block.MinerId == node.NodeId))
-            {
-                node.Blocks += 1;
-                node.Balance += blockSettings.Reward;
-                node.Balance += TransactionFee(block);
-            }
+            if (block.Miner is null)
+                continue;
+            
+            block.Miner.Blocks += 1;
+            block.Miner.Balance += blockSettings.Reward;
+            block.Miner.Balance += TransactionFee(block);
         }
     }
 

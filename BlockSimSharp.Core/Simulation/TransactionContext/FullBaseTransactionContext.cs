@@ -6,7 +6,7 @@ namespace BlockSimSharp.Core.Simulation.TransactionContext;
 
 public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
     : BaseTransactionContext<TTransaction, TBlock, TNode>
-    where TTransaction : BaseTransaction<TTransaction>, new()
+    where TTransaction : BaseTransaction<TTransaction, TBlock, TNode>, new()
     where TBlock : BaseBlock<TTransaction, TBlock, TNode>, new()
     where TNode : BaseNode<TTransaction, TBlock, TNode>
 {
@@ -28,8 +28,8 @@ public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
             var transaction = new TTransaction
             {
                 TransactionId = random.Next(),
-                SenderNodeId = sender.NodeId,
-                ReceiverNodeId = nodes.ElementAt(random.Next(nodes.Count)).NodeId,
+                SenderNode = sender,
+                ReceiverNode = nodes.ElementAt(random.Next(nodes.Count)),
                 TransactionCreateTime = random.Next(0, simulationSettings.LengthInSeconds - 1),
                 SizeInMb = Utility.Expovariate(1 / transactionSettings.AverageSizeInMb),
                 Fee = Utility.Expovariate(1 / transactionSettings.AverageFee)
@@ -68,9 +68,9 @@ public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
         var nodes = context.Get<BaseNodes<TTransaction, TBlock, TNode>>();
         var network = context.Get<BaseNetwork>();
 
-        foreach (var receiverNode in nodes.Where(node => node.NodeId != transaction.SenderNodeId))
+        foreach (var receiverNode in nodes.Where(node => node.NodeId != transaction.SenderNode.NodeId))
         {
-            var clonedTransaction = transaction.DeepClone();
+            var clonedTransaction = transaction.Clone();
             clonedTransaction.TransactionReceiveTime =
                 transaction.TransactionCreateTime + network.TransactionPropogationDelay(context);
             receiverNode.TransactionPool.Add(clonedTransaction);

@@ -11,19 +11,7 @@ public class ReceiveBlockBaseEvent: BaseEvent<Transaction, Block, Node>
 {
     public override void Handle(SimulationContext context)
     {
-        var nodes = context.Get<Nodes>();
-
-        var miner = nodes.FirstOrDefault(node => node.NodeId == Block.MinerId);
-        
-        if (miner is null)
-            throw new Exception($"Node with Id {Node.NodeId} does not exist!");
-        
-        var recipient = nodes.FirstOrDefault(node => node.NodeId == Node.NodeId);
-        
-        if (recipient is null)
-            throw new Exception($"Node with Id {Block.MinerId} does not exist!");
-        
-        var nextBlockInRecipientBlockChain = Block.PreviousBlockId == recipient.LastBlock.BlockId;
+        var nextBlockInRecipientBlockChain = Block.PreviousBlock?.BlockId == Node.LastBlock.BlockId;
         
         var settings = context.Get<Settings>();
         var scheduler = context.Get<Scheduler>();
@@ -35,40 +23,40 @@ public class ReceiveBlockBaseEvent: BaseEvent<Transaction, Block, Node>
         // accept the block into our blockchain.
         if (nextBlockInRecipientBlockChain)
         {
-            recipient.BlockChain.Add(Block);
+            Node.BlockChain.Add(Block);
             
             if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
             {
-                recipient.UpdateTransactionPool(Block);
+                Node.UpdateTransactionPool(Block);
             }
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
-            scheduler.TryScheduleMineBlockEvent(context, this, recipient);
+            scheduler.TryScheduleMineBlockEvent(context, this, Node);
         }
         else
         {  
             // Otherwise we have to check whether the miner of the received block has a blockchain that is longer
             // than ours. If they have a longer blockchain, we discard our blockchain and accept their blockchain.
-            if (recipient.BlockChainLength < Block.Depth)
+            if (Node.BlockChainLength < Block.Depth)
             {
-                recipient.UpdateLocalBlockChain(miner, Block.Depth + 1);
+                Node.UpdateLocalBlockChain(Block.Miner, Block.Depth + 1);
                 
                 if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
                 {
-                    recipient.UpdateTransactionPool(recipient.LastBlock);
+                    Node.UpdateTransactionPool(Node.LastBlock);
                 }
                 
                 // As before, given that we have updated the last block of our blockchain, we have to
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
                 
-                scheduler.TryScheduleMineBlockEvent(context, this, recipient);
+                scheduler.TryScheduleMineBlockEvent(context, this, Node);
             }
             
             if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
             {
-                recipient.UpdateTransactionPool(Block);
+                Node.UpdateTransactionPool(Block);
             }
         }
     }

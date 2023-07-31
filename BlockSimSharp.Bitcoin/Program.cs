@@ -41,6 +41,6 @@ simulator.Simulate(simulationContext);
 var simulationStatistics = simulationContext.Get<SimulationStatistics>();
 
 File.WriteAllText(
-    $"/home/markcdavid/git/BlockSimSharp/{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
+    $"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
     JsonConvert.SerializeObject(simulationStatistics, Formatting.Indented)
 );

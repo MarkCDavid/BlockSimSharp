@@ -44,7 +44,7 @@ public class SimulationStatistics : BaseStatistics
         {
             Depth = block.Depth,
             BlockId = block.BlockId,
-            PreviousBlockId = block.PreviousBlockId,
+            PreviousBlockId = block.PreviousBlock?.BlockId ?? -1,
             Timestamp = block.Timestamp,
             TransactionCount = block.Transactions.Count,
             SizeInMb = block.SizeInMb

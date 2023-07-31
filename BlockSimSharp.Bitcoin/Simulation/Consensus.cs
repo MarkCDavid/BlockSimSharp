@@ -35,7 +35,7 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         {
             var groupedByMiner = nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
-                .GroupBy(node => node.LastBlock.MinerId)
+                .GroupBy(node => node.LastBlock.Miner.NodeId)
                 .Select(group => new { Miner = group.Key, Count = group.Count() })
                 .ToList();
     
@@ -52,7 +52,7 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         foreach (var node in nodes)
         {
             if (node.BlockChainLength == maximumBlockChainLength &&
-                node.LastBlock.MinerId == minerWithBlockChainOfMaxLength)
+                node.LastBlock.Miner.NodeId == minerWithBlockChainOfMaxLength)
             {
                 GlobalBlockChain = node.BlockChain.ToList();
             }
