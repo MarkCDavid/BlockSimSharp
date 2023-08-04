@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Core", "Block
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Bitcoin", "BlockSimSharp.Bitcoin\BlockSimSharp.Bitcoin.csproj", "{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.BitcoinBurn", "BlockSimSharp.BitcoinBurn\BlockSimSharp.BitcoinBurn.csproj", "{20BEE270-743A-48D5-9509-56E1FAF05A14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
