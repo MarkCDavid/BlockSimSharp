@@ -10,6 +10,7 @@ using BlockSimSharp.Core.Simulation.TransactionContext;
 using Newtonsoft.Json;
 
 var settings = new SettingsFactory().Build("appsettings.json");
+var burnSettings = settings.Get<BurnSettings>();
 
 var simulationContext = new SimulationContext();
 
@@ -20,9 +21,16 @@ simulationContext.Register<Random, Random>(settings.Get<RandomNumberGenerationSe
 
 simulationContext.Register<BaseNodes<Transaction, Block, Node>, Nodes>(new Nodes
 {
-    new(0, 50),
-    new(1, 20),
-    new(2, 30)
+    new(0, 100, 0),
+    new(1, 90, 0),
+    new(2, 100, 0),
+    new(3, 85, 0),
+    new(4, 90, 0),
+    new(5, 100, 1),
+    new(6, 30, 1),
+    new(7, 40, 2),
+    new(8, 20, 2),
+    new(9, 10, 3)
 });
 
 simulationContext.Register<BaseConsensus<Transaction, Block, Node>, Consensus>(new Consensus());
@@ -34,6 +42,7 @@ simulationContext
 simulationContext.Register<BaseNetwork, Network>(new Network());
 simulationContext.Register<BaseIncentives, Incentives>(new Incentives());
 simulationContext.Register<BaseStatistics, SimulationStatistics>(new SimulationStatistics());
+simulationContext.Register<Constants, Constants>(new Constants(simulationContext));
 
 var simulator = new Simulator<Transaction, Block, Node>();
 simulator.Simulate(simulationContext);

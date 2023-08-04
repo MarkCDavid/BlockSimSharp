@@ -8,6 +8,6 @@ public class SettingsFactory: BaseSettingsFactory
     protected override void RegisterSections(IConfiguration configuration, Settings settings)
     {
         base.RegisterSections(configuration, settings);
-        settings.Register<BurningSettings>(configuration.BindSection<BurningSettings>("BurningSettings"));
+        settings.Register(configuration.BindSection<BurnSettings>("BurnSettings"));
     }
 }

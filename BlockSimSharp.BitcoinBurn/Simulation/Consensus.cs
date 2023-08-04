@@ -1,5 +1,5 @@
+using BlockSimSharp.BitcoinBurn.Configuration;
 using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.Core;
 using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Model;
@@ -11,12 +11,11 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
 {
     public override float Protocol(SimulationContext context, Node miner)
     {
+        var constants = context.Get<Constants>();
         var settings = context.Get<Settings>();
         var blockSettings = settings.Get<BlockSettings>();
-        var nodes = context.Get<Nodes>();
 
-        var totalHashPower = nodes.Sum(node => node.HashPower);
-        var hashPower = miner.HashPower / totalHashPower;
+        var hashPower = BuyHashPower(context, miner) / constants.TotalHashPower;
         return Utility.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
     }
     
@@ -58,5 +57,35 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
             }
         }
     
+    }
+
+    public float PowerCost(SimulationContext context, Node miner, float eventTime)
+    {
+        if (miner.CurrentlyMinedBlock is null)
+        {
+            return 0;
+        }
+
+        var nodePowerCostInDollarsPerSecond 
+            = context.Get<Constants>().AveragePowerCostInDollarsPerSecondPerHashPower * miner.HashPower;
+        
+        var totalTimeSpentMiningABlockInSeconds 
+            = eventTime - miner.CurrentlyMinedBlock.ScheduledTimestamp;
+        
+        return totalTimeSpentMiningABlockInSeconds * nodePowerCostInDollarsPerSecond;
+    }
+    
+    private float BuyHashPower(SimulationContext context, Node miner)
+    {
+        var settings = context.Get<Settings>();
+        var burnSettings = settings.Get<BurnSettings>();
+        
+        if (miner.DifficultyReduction == 0)
+        {
+            return miner.HashPower;
+        }
+    
+        miner.TotalDifficultyReductionCostInBitcoins +=  burnSettings.BitcoinCostPerDifficultyLevel * MathF.Pow(burnSettings.ExponentialBaseOfDifficultyCost, miner.DifficultyReduction);
+        return miner.HashPower * MathF.Pow(burnSettings.ExponentialBaseOfDifficulty, miner.DifficultyReduction);
     }
 }

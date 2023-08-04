@@ -19,16 +19,9 @@ public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
         if (!blockSequenceValid)
             return;
 
-        if (Node.CurrentlyMinedBlock is not null)
-        {
-            var powerConsumptionPerHashPower = 0.3;
-            
-            var blockMiningStartTime = Node.CurrentlyMinedBlock.ScheduledTimestamp;
-            var currentSimulationTime = EventTime;
-
-            var totalTimeSpentMiningABlockInSeconds = currentSimulationTime - blockMiningStartTime;
-            var totalEnergySpentMiningABlock = totalTimeSpentMiningABlockInSeconds * powerConsumptionPerHashPower;
-        }
+        var consensus = context.Get<Consensus>();
+        var powerCost = consensus.PowerCost(context, Node, EventTime);
+        Node.TotalPowerCostInDollars += powerCost;
         
         var simulationStatistics = context.Get<SimulationStatistics>();
         simulationStatistics.TotalBlocks += 1;

@@ -23,7 +23,7 @@ public class SimulationStatistics : BaseStatistics
     public override void Calculate(SimulationContext context)
     {
         CalculateSimulationStatistics(context);
-        CalculateBlockStatistics(context);
+        // CalculateBlockStatistics(context);
         CalculateProfitStatistics(context);
     }
 
@@ -54,12 +54,17 @@ public class SimulationStatistics : BaseStatistics
     private void CalculateProfitStatistics(SimulationContext context)
     {
         var nodes = context.Get<Nodes>();
+        var consants = context.Get<Constants>();
         ProfitStatistics = nodes.Select(node => new ProfitStatistics
         {
             NodeId = node.NodeId,
+            HashPower = node.HashPower,
+            PercentageOfAllHashPower = node.HashPower / consants.TotalHashPower, 
             Blocks = node.Blocks,
             PercentageOfAllBlocks = MathF.Round((float)node.Blocks / MainBlocks, 2),
-            Balance = node.Balance
+            Balance = node.Balance,
+            TotalPowerCostInDollars = node.TotalPowerCostInDollars,
+            TotalDifficultyReductionCostInDollars = node.TotalDifficultyReductionCostInBitcoins
         }).ToList();
     }
 }
