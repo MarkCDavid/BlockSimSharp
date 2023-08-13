@@ -34,8 +34,8 @@ var scenarioSettings = new ScenarioSettingsFactory()
     .Build("ScenarioSettings.json")
     .Get<ScenarioSettings>();
 
-if (scenarioSettings.RunNoNetworkScenario)
+if (scenarioSettings.RunNoNetworkDelayScenario)
     RunScenario<NoNetworkDelayScenario>();
 
-if (scenarioSettings.RunWithNetworkScenario)
+if (scenarioSettings.RunWithNetworkDelayScenario)
     RunScenario<WithNetworkDelayScenario>();

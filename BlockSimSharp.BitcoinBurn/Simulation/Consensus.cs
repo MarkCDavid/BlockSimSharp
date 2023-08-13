@@ -78,30 +78,16 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
 
     public float PerceivedHashPower(SimulationContext context, Node miner)
     {
-        if (miner.DifficultyReduction == 0)
-        {
-            return miner.HashPower;
-        }
-
-        return PerceivedHashPower(miner, context.Get<Settings>().Get<BurnSettings>());
+        return PerceivedHashPower(miner);
     }
     
     private float BuyHashPower(SimulationContext context, Node miner)
     {
-        var settings = context.Get<Settings>();
-        var burnSettings = settings.Get<BurnSettings>();
-        
-        if (miner.DifficultyReduction == 0)
-        {
-            return miner.HashPower;
-        }
-    
-        miner.TotalDifficultyReductionCostInBitcoins +=  burnSettings.BitcoinCostPerDifficultyLevel * MathF.Pow(burnSettings.ExponentialBaseOfDifficultyCost, miner.DifficultyReduction);
-        return PerceivedHashPower(miner, burnSettings);
+        return PerceivedHashPower(miner);
     }
 
-    private float PerceivedHashPower(Node miner, BurnSettings burnSettings)
+    private float PerceivedHashPower(Node miner)
     {
-        return miner.HashPower * MathF.Pow(burnSettings.ExponentialBaseOfDifficulty, miner.DifficultyReduction);
+        return miner.HashPower * MathF.Pow(16, miner.DifficultyReduction);
     }
 }
