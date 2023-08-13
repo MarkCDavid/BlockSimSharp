@@ -98,6 +98,9 @@ public class SimulationStatistics : BaseStatistics
             Blocks = node.Blocks,
             PercentageOfAllBlocks = MathF.Round((float)node.Blocks / MainBlocks, 2),
             Balance = node.Balance,
+            // The nodes should still be perceived as mining during the end of the simulation, although there might not
+            // be any events. As such, we must calculate the power cost for the mining during the last seconds of the 
+            // simulation.
             TotalPowerCost = node.TotalPowerCost + consensus.PowerCost(context, node, simulationSettings.LengthInSeconds),
             TotalDifficultyReductionCostInBitcoins = node.TotalDifficultyReductionCostInBitcoins
         }).ToList();

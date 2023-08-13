@@ -1,5 +1,6 @@
 {
   "ScenarioSettings": {
-    "RunNoNetworkScenario": true
+    "RunNoNetworkScenario": true,
+    "RunWithNetworkScenario": true
   }
 }

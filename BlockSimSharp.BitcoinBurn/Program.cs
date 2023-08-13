@@ -1,6 +1,7 @@
 ﻿using BlockSimSharp.BitcoinBurn.Configuration;
 using BlockSimSharp.BitcoinBurn.Scenarios;
 using BlockSimSharp.BitcoinBurn.Scenarios.NoNetworkDelay;
+using BlockSimSharp.BitcoinBurn.Scenarios.WithNetworkDelay;
 using BlockSimSharp.BitcoinBurn.Simulation.Statistics;
 using Newtonsoft.Json;
 
@@ -35,3 +36,6 @@ var scenarioSettings = new ScenarioSettingsFactory()
 
 if (scenarioSettings.RunNoNetworkScenario)
     RunScenario<NoNetworkDelayScenario>();
+
+if (scenarioSettings.RunWithNetworkScenario)
+    RunScenario<WithNetworkDelayScenario>();
