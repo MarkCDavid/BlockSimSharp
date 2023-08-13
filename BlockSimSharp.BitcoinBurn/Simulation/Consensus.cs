@@ -74,6 +74,16 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         
         return totalTimeSpentMiningABlockInSeconds * nodePowerCostInDollarsPerSecond;
     }
+
+    public float PerceivedHashPower(SimulationContext context, Node miner)
+    {
+        if (miner.DifficultyReduction == 0)
+        {
+            return miner.HashPower;
+        }
+
+        return PerceivedHashPower(miner, context.Get<Settings>().Get<BurnSettings>());
+    }
     
     private float BuyHashPower(SimulationContext context, Node miner)
     {
@@ -86,6 +96,11 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         }
     
         miner.TotalDifficultyReductionCostInBitcoins +=  burnSettings.BitcoinCostPerDifficultyLevel * MathF.Pow(burnSettings.ExponentialBaseOfDifficultyCost, miner.DifficultyReduction);
+        return PerceivedHashPower(miner, burnSettings);
+    }
+
+    private float PerceivedHashPower(Node miner, BurnSettings burnSettings)
+    {
         return miner.HashPower * MathF.Pow(burnSettings.ExponentialBaseOfDifficulty, miner.DifficultyReduction);
     }
 }

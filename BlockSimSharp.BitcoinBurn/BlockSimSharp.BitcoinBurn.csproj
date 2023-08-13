@@ -21,4 +21,8 @@
       <ProjectReference Include="..\BlockSimSharp.Core\BlockSimSharp.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Data\" />
+    </ItemGroup>
+
 </Project>

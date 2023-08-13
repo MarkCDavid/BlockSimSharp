@@ -50,6 +50,6 @@ simulator.Simulate(simulationContext);
 var simulationStatistics = simulationContext.Get<SimulationStatistics>();
 
 File.WriteAllText(
-    $"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
+    $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/git/BlockSimSharp/BlockSimSharp.BitcoinBurn/Data/{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
     JsonConvert.SerializeObject(simulationStatistics, Formatting.Indented)
 );
