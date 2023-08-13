@@ -31,7 +31,7 @@ public class SimulationStatistics : BaseStatistics
         CalculateSettings(context);
         CalculateTotals(context);
         CalculateSimulationStatistics(context);
-        // CalculateBlockStatistics(context);
+        CalculateBlockStatistics(context);
         CalculateProfitStatistics(context);
     }
     private void CalculateSettings(SimulationContext context)
@@ -84,6 +84,8 @@ public class SimulationStatistics : BaseStatistics
 
     private void CalculateProfitStatistics(SimulationContext context)
     {
+        var settings = context.Get<Settings>();
+        var simulationSettings = settings.Get<SimulationSettings>();
         var consensus = context.Get<Consensus>();
         var nodes = context.Get<Nodes>();
         var constants = context.Get<Constants>();
@@ -96,7 +98,7 @@ public class SimulationStatistics : BaseStatistics
             Blocks = node.Blocks,
             PercentageOfAllBlocks = MathF.Round((float)node.Blocks / MainBlocks, 2),
             Balance = node.Balance,
-            TotalPowerCost = node.TotalPowerCost,
+            TotalPowerCost = node.TotalPowerCost + consensus.PowerCost(context, node, simulationSettings.LengthInSeconds),
             TotalDifficultyReductionCostInBitcoins = node.TotalDifficultyReductionCostInBitcoins
         }).ToList();
     }

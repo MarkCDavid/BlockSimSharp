@@ -17,7 +17,13 @@ public sealed class NoNetworkDelayScenario: Scenario
         return new Nodes
         {
             new(0, 100, 0),
-            new(1, 100, 0)
+            new(1, 100, 0),
+            new(2, 50, 0),
+            new(3, 50, 0),
+            new(4, 25, 0),
+            new(5, 25, 0),
+            new(6, 10, 0),
+            new(7, 10, 0)
         };
     }
 }
