@@ -8,7 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Update="appsettings.json">
+      <None Update="ScenarioSettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Scenarios\NoNetworkDelay\appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
@@ -19,10 +22,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\BlockSimSharp.Core\BlockSimSharp.Core.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Data\" />
     </ItemGroup>
 
 </Project>

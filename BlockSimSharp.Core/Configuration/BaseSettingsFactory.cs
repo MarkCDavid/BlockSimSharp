@@ -19,14 +19,8 @@ public abstract class BaseSettingsFactory
         return settings;
     }
 
-    protected virtual void RegisterSections(IConfiguration configuration, Settings settings)
-    {
-        settings.Register(configuration.BindSection<BlockSettings>("BlockSettings"));
-        settings.Register(configuration.BindSection<TransactionSettings>("TransactionSettings"));
-        settings.Register(configuration.BindSection<SimulationSettings>("SimulationSettings"));
-        settings.Register(configuration.BindSection<RandomNumberGenerationSettings>("RandomNumberGenerationSettings"));
-    }
-   
+    protected abstract void RegisterSections(IConfiguration configuration, Settings settings);
+
 }
 
 public static class SettingsFactoryExtensions

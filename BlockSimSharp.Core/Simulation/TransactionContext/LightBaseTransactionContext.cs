@@ -18,7 +18,7 @@ public sealed class LightBaseTransactionContext<TTransaction, TBlock, TNode>: Ba
     public override void CreateTransactions(SimulationContext context)
     {
         var nodes = context.Get<BaseNodes<TTransaction, TBlock, TNode>>();
-        var random = context.Get<Random>();
+        var randomness = context.Get<Randomness>();
 
         var settings = context.Get<Settings>();
         
@@ -29,11 +29,11 @@ public sealed class LightBaseTransactionContext<TTransaction, TBlock, TNode>: Ba
         LocalTransactionPool = Enumerable.Range(0, transactionCountInBlock)
             .Select(_ => new TTransaction()
             {
-                TransactionId = random.Next(),
-                SenderNode = nodes.ElementAt(random.Next(nodes.Count)),
-                ReceiverNode = nodes.ElementAt(random.Next(nodes.Count)),
-                SizeInMb = Utility.Expovariate(1 / transactionSettings.AverageSizeInMb),
-                Fee = Utility.Expovariate(1 / transactionSettings.AverageFee)
+                TransactionId = randomness.Next(),
+                SenderNode = nodes.ElementAt(randomness.Next(nodes.Count)),
+                ReceiverNode = nodes.ElementAt(randomness.Next(nodes.Count)),
+                SizeInMb = randomness.Expovariate(1 / transactionSettings.AverageSizeInMb),
+                Fee = randomness.Expovariate(1 / transactionSettings.AverageFee)
             }).ToList();
     }
 

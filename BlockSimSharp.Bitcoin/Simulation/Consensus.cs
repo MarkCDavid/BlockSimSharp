@@ -14,10 +14,11 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         var settings = context.Get<Settings>();
         var blockSettings = settings.Get<BlockSettings>();
         var nodes = context.Get<Nodes>();
+        var randomness = context.Get<Randomness>();
 
         var totalHashPower = nodes.Sum(node => node.HashPower);
         var hashPower = miner.HashPower / totalHashPower;
-        return Utility.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
+        return randomness.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
     }
     
     public override void ResolveForks(SimulationContext context)

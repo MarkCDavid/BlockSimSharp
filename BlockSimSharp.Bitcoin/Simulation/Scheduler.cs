@@ -9,9 +9,9 @@ namespace BlockSimSharp.Bitcoin.Simulation;
 
 public class Scheduler: BaseScheduler<Transaction, Block, Node>
 {
-    public override void ScheduleInitialEvents(Node node)
+    public override void ScheduleInitialEvents(SimulationContext context, Node node)
     {
-        ScheduleMineBlockEvent(node, 0);
+        ScheduleMineBlockEvent(context, node, 0);
     }
     
     public void TryScheduleMineBlockEvent(SimulationContext context, BaseEvent<Transaction, Block, Node> baseEvent, Node miner)
@@ -28,18 +28,19 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
         if (eventTime > simulationSettings.LengthInSeconds)
             return;
     
-        ScheduleMineBlockEvent(miner, eventTime);
+        ScheduleMineBlockEvent(context, miner, eventTime);
     }
     
-    public void ScheduleMineBlockEvent(Node node, float eventTime)
+    public void ScheduleMineBlockEvent(SimulationContext context, Node node, float eventTime)
     {
+        var randomness = context.Get<Randomness>();
         Enqueue(new MineBlockBaseEvent
         {
             Node = node,
             EventTime = eventTime,
             Block = new Block
             {
-                BlockId = new Random().Next(),
+                BlockId = randomness.Next(),
                 PreviousBlock = node.LastBlock,
                 Miner = node,
                 Depth = node.BlockChain.Count,

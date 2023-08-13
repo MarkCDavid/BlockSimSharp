@@ -4,19 +4,17 @@ using BlockSimSharp.Bitcoin.Simulation;
 using BlockSimSharp.Bitcoin.Simulation.Statistics;
 using BlockSimSharp.Core;
 using BlockSimSharp.Core.Configuration;
-using BlockSimSharp.Core.Configuration.Model;
 using BlockSimSharp.Core.Simulation;
 using BlockSimSharp.Core.Simulation.TransactionContext;
 using Newtonsoft.Json;
 
-var settings = new SettingsFactory().Build("appsettings.json");
+var settings = new SimulationSettingsFactory().Build("appsettings.json");
 
 var simulationContext = new SimulationContext();
 
 simulationContext.Register<Settings, Settings>(settings);
-simulationContext.Register<Random, Random>(settings.Get<RandomNumberGenerationSettings>().UseStaticSeed
-    ? new Random(settings.Get<RandomNumberGenerationSettings>().StaticSeed)
-    : new Random());
+        
+simulationContext.Register<Randomness, Randomness>(new Randomness(settings));
 
 simulationContext.Register<BaseNodes<Transaction, Block, Node>, Nodes>(new Nodes
 {

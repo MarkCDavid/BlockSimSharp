@@ -1,55 +1,37 @@
 ﻿using BlockSimSharp.BitcoinBurn.Configuration;
-using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.BitcoinBurn.Simulation;
+using BlockSimSharp.BitcoinBurn.Scenarios;
+using BlockSimSharp.BitcoinBurn.Scenarios.NoNetworkDelay;
 using BlockSimSharp.BitcoinBurn.Simulation.Statistics;
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Configuration;
-using BlockSimSharp.Core.Configuration.Model;
-using BlockSimSharp.Core.Simulation;
-using BlockSimSharp.Core.Simulation.TransactionContext;
 using Newtonsoft.Json;
 
-var settings = new SettingsFactory().Build("appsettings.json");
-var burnSettings = settings.Get<BurnSettings>();
-
-var simulationContext = new SimulationContext();
-
-simulationContext.Register<Settings, Settings>(settings);
-simulationContext.Register<Random, Random>(settings.Get<RandomNumberGenerationSettings>().UseStaticSeed
-    ? new Random(settings.Get<RandomNumberGenerationSettings>().StaticSeed)
-    : new Random());
-
-simulationContext.Register<BaseNodes<Transaction, Block, Node>, Nodes>(new Nodes
+void RunScenario<TScenario>()
+    where TScenario: Scenario, new()
 {
-    new(0, 100, 0),
-    new(1, 90, 0),
-    new(2, 100, 0),
-    new(3, 85, 0),
-    new(4, 90, 0),
-    new(5, 100, 1),
-    new(6, 30, 1),
-    new(7, 40, 2),
-    new(8, 20, 2),
-    new(9, 10, 3)
-});
+    var scenario = new TScenario();
+    var statistics = scenario.Execute();
+    SaveSimulationData(scenario, statistics);
+}
 
-simulationContext.Register<BaseConsensus<Transaction, Block, Node>, Consensus>(new Consensus());
-simulationContext.Register<BaseScheduler<Transaction, Block, Node>, Scheduler>(new Scheduler());
-simulationContext
-    .Register<BaseTransactionContext<Transaction, Block, Node>, BaseTransactionContext<Transaction, Block, Node>>(
-        new TransactionContextFactory<Transaction, Block, Node>().BuildTransactionContext(settings));
+void SaveSimulationData<TScenario>(TScenario scenario, SimulationStatistics statistics)
+    where TScenario: Scenario
+{
+    var homePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+    var directoryPath = Path.Combine(homePath, "BlockSimSharp", scenario.Name);
+    
+    Directory.CreateDirectory(directoryPath);
+    
+    var fileName = $"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json";
+    var filePath = Path.Combine(directoryPath, fileName);
+    
+    File.WriteAllText(
+        filePath, 
+        JsonConvert.SerializeObject(statistics, Formatting.Indented)
+    );
+}
 
-simulationContext.Register<BaseNetwork, Network>(new Network());
-simulationContext.Register<BaseIncentives, Incentives>(new Incentives());
-simulationContext.Register<BaseStatistics, SimulationStatistics>(new SimulationStatistics());
-simulationContext.Register<Constants, Constants>(new Constants(simulationContext));
+var scenarioSettings = new ScenarioSettingsFactory()
+    .Build("ScenarioSettings.json")
+    .Get<ScenarioSettings>();
 
-var simulator = new Simulator<Transaction, Block, Node>();
-simulator.Simulate(simulationContext);
-
-var simulationStatistics = simulationContext.Get<SimulationStatistics>();
-
-File.WriteAllText(
-    $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/git/BlockSimSharp/BlockSimSharp.BitcoinBurn/Data/{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json", 
-    JsonConvert.SerializeObject(simulationStatistics, Formatting.Indented)
-);
+if (scenarioSettings.RunNoNetworkScenario)
+    RunScenario<NoNetworkDelayScenario>();

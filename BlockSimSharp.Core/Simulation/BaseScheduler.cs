@@ -1,7 +1,6 @@
 using BlockSimSharp.Core.Model;
-using BlockSimSharp.Core.Simulation;
 
-namespace BlockSimSharp.Core;
+namespace BlockSimSharp.Core.Simulation;
 
 public abstract class BaseScheduler<TTransaction, TBlock, TNode>
     where TTransaction: BaseTransaction<TTransaction, TBlock, TNode>, new()
@@ -11,7 +10,7 @@ public abstract class BaseScheduler<TTransaction, TBlock, TNode>
 
     public BaseEvent<TTransaction, TBlock, TNode> NextEvent() => _queue.Dequeue();
     public bool HasEvents() => _queue.Count != 0;
-    public abstract void ScheduleInitialEvents(TNode node);
+    public abstract void ScheduleInitialEvents(SimulationContext context, TNode node);
     private readonly PriorityQueue<BaseEvent<TTransaction, TBlock, TNode>, float> _queue;
     
     protected BaseScheduler()

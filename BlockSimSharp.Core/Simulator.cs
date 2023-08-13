@@ -38,7 +38,7 @@ public class Simulator<TTransaction, TBlock, TNode>
 
         foreach (var node in nodes)
         {
-            scheduler.ScheduleInitialEvents(node);
+            scheduler.ScheduleInitialEvents(context, node);
         }
     }
 

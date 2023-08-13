@@ -13,7 +13,7 @@ public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
     public override void CreateTransactions(SimulationContext context)
     {
         var nodes = context.Get<BaseNodes<TTransaction, TBlock, TNode>>();
-        var random = context.Get<Random>();
+        var randomness = context.Get<Randomness>();
 
         var settings = context.Get<Settings>();
         var transactionSettings = settings.Get<TransactionSettings>();
@@ -23,16 +23,16 @@ public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
 
         for (var index = 0; index < transactionCountDuringSimulation; index++)
         {
-            var sender = nodes.ElementAt(random.Next(nodes.Count));
+            var sender = nodes.ElementAt(randomness.Next(nodes.Count));
 
             var transaction = new TTransaction
             {
-                TransactionId = random.Next(),
+                TransactionId = randomness.Next(),
                 SenderNode = sender,
-                ReceiverNode = nodes.ElementAt(random.Next(nodes.Count)),
-                TransactionCreateTime = random.Next(0, simulationSettings.LengthInSeconds - 1),
-                SizeInMb = Utility.Expovariate(1 / transactionSettings.AverageSizeInMb),
-                Fee = Utility.Expovariate(1 / transactionSettings.AverageFee)
+                ReceiverNode = nodes.ElementAt(randomness.Next(nodes.Count)),
+                TransactionCreateTime = randomness.Next(0, simulationSettings.LengthInSeconds - 1),
+                SizeInMb = randomness.Expovariate(1 / transactionSettings.AverageSizeInMb),
+                Fee = randomness.Expovariate(1 / transactionSettings.AverageFee)
             };
 
             sender.TransactionPool.Add(transaction);

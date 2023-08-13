@@ -21,4 +21,4 @@ Average time for 1 zero: 0.01 ms
 
 # Conclusion
 
-Ration seems to be roughly 16, as you would expect for increasing the "search area" by 4 bits (2^4 = 16).
+Ratio seems to be roughly 16, as you would expect for increasing the "search area" by 4 bits (2^4 = 16).

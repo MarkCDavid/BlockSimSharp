@@ -12,11 +12,12 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
     public override float Protocol(SimulationContext context, Node miner)
     {
         var constants = context.Get<Constants>();
+        var randomness = context.Get<Randomness>();
         var settings = context.Get<Settings>();
         var blockSettings = settings.Get<BlockSettings>();
 
         var hashPower = BuyHashPower(context, miner) / constants.TotalHashPower;
-        return Utility.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
+        return randomness.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
     }
     
     public override void ResolveForks(SimulationContext context)

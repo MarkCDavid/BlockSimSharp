@@ -7,11 +7,31 @@ public abstract class BaseNetwork
 {
     public virtual float BlockPropogationDelay(SimulationContext context)
     {
-        return Utility.Expovariate(1.0f / context.Get<Settings>().Get<BlockSettings>().AveragePropogationDelay);
+        var averagePropogationDelay = context
+            .Get<Settings>()
+            .Get<BlockSettings>()
+            .AveragePropogationDelay;
+
+        if (averagePropogationDelay == 0)
+        {
+            return 0;
+        }
+        
+        return context.Get<Randomness>().Expovariate(1.0f / averagePropogationDelay);
     }
 
     public virtual float TransactionPropogationDelay(SimulationContext context)
     {
-        return Utility.Expovariate(1.0f / context.Get<Settings>().Get<TransactionSettings>().AveragePropogationDelay);
+        var averagePropogationDelay = context
+            .Get<Settings>()
+            .Get<TransactionSettings>()
+            .AveragePropogationDelay;
+
+        if (averagePropogationDelay == 0)
+        {
+            return 0;
+        } 
+        
+        return context.Get<Randomness>().Expovariate(1.0f / averagePropogationDelay);
     }
 }
