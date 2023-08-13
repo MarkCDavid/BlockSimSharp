@@ -53,7 +53,7 @@ public class SimulationStatistics : BaseStatistics
         Totals = new TotalStatistics()
         {
             TotalBitcoinsEarned = nodes.Sum(node => node.Balance),
-            TotalEnergyCostInDollars = nodes.Sum(node => node.TotalPowerCostInDollars)
+            TotalEnergyCostInDollars = nodes.Sum(node => node.TotalPowerCost)
         };
     }
 
@@ -96,7 +96,7 @@ public class SimulationStatistics : BaseStatistics
             Blocks = node.Blocks,
             PercentageOfAllBlocks = MathF.Round((float)node.Blocks / MainBlocks, 2),
             Balance = node.Balance,
-            TotalPowerCostInDollars = node.TotalPowerCostInDollars,
+            TotalPowerCost = node.TotalPowerCost,
             TotalDifficultyReductionCostInBitcoins = node.TotalDifficultyReductionCostInBitcoins
         }).ToList();
     }

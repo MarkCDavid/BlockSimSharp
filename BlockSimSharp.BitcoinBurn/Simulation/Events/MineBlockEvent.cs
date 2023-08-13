@@ -21,7 +21,7 @@ public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
 
         var consensus = context.Get<Consensus>();
         var powerCost = consensus.PowerCost(context, Node, EventTime);
-        Node.TotalPowerCostInDollars += powerCost;
+        Node.TotalPowerCost += powerCost;
         
         var simulationStatistics = context.Get<SimulationStatistics>();
         simulationStatistics.TotalBlocks += 1;

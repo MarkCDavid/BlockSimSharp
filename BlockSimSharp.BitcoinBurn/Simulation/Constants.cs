@@ -7,7 +7,7 @@ namespace BlockSimSharp.BitcoinBurn.Simulation;
 public class Constants
 {
     public float TotalHashPower { get; }
-    public float AveragePowerCostInDollarsPerSecondPerHashPower { get; }
+    public float AveragePowerCostHashPower { get; }
 
     public Constants(SimulationContext context)
     {
@@ -18,7 +18,7 @@ public class Constants
         TotalHashPower = 
             nodes.Sum(node => node.HashPower);
         
-        AveragePowerCostInDollarsPerSecondPerHashPower =
-            burnSettings.AveragePowerCostInDollarsPerSecond / TotalHashPower;
+        AveragePowerCostHashPower =
+            burnSettings.AveragePowerCostPerSecond / TotalHashPower;
     }
 }

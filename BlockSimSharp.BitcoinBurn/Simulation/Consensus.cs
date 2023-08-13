@@ -68,7 +68,7 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
         }
 
         var nodePowerCostInDollarsPerSecond 
-            = context.Get<Constants>().AveragePowerCostInDollarsPerSecondPerHashPower * miner.HashPower;
+            = context.Get<Constants>().AveragePowerCostHashPower * miner.HashPower;
         
         var totalTimeSpentMiningABlockInSeconds 
             = eventTime - miner.CurrentlyMinedBlock.ScheduledTimestamp;

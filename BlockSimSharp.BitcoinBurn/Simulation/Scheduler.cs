@@ -11,7 +11,12 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
 {
     public override void ScheduleInitialEvents(SimulationContext context, Node node)
     {
-        ScheduleMineBlockEvent(context, node, 0, 0);
+        const int eventScheduleTime = 0;
+        const int eventTime = 0;
+        
+        var block = BuildNextBlock(context, node, eventScheduleTime, eventTime);
+        
+        ScheduleMineBlockEvent(block, node, 0);
     }
     
     public void TryScheduleMineBlockEvent(SimulationContext context, BaseEvent<Transaction, Block, Node> baseEvent, Node miner)
@@ -25,33 +30,12 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
         var simulationSettings = settings.Get<SimulationSettings>();
         var eventTime = baseEvent.EventTime + consensus.Protocol(context, miner);
     
+        var block = BuildNextBlock(context, miner, baseEvent.EventTime, eventTime);
+        
         if (eventTime > simulationSettings.LengthInSeconds)
             return;
     
-        ScheduleMineBlockEvent(context, miner, baseEvent.EventTime, eventTime);
-    }
-    
-    public void ScheduleMineBlockEvent(SimulationContext context, Node node, float eventScheduleTime, float eventTime)
-    {
-        var randomness = context.Get<Randomness>();
-        var block = new Block
-        {
-            BlockId = randomness.Next(),
-            PreviousBlock = node.LastBlock,
-            Miner = node,
-            Depth = node.BlockChain.Count,
-            Timestamp = eventTime,
-            ScheduledTimestamp = eventScheduleTime
-        };
-
-        node.CurrentlyMinedBlock = block;
-        
-        Enqueue(new MineBlockEvent
-        {
-            Node = node,
-            EventTime = eventTime,
-            Block = block, 
-        });
+        ScheduleMineBlockEvent(block, miner, eventTime);
     }
     
     public void TryScheduleReceiveBlockEvents(SimulationContext context, BaseEvent<Transaction, Block, Node> baseEvent)
@@ -68,5 +52,32 @@ public class Scheduler: BaseScheduler<Transaction, Block, Node>
                 EventTime = baseEvent.EventTime + network.BlockPropogationDelay(context),
             });
         }
+    }
+
+    private void ScheduleMineBlockEvent(Block block, Node node, float eventTime)
+    {
+        Enqueue(new MineBlockEvent
+        {
+            Node = node,
+            EventTime = eventTime,
+            Block = block, 
+        });
+    }
+
+    private static Block BuildNextBlock(SimulationContext context, Node node, float eventScheduleTime, float eventTime)
+    {
+        var randomness = context.Get<Randomness>();
+        var block = new Block
+        {
+            BlockId = randomness.Next(),
+            PreviousBlock = node.LastBlock,
+            Miner = node,
+            Depth = node.BlockChain.Count,
+            Timestamp = eventTime,
+            ScheduledTimestamp = eventScheduleTime
+        };
+
+        node.CurrentlyMinedBlock = block;
+        return block;
     }
 }
