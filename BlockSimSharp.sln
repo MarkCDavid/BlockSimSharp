@@ -2,13 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Core", "BlockSimSharp.Core\BlockSimSharp.Core.csproj", "{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Bitcoin", "BlockSimSharp.Bitcoin\BlockSimSharp.Bitcoin.csproj", "{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Bitcoin", "BlockSimSharp.Bitcoin\BlockSimSharp.Bitcoin.csproj", "{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.BitcoinBurn", "BlockSimSharp.BitcoinBurn\BlockSimSharp.BitcoinBurn.csproj", "{20BEE270-743A-48D5-9509-56E1FAF05A14}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeDependenceOnAmountOfZeroesExperiment", "TimeDependenceOnAmountOfZeroesExperiment\TimeDependenceOnAmountOfZeroesExperiment.csproj", "{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Experiment", "Experiment", "{C5F0DC33-6B7F-48CA-8CFD-EC7989ACD424}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.BitcoinBurn", "BlockSimSharp.BitcoinBurn\BlockSimSharp.BitcoinBurn.csproj", "{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,20 +16,15 @@ Global
 		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC75D9EA-909D-4DD2-AEE9-944C73BF74C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20BEE270-743A-48D5-9509-56E1FAF05A14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{42BE21E0-5DCB-4BF9-95C1-8040E7DC7C7C} = {C5F0DC33-6B7F-48CA-8CFD-EC7989ACD424}
 	EndGlobalSection
 EndGlobal

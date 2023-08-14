@@ -1,9 +1,20 @@
 {
+  "ScenarioSettings": {
+    "ScenarioName": "TestScenario"
+  },
+  "NodeSettings": {
+    "StartingNodeCount": 10,
+    "StandardDeviationOfHashRate": 500,
+    "AverageHashRate": 1000
+  },
+  "DifficultySettings": {
+    "DifficultyAdjustmentFrequencyInBlocks": 2016
+  },
   "BlockSettings": {
     "SizeInMb": 1.0,
     "Reward": 12.5,
     "AverageIntervalInSeconds": 600,
-    "AveragePropogationDelay": 0.42
+    "AveragePropogationDelay": 0
   },
   "TransactionSettings": {
     "Enabled": false,
@@ -14,10 +25,10 @@
     "AveragePropogationDelay": 0
   },
   "SimulationSettings": {
-    "LengthInSeconds": 1000000
+    "LengthInSeconds": 10000000
   },
   "RandomNumberGenerationSettings": {
-    "UseStaticSeed": true,
+    "UseStaticSeed": false,
     "StaticSeed": 400400
   },
   "BurnSettings": {

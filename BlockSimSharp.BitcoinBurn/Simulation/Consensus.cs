@@ -11,20 +11,20 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
 {
     public override float Protocol(SimulationContext context, Node miner)
     {
-        var constants = context.Get<Constants>();
+        var difficulty = context.Get<Difficulty>();
         var randomness = context.Get<Randomness>();
         var settings = context.Get<Settings>();
         var blockSettings = settings.Get<BlockSettings>();
 
-        var hashPower = BuyHashPower(context, miner) / constants.TotalHashPower;
-        return randomness.Expovariate(hashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
+        var relativeHashPower = difficulty.GetRelativeHashPower(miner);
+        return randomness.Expovariate(relativeHashPower * (1.0f / blockSettings.AverageIntervalInSeconds));
     }
     
     public override void ResolveForks(SimulationContext context)
     {
         var nodes = context.Get<Nodes>();
         
-        var maximumBlockChainLength = nodes.MaxBy(node => node.BlockChainLength)!.BlockChainLength;
+        var maximumBlockChainLength = nodes.MaxBy(node => node.BlockChainLength)?.BlockChainLength ?? 0;
     
         var minersWithBlockChainsOfMaximumLength = nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
@@ -47,12 +47,12 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
                 .ToList();
         }
     
-        var minerWithBlockChainOfMaxLength = minersWithBlockChainsOfMaximumLength.First();
+        var minerWithBlockChainOfMaxLength = minersWithBlockChainsOfMaximumLength.FirstOrDefault(-1);
     
         foreach (var node in nodes)
         {
             if (node.BlockChainLength == maximumBlockChainLength &&
-                node.LastBlock.Miner.NodeId == minerWithBlockChainOfMaxLength)
+                node.LastBlock.Miner?.NodeId == minerWithBlockChainOfMaxLength)
             {
                 GlobalBlockChain = node.BlockChain.ToList();
             }
@@ -74,20 +74,5 @@ public class Consensus: BaseConsensus<Transaction, Block, Node>
             = eventTime - miner.CurrentlyMinedBlock.ScheduledTimestamp;
         
         return totalTimeSpentMiningABlockInSeconds * nodePowerCostInDollarsPerSecond;
-    }
-
-    public float PerceivedHashPower(SimulationContext context, Node miner)
-    {
-        return PerceivedHashPower(miner);
-    }
-    
-    private float BuyHashPower(SimulationContext context, Node miner)
-    {
-        return PerceivedHashPower(miner);
-    }
-
-    private float PerceivedHashPower(Node miner)
-    {
-        return miner.HashPower * MathF.Pow(16, miner.DifficultyReduction);
     }
 }

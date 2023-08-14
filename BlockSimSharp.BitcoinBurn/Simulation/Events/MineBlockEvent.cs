@@ -1,10 +1,9 @@
-using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.BitcoinBurn.Simulation.Statistics;
 using BlockSimSharp.Core;
+using BlockSimSharp.Core.Simulation;
 using BlockSimSharp.Core.Configuration;
 using BlockSimSharp.Core.Configuration.Enum;
 using BlockSimSharp.Core.Configuration.Model;
-using BlockSimSharp.Core.Simulation;
+using BlockSimSharp.BitcoinBurn.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 
@@ -21,9 +20,9 @@ public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
 
         var consensus = context.Get<Consensus>();
         var powerCost = consensus.PowerCost(context, Node, EventTime);
-        Node.TotalPowerCost += powerCost;
+        // Node.TotalPowerCost += powerCost;
         
-        var simulationStatistics = context.Get<SimulationStatistics>();
+        var simulationStatistics = context.Get<Statistics.Statistics>();
         simulationStatistics.TotalBlocks += 1;
 
         var settings = context.Get<Settings>();
@@ -38,6 +37,7 @@ public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
         }
 
         Node.BlockChain.Add(Block);
+        context.Get<Difficulty>().OnBlockMined(Node, context);
 
         if (transactionSettings is { Enabled: true, Type: TransactionContextType.Light } && transactionContext is not null)
         {

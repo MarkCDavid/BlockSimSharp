@@ -20,7 +20,7 @@ public class ReceiveBlockEvent: BaseEvent<Transaction, Block, Node>
 
         var consensus = context.Get<Consensus>();
         var powerCost = consensus.PowerCost(context, Node, EventTime);
-        Node.TotalPowerCost += powerCost;
+        // Node.TotalPowerCost += powerCost;
        
         // The last block in our block chain matches the last block that the new mined block
         // is based on. As such, we do not need to modify our local blockchain and we can simply

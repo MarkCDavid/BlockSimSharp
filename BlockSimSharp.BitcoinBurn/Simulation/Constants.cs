@@ -16,7 +16,7 @@ public class Constants
         var burnSettings = settings.Get<BurnSettings>();
         
         TotalHashPower = 
-            nodes.Sum(node => node.HashPower);
+            (nodes.Sum(node => node.HashPower)) * 2;
         
         AveragePowerCostHashPower =
             burnSettings.AveragePowerCostPerSecond / TotalHashPower;

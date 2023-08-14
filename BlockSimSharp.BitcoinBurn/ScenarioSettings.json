@@ -1,7 +1,0 @@
-{
-  "ScenarioSettings": {
-    "RunNoNetworkDelayScenario": false,
-    "RunWithNetworkDelayScenario": false,
-    "RunWithBurningScenario": true
-  }
-}

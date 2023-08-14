@@ -1,3 +1,4 @@
+using System.Numerics;
 using BlockSimSharp.Core.Model;
 
 namespace BlockSimSharp.Core.Simulation;

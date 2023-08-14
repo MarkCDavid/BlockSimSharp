@@ -5,6 +5,7 @@ namespace BlockSimSharp.BitcoinBurn.Simulation.Statistics;
 
 public class SettingsStatistics
 {
+    public NodeSettings NodeSettings { get; init; } = null!;
     public BlockSettings BlockSettings { get; init; } = null!;
     public TransactionSettings TransactionSettings { get; init; } = null!;
     public SimulationSettings SimulationSettings { get; init; } = null!;

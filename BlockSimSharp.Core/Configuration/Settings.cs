@@ -33,4 +33,12 @@ public class Settings
 
         throw new ArgumentOutOfRangeException(key, $"No settings registered with type {key}.");
     }
+
+    private readonly char[] _delimiters = { '.' };
+    public Dictionary<string, ISettings> GetAll()
+    {
+        return _configurationOptions.ToDictionary(
+            pair => pair.Key.Split(_delimiters).Last(),
+            pair => pair.Value);
+    } 
 }

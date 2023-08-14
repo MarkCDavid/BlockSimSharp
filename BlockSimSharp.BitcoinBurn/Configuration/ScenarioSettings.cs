@@ -4,7 +4,5 @@ namespace BlockSimSharp.BitcoinBurn.Configuration;
 
 public class ScenarioSettings: ISettings
 {
-    public bool RunNoNetworkDelayScenario { get; init; }
-    public bool RunWithNetworkDelayScenario { get; init; }
-    public bool RunWithBurningScenario { get; init; }
+    public string ScenarioName { get; set; } = null!;
 }

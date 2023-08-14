@@ -30,7 +30,7 @@ public sealed class FullBaseTransactionContext<TTransaction, TBlock, TNode>
                 TransactionId = randomness.Next(),
                 SenderNode = sender,
                 ReceiverNode = nodes.ElementAt(randomness.Next(nodes.Count)),
-                TransactionCreateTime = randomness.Next(0, simulationSettings.LengthInSeconds - 1),
+                TransactionCreateTime = randomness.Next(0, (int)(simulationSettings.LengthInSeconds - 1)),
                 SizeInMb = randomness.Expovariate(1 / transactionSettings.AverageSizeInMb),
                 Fee = randomness.Expovariate(1 / transactionSettings.AverageFee)
             };
