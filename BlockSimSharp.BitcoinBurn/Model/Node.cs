@@ -1,4 +1,4 @@
-namespace BlockSimSharp.Model;
+namespace BlockSimSharp.BitcoinBurn.Model;
 
 public class Node
 {
@@ -14,7 +14,7 @@ public class Node
         NodeId = nodeId;
         BlockChain = new List<Block> { new() };
         Blocks = 0;
-        Balance = 0.0f;
+        Balance = 0.0;
         HashPower = hashPower;
     }   
     

@@ -14,8 +14,6 @@ public sealed class Randomness
     }
 
     public int Next() => _randomNumberGenerator.Next();
-    public int Next(int maxValue) => _randomNumberGenerator.Next(maxValue);
-    public int Next(int minValue, int maxValue) => _randomNumberGenerator.Next(minValue, maxValue);
 
     public double Expovariate(double lambda)
     {

@@ -1,5 +1,5 @@
+using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
-using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
@@ -26,12 +26,11 @@ public sealed class Difficulty
     }
     
     public void OnBlockMined(Node miner)
-    {;
-        
-        if (miner.BlockChainLength % _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks != 0)
+    {
+        if (miner.BlockChainLength % _configuration.Difficulty.AdjustmentFrequencyInBlocks != 0)
             return;
 
-        var epoch = miner.BlockChainLength / _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks + 1;
+        var epoch = miner.BlockChainLength / _configuration.Difficulty.AdjustmentFrequencyInBlocks + 1;
 
         CurrentDifficulty = CalculateAdjustedDifficulty(miner);
         History.Add(new DifficultyHistory(epoch, CurrentDifficulty));
@@ -43,12 +42,12 @@ public sealed class Difficulty
             miner.LastBlock;
         
         var lastBlockOfPreviousEpoch = 
-            miner.BlockChain[miner.BlockChainLength - _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks];
+            miner.BlockChain[miner.BlockChainLength - _configuration.Difficulty.AdjustmentFrequencyInBlocks];
 
-        var actualMiningTime = lastBlockOfCurrentEpoch.ExecutedAt - lastBlockOfPreviousEpoch.ExecutedAt;
+        var actualMiningTime = lastBlockOfCurrentEpoch.MinedAt - lastBlockOfPreviousEpoch.MinedAt;
 
         var expectedMiningTime = 
-            _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks * _configuration.Block.AverageIntervalInSeconds;
+            _configuration.Difficulty.AdjustmentFrequencyInBlocks * _configuration.Block.AverageIntervalInSeconds;
 
         return CurrentDifficulty * GetDifficultyChangeRatio(expectedMiningTime, actualMiningTime);
     }

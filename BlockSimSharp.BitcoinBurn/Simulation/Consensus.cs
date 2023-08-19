@@ -1,27 +1,27 @@
+using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
-using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
 public sealed class Consensus
 {
+    public List<Block> GlobalBlockChain { get; private set; }
+    
     private readonly Configuration _configuration;
-    private readonly Difficulty _difficulty;
     private readonly Randomness _randomness;
     private readonly Nodes _nodes;
-
-    public List<Block> GlobalBlockChain { get; private set; }
+    private readonly Difficulty _difficulty;
 
     public Consensus(
-        Configuration configuration, 
-        Difficulty difficulty, 
-        Randomness randomness, 
-        Nodes nodes)
+        Configuration configuration,
+        Randomness randomness,
+        Nodes nodes,
+        Difficulty difficulty)
     {
         _configuration = configuration;
-        _difficulty = difficulty;
         _randomness = randomness;
         _nodes = nodes;
+        _difficulty = difficulty;
 
         GlobalBlockChain = new List<Block>();
     }
@@ -29,12 +29,13 @@ public sealed class Consensus
     public double Protocol(Node miner)
     {
         var relativeHashPower = _difficulty.GetRelativeHashPower(miner);
-        return _randomness.Expovariate(relativeHashPower * (1.0f / _configuration.Block.AverageIntervalInSeconds));
+        var blockRate = 1.0 / _configuration.Block.AverageIntervalInSeconds;
+        return _randomness.Expovariate(relativeHashPower * blockRate);
     }
     
     public void ResolveForks()
     {
-        var maximumBlockChainLength = _nodes.MaxBy(node => node.BlockChainLength)?.BlockChainLength ?? 0;
+        var maximumBlockChainLength = _nodes.MaximumBlockChainLength;
     
         var minersWithBlockChainsOfMaximumLength = _nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
@@ -45,7 +46,7 @@ public sealed class Consensus
         {
             var groupedByMiner = _nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
-                .GroupBy(node => node.LastBlock.Miner.NodeId)
+                .GroupBy(node => node.LastBlock.Miner!.NodeId)
                 .Select(group => new { Miner = group.Key, Count = group.Count() })
                 .ToList();
     

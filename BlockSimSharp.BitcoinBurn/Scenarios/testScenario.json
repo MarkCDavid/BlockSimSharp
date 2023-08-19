@@ -11,7 +11,7 @@
     "StaticSeed": 400400
   },
   "Difficulty": {
-    "DifficultyAdjustmentFrequencyInBlocks": 2016
+    "AdjustmentFrequencyInBlocks": 2016
   },
   "Simulation": {
     "LengthInSeconds": 10000000

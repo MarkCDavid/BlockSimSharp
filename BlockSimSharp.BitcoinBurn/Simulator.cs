@@ -1,26 +1,35 @@
 using BlockSimSharp.BitcoinBurn.Simulation;
+using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
-using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn;
 
 public class Simulator
 {
     private readonly Configuration _configuration;
+    private readonly EventPool _eventPool;
     private readonly Nodes _nodes;
-    private readonly Scheduler _scheduler;
     private readonly Consensus _consensus;
     private readonly Incentives _incentives;
+    private readonly Scheduler _scheduler;
     private readonly Statistics _statistics;
 
-    public Simulator(Configuration configuration, Nodes nodes, Scheduler scheduler, Consensus consensus, Incentives incentives, Statistics statistics)
+    public Simulator(
+        Configuration configuration, 
+        EventPool eventPool,
+        Nodes nodes, 
+        Consensus consensus, 
+        Incentives incentives,
+        Scheduler scheduler, 
+        Statistics statistics)
     {
         _configuration = configuration;
+        _eventPool = eventPool;
         _nodes = nodes;
-        _scheduler = scheduler;
         _consensus = consensus;
         _incentives = incentives;
+        _scheduler = scheduler;
         _statistics = statistics;
     }
 
@@ -38,15 +47,15 @@ public class Simulator
     {
         foreach (var node in _nodes)
         {
-            _scheduler.ScheduleInitialEvents(node);
+            _scheduler.ScheduleMineBlockEvent(null, node);
         }
     }
 
     private void RunSimulation()
     {
-        while (_scheduler.HasEvents())
+        while (_eventPool.HasEvents())
         {
-            var @event = _scheduler.NextEvent();
+            var @event = _eventPool.NextEvent();
             
             if (@event.EventTime >= _configuration.Simulation.LengthInSeconds)
                 return;

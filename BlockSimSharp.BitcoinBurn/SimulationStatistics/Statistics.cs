@@ -67,7 +67,7 @@ public class Statistics
         {
             var currentBlock = _consensus.GlobalBlockChain[blockIndex];
             var previousBlock = _consensus.GlobalBlockChain[blockIndex - 1];
-            AverageBlockMiningTimeInSeconds += currentBlock.ExecutedAt - previousBlock.ExecutedAt;
+            AverageBlockMiningTimeInSeconds += currentBlock.MinedAt - previousBlock.MinedAt;
         }
         
         AverageBlockMiningTimeInSeconds /= (_consensus.GlobalBlockChain.Count - 1);

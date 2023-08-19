@@ -1,5 +1,5 @@
+using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
-using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
@@ -15,7 +15,9 @@ public sealed class Nodes: List<Node>
         BuildNodes();
     }
 
+    public IEnumerable<Node> Without(int nodeId) => this.Where(node => node.NodeId != nodeId);
     public double TotalHashPower => this.Sum(node => node.HashPower);
+    public int MaximumBlockChainLength => this.Select(node => node.BlockChainLength).Max();
 
     private void BuildNodes()
     {

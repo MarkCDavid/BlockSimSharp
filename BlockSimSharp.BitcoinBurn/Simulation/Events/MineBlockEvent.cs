@@ -18,8 +18,8 @@ public sealed class MineBlockEvent: Event
     public override void Handle()
     {
         // This check allows us to discard an event that has already been scheduled,
-        // because this node has accepted a new block into the blockchain in the
-        // meantime.
+        // because the target node has accepted a new block into the blockchain in
+        // the meantime.
         var blockSequenceValid = Block.PreviousBlock?.BlockId == Node.LastBlock.BlockId;
         if (!blockSequenceValid)
             return;
@@ -27,9 +27,10 @@ public sealed class MineBlockEvent: Event
         _statistics.TotalBlocks += 1;
         
         Node.BlockChain.Add(Block);
+        
         _difficulty.OnBlockMined(Node);
 
-        _scheduler.TryScheduleReceiveBlockEvents(this);
-        _scheduler.TryScheduleMineBlockEvent(this, Node);
+        _scheduler.ScheduleReceiveBlockEvents(this);
+        _scheduler.ScheduleMineBlockEvent(this, Node);
     }
 }

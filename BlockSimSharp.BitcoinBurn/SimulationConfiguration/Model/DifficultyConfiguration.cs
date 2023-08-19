@@ -1,6 +1,6 @@
-namespace BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+namespace BlockSimSharp.BitcoinBurn.SimulationConfiguration.Model;
 
 public class DifficultyConfiguration
 {
-    public int DifficultyAdjustmentFrequencyInBlocks { get; set; }
+    public int AdjustmentFrequencyInBlocks { get; set; }
 }
