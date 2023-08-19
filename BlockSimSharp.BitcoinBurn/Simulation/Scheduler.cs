@@ -9,7 +9,7 @@ public sealed class Scheduler
 {
     private readonly Configuration _configuration;
     private readonly Consensus _consensus;
-    private readonly IReadOnlyList<Node> _nodes;
+    private readonly Nodes _nodes;
     private readonly Network _network;
     private readonly Randomness _randomness;
     private readonly Difficulty _difficulty;
@@ -20,7 +20,7 @@ public sealed class Scheduler
     
     private readonly PriorityQueue<Event, double> _queue;
     
-    public Scheduler(Configuration configuration, Consensus consensus, IReadOnlyList<Node> nodes, Network network, Randomness randomness, Difficulty difficulty, Statistics statistics)
+    public Scheduler(Configuration configuration, Consensus consensus, Nodes nodes, Network network, Randomness randomness, Difficulty difficulty, Statistics statistics)
     {
         _configuration = configuration;
         _consensus = consensus;
@@ -67,7 +67,7 @@ public sealed class Scheduler
         
         foreach (var receiver in _nodes.Where(node => node.NodeId != baseEvent.Block.Miner.NodeId))
         {
-            Enqueue(new ReceiveBlockEvent(_configuration, this)
+            Enqueue(new ReceiveBlockEvent(this)
             {
                 Node = receiver,
                 Block = baseEvent.Block,
@@ -78,7 +78,7 @@ public sealed class Scheduler
 
     private void ScheduleMineBlockEvent(Block block, Node node, double eventTime)
     {
-        Enqueue(new MineBlockEvent(_configuration, this, _difficulty, _statistics)
+        Enqueue(new MineBlockEvent(this, _difficulty, _statistics)
         {
             Node = node,
             EventTime = eventTime,

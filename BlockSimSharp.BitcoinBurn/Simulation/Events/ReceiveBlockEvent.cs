@@ -1,16 +1,11 @@
-using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
-using BlockSimSharp.Core.Configuration.Enum;
-
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 
-public class ReceiveBlockEvent: Event
+public sealed class ReceiveBlockEvent: Event
 {
-    private readonly Configuration _configuration;
     private readonly Scheduler _scheduler;
 
-    public ReceiveBlockEvent(Configuration configuration, Scheduler scheduler)
+    public ReceiveBlockEvent(Scheduler scheduler)
     {
-        _configuration = configuration;
         _scheduler = scheduler;
     }
 

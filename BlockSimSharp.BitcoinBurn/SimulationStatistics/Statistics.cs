@@ -34,7 +34,7 @@ public class Statistics
     public List<ProfitStatistics> ProfitStatistics { get; set; }
     public List<BlockStatistics> BlockStatistics { get; set; }
 
-    public void Calculate(IEnumerable<Model.Node> nodes)
+    public void Calculate(Nodes nodes)
     {
         Timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss");
         Nodes = nodes.Select(node => new SimulationNode(node)).ToList();

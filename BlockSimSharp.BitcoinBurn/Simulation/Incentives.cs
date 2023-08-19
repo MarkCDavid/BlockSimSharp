@@ -2,7 +2,7 @@ using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
-public class Incentives
+public sealed class Incentives
 {
     private readonly Configuration _configuration;
     private readonly Consensus _consensus;

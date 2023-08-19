@@ -8,13 +8,13 @@ namespace BlockSimSharp.BitcoinBurn;
 public class Simulator
 {
     private readonly Configuration _configuration;
-    private readonly IReadOnlyList<Node> _nodes;
+    private readonly Nodes _nodes;
     private readonly Scheduler _scheduler;
     private readonly Consensus _consensus;
     private readonly Incentives _incentives;
     private readonly Statistics _statistics;
 
-    public Simulator(Configuration configuration, IReadOnlyList<Node> nodes, Scheduler scheduler, Consensus consensus, Incentives incentives, Statistics statistics)
+    public Simulator(Configuration configuration, Nodes nodes, Scheduler scheduler, Consensus consensus, Incentives incentives, Statistics statistics)
     {
         _configuration = configuration;
         _nodes = nodes;

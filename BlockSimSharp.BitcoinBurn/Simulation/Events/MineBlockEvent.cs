@@ -1,19 +1,15 @@
-using BlockSimSharp.Core.Configuration.Enum;
-using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 
-public class MineBlockEvent: Event
+public sealed class MineBlockEvent: Event
 {
-    private readonly Configuration _configuration;
     private readonly Scheduler _scheduler;
     private readonly Difficulty _difficulty;
     private readonly Statistics _statistics;
 
-    public MineBlockEvent(Configuration configuration, Scheduler scheduler, Difficulty difficulty, Statistics statistics)
+    public MineBlockEvent(Scheduler scheduler, Difficulty difficulty, Statistics statistics)
     {
-        _configuration = configuration;
         _scheduler = scheduler;
         _difficulty = difficulty;
         _statistics = statistics;

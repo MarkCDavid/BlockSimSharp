@@ -9,11 +9,11 @@ public sealed class Difficulty
     public double CurrentDifficulty { get; private set; }
     public List<DifficultyHistory> History { get; init; }
     
-    public Difficulty(Configuration configuration, IReadOnlyList<Node> nodes)
+    public Difficulty(Configuration configuration, Nodes nodes)
     {
         _configuration = configuration;
         
-        CurrentDifficulty = nodes.Sum(node => node.HashPower);
+        CurrentDifficulty = nodes.TotalHashPower;
         History = new List<DifficultyHistory>
         {
             new(0, CurrentDifficulty)

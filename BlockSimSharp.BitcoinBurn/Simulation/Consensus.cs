@@ -8,7 +8,7 @@ public sealed class Consensus
     private readonly Configuration _configuration;
     private readonly Difficulty _difficulty;
     private readonly Randomness _randomness;
-    private readonly List<Node> _nodes;
+    private readonly Nodes _nodes;
 
     public List<Block> GlobalBlockChain { get; private set; }
 
@@ -16,7 +16,7 @@ public sealed class Consensus
         Configuration configuration, 
         Difficulty difficulty, 
         Randomness randomness, 
-        List<Node> nodes)
+        Nodes nodes)
     {
         _configuration = configuration;
         _difficulty = difficulty;

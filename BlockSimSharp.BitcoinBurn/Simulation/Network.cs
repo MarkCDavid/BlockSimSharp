@@ -2,7 +2,7 @@ using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
-public class Network
+public sealed class Network
 {
     private readonly Configuration _configuration;
     private readonly Randomness _randomness;
@@ -13,7 +13,7 @@ public class Network
         _randomness = randomness;
     }
     
-    public virtual double BlockPropogationDelay()
+    public double BlockPropogationDelay()
     {
         if (_configuration.Block.AveragePropogationDelay == 0)
         {
