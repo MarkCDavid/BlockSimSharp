@@ -1,5 +1,5 @@
-using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 

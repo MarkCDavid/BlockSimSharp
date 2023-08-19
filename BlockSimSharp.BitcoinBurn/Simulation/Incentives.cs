@@ -23,7 +23,6 @@ public class Incentives
             
             miner.Blocks += 1;
             miner.Balance += _configuration.Block.Reward;
-            miner.Balance += block.TotalBlockFee;
         }
     }
 

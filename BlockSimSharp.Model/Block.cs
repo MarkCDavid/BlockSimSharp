@@ -1,4 +1,4 @@
-namespace BlockSimSharp.BitcoinBurn.Model;
+namespace BlockSimSharp.Model;
 
 public class Block
 {
@@ -11,8 +11,4 @@ public class Block
     public double ExecutedAt { get; set; }
     public double ScheduledAt { get; set; }
     public double UsedGas { get; set; }
-    
-    public List<Transaction> Transactions { get; set; } = new();
-    
-    public double TotalBlockFee => Transactions.Sum(transaction => transaction.Fee);
 }

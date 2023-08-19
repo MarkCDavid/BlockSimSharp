@@ -2,8 +2,8 @@
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration.Factory;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
+using BlockSimSharp.Model;
 using Newtonsoft.Json;
-using Node = BlockSimSharp.BitcoinBurn.Model.Node;
 using Randomness = BlockSimSharp.BitcoinBurn.Simulation.Randomness;
 
 namespace BlockSimSharp.BitcoinBurn;

@@ -1,8 +1,7 @@
-using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
-using Node = BlockSimSharp.BitcoinBurn.Model.Node;
+using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 

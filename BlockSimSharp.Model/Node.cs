@@ -1,10 +1,9 @@
-namespace BlockSimSharp.BitcoinBurn.Model;
+namespace BlockSimSharp.Model;
 
 public class Node
 {
     public int NodeId { get; }
     public List<Block> BlockChain { get; }
-    public List<Transaction> TransactionPool { get; private set; }
     public int Blocks { get; set; }
     public double Balance { get; set; } 
     public Block? CurrentlyMinedBlock { get; set; }
@@ -14,7 +13,6 @@ public class Node
     {
         NodeId = nodeId;
         BlockChain = new List<Block> { new() };
-        TransactionPool = new List<Transaction>();
         Blocks = 0;
         Balance = 0.0f;
         HashPower = hashPower;
@@ -40,18 +38,5 @@ public class Node
             else
                 BlockChain.Add(sourceBaseNode.BlockChain[index]);
         }
-        
-      
-    }
-
-    public void UpdateTransactionPool(Block block)
-    {
-        var blockTransactionIds = block.Transactions
-            .Select(transaction => transaction.TransactionId)
-            .ToHashSet();
-        
-        TransactionPool = TransactionPool
-            .Where(transaction => !blockTransactionIds.Contains(transaction.TransactionId))
-            .ToList();
     }
 }

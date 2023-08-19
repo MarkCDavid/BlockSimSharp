@@ -19,5 +19,9 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BlockSimSharp.Model\BlockSimSharp.Model.csproj" />
+    </ItemGroup>
     
 </Project>

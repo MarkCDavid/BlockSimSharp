@@ -1,4 +1,4 @@
-using BlockSimSharp.BitcoinBurn.Model;
+using BlockSimSharp.Model;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 

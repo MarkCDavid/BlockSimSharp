@@ -22,14 +22,12 @@ public class Statistics
     public Difficulty Difficulty { get; init; }
 
     // public Dictionary<string, ISettings> Configuration { get; set; } = null!;
-    public List<Node> Nodes { get; set; } = null!;
-    public Dictionary<int, double> HistoryOfDifficulty { get; set; } = null!;
+    public List<SimulationNode> Nodes { get; set; } = null!;
 
     public int TotalBlocks { get; set; }
     public int MainBlocks { get; set; }
     public int StaleBlocks { get; set; }
     public double StaleRate { get; set; }
-    public int TotalTransactions { get; set; }
     
     public double AverageBlockMiningTimeInSeconds { get; set; }
     public TotalStatistics Totals { get; set; } = null!;
@@ -39,7 +37,7 @@ public class Statistics
     public void Calculate(IEnumerable<Model.Node> nodes)
     {
         Timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss");
-        Nodes = nodes.Select(node => new Node(node)).ToList();
+        Nodes = nodes.Select(node => new SimulationNode(node)).ToList();
         
         // CalculateTotals(context);
         CalculateSimulationStatistics();
@@ -63,7 +61,6 @@ public class Statistics
         MainBlocks = _consensus.GlobalBlockChain.Count - 1;
         StaleBlocks = TotalBlocks - MainBlocks;
         StaleRate = Math.Round((double)StaleBlocks / TotalBlocks, 2);
-        TotalTransactions = _consensus.GlobalBlockChain.Sum(block => block.Transactions.Count);
         
         
         for (var blockIndex = _consensus.GlobalBlockChain.Count - 1; blockIndex > 0; blockIndex--)
