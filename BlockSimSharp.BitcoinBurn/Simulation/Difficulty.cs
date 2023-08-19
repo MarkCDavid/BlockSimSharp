@@ -1,81 +1,68 @@
-using BlockSimSharp.BitcoinBurn.Configuration;
 using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Configuration;
-using BlockSimSharp.Core.Configuration.Model;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
-public class Difficulty
+public sealed class Difficulty
 {
-    public float CurrentDifficulty { get; private set; }
-    public Dictionary<int, float> DifficultyHistory { get; init; }
+    private readonly Configuration _configuration;
+    public double CurrentDifficulty { get; private set; }
+    public List<DifficultyHistory> History { get; init; }
     
-    public Difficulty(Nodes nodes)
+    public Difficulty(Configuration configuration, IReadOnlyList<Node> nodes)
     {
+        _configuration = configuration;
+        
         CurrentDifficulty = nodes.Sum(node => node.HashPower);
-        DifficultyHistory = new Dictionary<int, float>
+        History = new List<DifficultyHistory>
         {
-            {0, CurrentDifficulty}
+            new(0, CurrentDifficulty)
         };
     }
 
-    public float GetRelativeHashPower(Node miner)
+    public double GetRelativeHashPower(Node miner)
     {
         return miner.HashPower / CurrentDifficulty;
     }
     
-    public void OnBlockMined(Node miner, SimulationContext context)
-    {
-        var settings = context.Get<Settings>();
-        var difficultySettings = settings.Get<DifficultySettings>();
+    public void OnBlockMined(Node miner)
+    {;
         
-        if (miner.BlockChainLength % difficultySettings.DifficultyAdjustmentFrequencyInBlocks != 0)
+        if (miner.BlockChainLength % _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks != 0)
             return;
 
-        var epoch = miner.BlockChainLength / difficultySettings.DifficultyAdjustmentFrequencyInBlocks + 1;
+        var epoch = miner.BlockChainLength / _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks + 1;
 
-        CurrentDifficulty = CalculateAdjustedDifficulty(miner, context);
-        DifficultyHistory.Add(epoch, CurrentDifficulty);
+        CurrentDifficulty = CalculateAdjustedDifficulty(miner);
+        History.Add(new DifficultyHistory(epoch, CurrentDifficulty));
     }
 
-    private float CalculateAdjustedDifficulty(Node miner, SimulationContext context)
+    private double CalculateAdjustedDifficulty(Node miner)
     {
-        var settings = context.Get<Settings>();
-        var difficultySettings = settings.Get<DifficultySettings>();
-        var blockSettings = settings.Get<BlockSettings>();
-
         var lastBlockOfCurrentEpoch = 
             miner.LastBlock;
         
         var lastBlockOfPreviousEpoch = 
-            miner.BlockChain[miner.BlockChainLength - difficultySettings.DifficultyAdjustmentFrequencyInBlocks];
+            miner.BlockChain[miner.BlockChainLength - _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks];
 
-        var actualMiningTime = lastBlockOfCurrentEpoch.Timestamp - lastBlockOfPreviousEpoch.Timestamp;
+        var actualMiningTime = lastBlockOfCurrentEpoch.ExecutedAt - lastBlockOfPreviousEpoch.ExecutedAt;
 
         var expectedMiningTime = 
-            difficultySettings.DifficultyAdjustmentFrequencyInBlocks * blockSettings.AverageIntervalInSeconds;
+            _configuration.Difficulty.DifficultyAdjustmentFrequencyInBlocks * _configuration.Block.AverageIntervalInSeconds;
 
         return CurrentDifficulty * GetDifficultyChangeRatio(expectedMiningTime, actualMiningTime);
     }
 
-    private float GetDifficultyChangeRatio(float expectedMiningTime, float actualMiningTime)
+    private static double GetDifficultyChangeRatio(double expectedMiningTime, double actualMiningTime)
     {
         var difficultyChangeRatio = expectedMiningTime / actualMiningTime;
-
-        if (difficultyChangeRatio > 4)
+        return difficultyChangeRatio switch
         {
-            return 4;
-        }
-
-        if (difficultyChangeRatio < 0.25)
-        {
-            return 0.25f;
-        }
-
-        return difficultyChangeRatio;
+            > 4 => 4,
+            < 0.25 => 0.25,
+            _ => difficultyChangeRatio
+        };
     }
-
-    
-    
 }
+
+public sealed record DifficultyHistory(int Epoch, double Difficulty);

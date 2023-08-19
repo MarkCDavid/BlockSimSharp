@@ -1,13 +1,10 @@
-﻿using BlockSimSharp.BitcoinBurn.Configuration;
-using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.BitcoinBurn.Simulation;
-using BlockSimSharp.BitcoinBurn.Simulation.Statistics;
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Configuration;
-using BlockSimSharp.Core.Simulation;
-using BlockSimSharp.Core.Simulation.TransactionContext;
+﻿using BlockSimSharp.BitcoinBurn.Simulation;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration.Factory;
+using BlockSimSharp.BitcoinBurn.SimulationStatistics;
 using Newtonsoft.Json;
 using Node = BlockSimSharp.BitcoinBurn.Model.Node;
+using Randomness = BlockSimSharp.BitcoinBurn.Simulation.Randomness;
 
 namespace BlockSimSharp.BitcoinBurn;
 
@@ -25,73 +22,39 @@ internal abstract class Program
 
     private static void RunScenario(string configurationPath)
     {
-        var settings = new SimulationSettingsFactory().Build(configurationPath);
+        var configuration = ConfigurationFactory.Build(configurationPath);
+        var randomness = new Randomness(configuration);
+        var nodes = BuildNodes(configuration, randomness);
+        var difficulty = new Difficulty(configuration, nodes);
+        var consensus = new Consensus(configuration, difficulty, randomness, nodes);
+        var network = new Network(configuration, randomness);
+        var statistics = new Statistics(configuration, difficulty, consensus);
+        var scheduler = new Scheduler(configuration, consensus, nodes, network, randomness, difficulty, statistics, null);
+        var incentives = new Incentives(configuration, consensus);
 
-        var simulationContext = BuildSimulationContext(settings);
+        var simulator = new Simulator(configuration, null, nodes, scheduler, consensus, incentives, statistics);
+        simulator.Simulate();
 
-        new Simulator<Transaction, Block, Node>().Simulate(simulationContext);
-
-        SaveSimulationStatistics(
-            settings.Get<ScenarioSettings>().ScenarioName,
-            simulationContext.Get<Statistics>());
+        SaveSimulationStatistics(configuration.ScenarioName, statistics);
     }
 
-    private static void EnsureConfigurationWasProvided(string[] args)
+    private static void EnsureConfigurationWasProvided(IReadOnlyCollection<string> args)
     {
-        if (args.Length < 1)
+        if (args.Count < 1)
         {
             throw new Exception("No configurations provided!");
         }
     }
 
-    private static SimulationContext BuildSimulationContext(Settings settings)
+    private static List<Node> BuildNodes(Configuration configuration, Randomness randomness)
     {
-        var simulationContext = new SimulationContext();
-        simulationContext.Register<Settings, Settings>(settings);
-        
-        var randomness = new Randomness(settings);
-        simulationContext.Register<Randomness, Randomness>(randomness);
+        var nodes = new List<Node>();
 
-        var nodes = BuildNodes(settings, randomness);
-        simulationContext.Register<BaseNodes<Transaction, Block, Node>, Nodes>(nodes);
-
-        var difficulty = new Difficulty(nodes);
-        simulationContext.Register<Difficulty, Difficulty>(difficulty);
-        
-        var transactionContext = new TransactionContextFactory<Transaction, Block, Node>().BuildTransactionContext(settings);
-        simulationContext.Register<BaseTransactionContext<Transaction, Block, Node>, BaseTransactionContext<Transaction, Block, Node>>(transactionContext);
-
-        simulationContext
-            .Register<BaseConsensus<Transaction, Block, Node>, Consensus>(new Consensus());
-
-        simulationContext
-            .Register<BaseScheduler<Transaction, Block, Node>, Scheduler>(new Scheduler());
-
-        simulationContext
-            .Register<BaseNetwork, Network>(new Network());
-
-        simulationContext
-            .Register<BaseIncentives, Incentives>(new Incentives());
-
-        simulationContext
-            .Register<BaseStatistics, Statistics>(new Statistics());
-
-        simulationContext
-            .Register<Constants, Constants>(new Constants(simulationContext));
-        
-        return simulationContext;
-    }
-
-    private static Nodes BuildNodes(Settings settings, Randomness randomness)
-    {
-        var nodeSettings = settings.Get<NodeSettings>();
-        var nodes = new Nodes();
-
-        for (var nodeId = 0; nodeId < nodeSettings.StartingNodeCount; nodeId++)
+        for (var nodeId = 0; nodeId < configuration.Node.StartingNodeCount; nodeId++)
         {
             // Aoki et al. (2019) SimBlock
-            var hashPower = randomness.NextGaussian() * nodeSettings.StandardDeviationOfHashRate + nodeSettings.AverageHashRate;
-            hashPower = MathF.Max(hashPower, 1);
+            var hashPower = randomness.NextGaussian() * configuration.Node.StandardDeviationOfHashRate + configuration.Node.AverageHashRate;
+            hashPower = Math.Max(hashPower, 1);
             nodes.Add(new Node(nodeId, hashPower));
         }
         

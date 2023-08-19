@@ -1,9 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Core", "BlockSimSharp.Core\BlockSimSharp.Core.csproj", "{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.Bitcoin", "BlockSimSharp.Bitcoin\BlockSimSharp.Bitcoin.csproj", "{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockSimSharp.BitcoinBurn", "BlockSimSharp.BitcoinBurn\BlockSimSharp.BitcoinBurn.csproj", "{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}"
 EndProject
 Global
@@ -12,14 +8,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD84AD66-271B-415C-8BB8-18B0CEB1DA02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CFF7DE7-AFA5-49F6-BDCE-0BB74D3A75E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846DF89F-A7FD-4EB4-AA0F-939CE4EC924F}.Release|Any CPU.ActiveCfg = Release|Any CPU

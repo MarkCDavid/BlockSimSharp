@@ -1,9 +1,9 @@
-namespace BlockSimSharp.BitcoinBurn.Simulation.Statistics;
+namespace BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
 public class Node
 {
     public int Id { get; set; }
-    public float HashPower { get; set; }
+    public double HashPower { get; set; }
     
     public Node(Model.Node node)
     {

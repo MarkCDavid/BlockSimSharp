@@ -1,4 +1,4 @@
-namespace BlockSimSharp.Core.Simulation;
+using BlockSimSharp.Core;
 
 public abstract class BaseIncentives
 {

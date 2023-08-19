@@ -1,27 +1,26 @@
-using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Configuration;
+using BlockSimSharp.BitcoinBurn.Simulation.Context.Transaction;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.Core.Configuration.Enum;
-using BlockSimSharp.Core.Configuration.Model;
-using BlockSimSharp.Core.Simulation;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 
-public class ReceiveBlockEvent: BaseEvent<Transaction, Block, Node>
+public class ReceiveBlockEvent: Event
 {
-    public override void Handle(SimulationContext context)
+    private readonly Configuration _configuration;
+    private readonly Scheduler _scheduler;
+    private readonly TransactionContext? _transactionContext;
+
+    public ReceiveBlockEvent(Configuration configuration, Scheduler scheduler, TransactionContext? transactionContext)
+    {
+        _configuration = configuration;
+        _scheduler = scheduler;
+        _transactionContext = transactionContext;
+    }
+
+    public override void Handle()
     {
         var nextBlockInRecipientBlockChain = Block.PreviousBlock?.BlockId == Node.LastBlock.BlockId;
         
-        var settings = context.Get<Settings>();
-        var scheduler = context.Get<Scheduler>();
-        var transactionSettings = settings.Get<TransactionSettings>();
-        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
-
-        var consensus = context.Get<Consensus>();
-        var powerCost = consensus.PowerCost(context, Node, EventTime);
-        // Node.TotalPowerCost += powerCost;
-       
         // The last block in our block chain matches the last block that the new mined block
         // is based on. As such, we do not need to modify our local blockchain and we can simply
         // accept the block into our blockchain.
@@ -29,14 +28,14 @@ public class ReceiveBlockEvent: BaseEvent<Transaction, Block, Node>
         {
             Node.BlockChain.Add(Block);
             
-            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
+            if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
             {
                 Node.UpdateTransactionPool(Block);
             }
             
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
-            scheduler.TryScheduleMineBlockEvent(context, this, Node);
+            _scheduler.TryScheduleMineBlockEvent(this, Node);
         }
         else
         {  
@@ -46,7 +45,7 @@ public class ReceiveBlockEvent: BaseEvent<Transaction, Block, Node>
             {
                 Node.UpdateLocalBlockChain(Block.Miner, Block.Depth + 1);
                 
-                if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
+                if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
                 {
                     Node.UpdateTransactionPool(Node.LastBlock);
                 }
@@ -55,10 +54,10 @@ public class ReceiveBlockEvent: BaseEvent<Transaction, Block, Node>
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
                 
-                scheduler.TryScheduleMineBlockEvent(context, this, Node);
+                _scheduler.TryScheduleMineBlockEvent(this, Node);
             }
             
-            if (transactionSettings is { Enabled: true, Type: TransactionContextType.Full } && transactionContext is not null)
+            if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
             {
                 Node.UpdateTransactionPool(Block);
             }

@@ -1,33 +1,30 @@
-using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Configuration;
-using BlockSimSharp.Core.Configuration.Model;
-using BlockSimSharp.Core.Simulation;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
-public class Incentives: BaseIncentives
+public class Incentives
 {
-    public override void DistributeRewards(SimulationContext context)
+    private readonly Configuration _configuration;
+    private readonly Consensus _consensus;
+    
+    public Incentives(Configuration configuration, Consensus consensus)
     {
-        var consensus = context.Get<Consensus>();
-        
-        var settings = context.Get<Settings>();
-        var blockSettings = settings.Get<BlockSettings>();
-        
-        foreach (var block in consensus.GlobalBlockChain)
+        _configuration = configuration;
+        _consensus = consensus;
+    }
+    
+    public void DistributeRewards()
+    {
+        foreach (var block in _consensus.GlobalBlockChain)
         {
-            if (block.Miner is null)
+            var miner = block.Miner;
+            if (miner is null)
                 continue;
             
-            block.Miner.Blocks += 1;
-            block.Miner.Balance += blockSettings.Reward;
-            block.Miner.Balance += TransactionFee(block);
+            miner.Blocks += 1;
+            miner.Balance += _configuration.Block.Reward;
+            miner.Balance += block.TotalBlockFee;
         }
     }
 
-    private static float TransactionFee(Block block)
-    {
-        return block.Transactions.Sum(transaction => transaction.Fee);
-    }
 }

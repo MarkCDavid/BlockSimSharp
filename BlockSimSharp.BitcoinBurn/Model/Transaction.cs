@@ -1,12 +1,24 @@
-using BlockSimSharp.Core.Model;
-
 namespace BlockSimSharp.BitcoinBurn.Model;
 
-public class Transaction: BaseTransaction<Transaction, Block, Node>
+public class Transaction
 {
-    public float UsedGas { get; set; }
     
-    public override Transaction Clone()
+    public int TransactionId { get; set; }
+        
+    public double TransactionCreateTime { get; set; }
+    public double TransactionReceiveTime { get; set; }
+        
+    public Node SenderNode { get; set; }
+    public Node ReceiverNode { get; set; }
+        
+    public double Value { get; set; }
+    public double Fee { get; set; }
+        
+    public double SizeInMb { get; set; }
+
+    public double UsedGas { get; set; }
+    
+    public Transaction Clone()
     {
         return new Transaction
         {

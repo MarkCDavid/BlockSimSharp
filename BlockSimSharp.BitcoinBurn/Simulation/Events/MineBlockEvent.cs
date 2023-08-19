@@ -1,15 +1,28 @@
-using BlockSimSharp.Core;
-using BlockSimSharp.Core.Simulation;
-using BlockSimSharp.Core.Configuration;
+using BlockSimSharp.BitcoinBurn.Simulation.Context.Transaction;
 using BlockSimSharp.Core.Configuration.Enum;
-using BlockSimSharp.Core.Configuration.Model;
-using BlockSimSharp.BitcoinBurn.Model;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+using BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation.Events;
 
-public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
+public class MineBlockEvent: Event
 {
-    public override void Handle(SimulationContext context)
+    private readonly Configuration _configuration;
+    private readonly Scheduler _scheduler;
+    private readonly Difficulty _difficulty;
+    private readonly Statistics _statistics;
+    private readonly TransactionContext? _transactionContext;
+
+    public MineBlockEvent(Configuration configuration, Scheduler scheduler, Difficulty difficulty, Statistics statistics, TransactionContext? transactionContext)
+    {
+        _configuration = configuration;
+        _scheduler = scheduler;
+        _difficulty = difficulty;
+        _statistics = statistics;
+        _transactionContext = transactionContext;
+    }
+    
+    public override void Handle()
     {
         // This check allows us to discard an event that has already been scheduled,
         // because this node has accepted a new block into the blockchain in the
@@ -18,34 +31,24 @@ public class MineBlockEvent: BaseEvent<Transaction, Block, Node>
         if (!blockSequenceValid)
             return;
 
-        var consensus = context.Get<Consensus>();
-        var powerCost = consensus.PowerCost(context, Node, EventTime);
-        // Node.TotalPowerCost += powerCost;
+        _statistics.TotalBlocks += 1;
         
-        var simulationStatistics = context.Get<Statistics.Statistics>();
-        simulationStatistics.TotalBlocks += 1;
-
-        var settings = context.Get<Settings>();
-        var transactionSettings = settings.Get<TransactionSettings>();
-        var transactionContext = context.TryGet<BaseTransactionContext<Transaction, Block, Node>>();
-
-        if (transactionSettings.Enabled && transactionContext is not null)
+        if (_configuration.Transaction.Enabled && _transactionContext is not null)
         {
-            var (transactions, sizeInMb) = transactionContext.CollectTransactions(context, Node, EventTime);
+            var (transactions, sizeInMb) = _transactionContext.CollectTransactions(Node, EventTime);
             Block.Transactions = transactions;
             Block.UsedGas = sizeInMb;
         }
 
         Node.BlockChain.Add(Block);
-        context.Get<Difficulty>().OnBlockMined(Node, context);
+        _difficulty.OnBlockMined(Node);
 
-        if (transactionSettings is { Enabled: true, Type: TransactionContextType.Light } && transactionContext is not null)
+        if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Light && _transactionContext is not null)
         {
-            transactionContext.CreateTransactions(context);
+            _transactionContext.CreateTransactions();
         }
         
-        var scheduler = context.Get<Scheduler>();
-        scheduler.TryScheduleReceiveBlockEvents(context, this);
-        scheduler.TryScheduleMineBlockEvent(context, this, Node);
+        _scheduler.TryScheduleReceiveBlockEvents(this);
+        _scheduler.TryScheduleMineBlockEvent(this, Node);
     }
 }
