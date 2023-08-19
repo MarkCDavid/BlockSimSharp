@@ -1,4 +1,3 @@
-using BlockSimSharp.BitcoinBurn.Simulation.Context.Transaction;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.Core.Configuration.Enum;
 
@@ -8,13 +7,11 @@ public class ReceiveBlockEvent: Event
 {
     private readonly Configuration _configuration;
     private readonly Scheduler _scheduler;
-    private readonly TransactionContext? _transactionContext;
 
-    public ReceiveBlockEvent(Configuration configuration, Scheduler scheduler, TransactionContext? transactionContext)
+    public ReceiveBlockEvent(Configuration configuration, Scheduler scheduler)
     {
         _configuration = configuration;
         _scheduler = scheduler;
-        _transactionContext = transactionContext;
     }
 
     public override void Handle()
@@ -28,11 +25,6 @@ public class ReceiveBlockEvent: Event
         {
             Node.BlockChain.Add(Block);
             
-            if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
-            {
-                Node.UpdateTransactionPool(Block);
-            }
-            
             // Once we have accepted the block, the previous scheduled event for mining a block
             // becomes invalid as such we schedule a new one immediately.
             _scheduler.TryScheduleMineBlockEvent(this, Node);
@@ -45,21 +37,11 @@ public class ReceiveBlockEvent: Event
             {
                 Node.UpdateLocalBlockChain(Block.Miner, Block.Depth + 1);
                 
-                if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
-                {
-                    Node.UpdateTransactionPool(Node.LastBlock);
-                }
-                
                 // As before, given that we have updated the last block of our blockchain, we have to
                 // reschedule an block mining event, as the one that was scheduled previously has become 
                 // invalid and will exit early during handling.
                 
                 _scheduler.TryScheduleMineBlockEvent(this, Node);
-            }
-            
-            if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Full && _transactionContext is not null)
-            {
-                Node.UpdateTransactionPool(Block);
             }
         }
     }

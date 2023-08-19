@@ -14,7 +14,6 @@ public static class ConfigurationFactory
         
         configuration.Bind(settings);
         configuration.GetSection("Block").Bind(settings.Block);
-        configuration.GetSection("Transaction").Bind(settings.Transaction);
         configuration.GetSection("RandomNumberGenerator").Bind(settings.RandomNumberGenerator);
         configuration.GetSection("Difficulty").Bind(settings.Difficulty);
         configuration.GetSection("Simulation").Bind(settings.Simulation);

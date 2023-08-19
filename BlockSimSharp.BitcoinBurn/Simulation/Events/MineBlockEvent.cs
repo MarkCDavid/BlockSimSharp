@@ -1,4 +1,3 @@
-using BlockSimSharp.BitcoinBurn.Simulation.Context.Transaction;
 using BlockSimSharp.Core.Configuration.Enum;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
@@ -11,15 +10,13 @@ public class MineBlockEvent: Event
     private readonly Scheduler _scheduler;
     private readonly Difficulty _difficulty;
     private readonly Statistics _statistics;
-    private readonly TransactionContext? _transactionContext;
 
-    public MineBlockEvent(Configuration configuration, Scheduler scheduler, Difficulty difficulty, Statistics statistics, TransactionContext? transactionContext)
+    public MineBlockEvent(Configuration configuration, Scheduler scheduler, Difficulty difficulty, Statistics statistics)
     {
         _configuration = configuration;
         _scheduler = scheduler;
         _difficulty = difficulty;
         _statistics = statistics;
-        _transactionContext = transactionContext;
     }
     
     public override void Handle()
@@ -33,21 +30,9 @@ public class MineBlockEvent: Event
 
         _statistics.TotalBlocks += 1;
         
-        if (_configuration.Transaction.Enabled && _transactionContext is not null)
-        {
-            var (transactions, sizeInMb) = _transactionContext.CollectTransactions(Node, EventTime);
-            Block.Transactions = transactions;
-            Block.UsedGas = sizeInMb;
-        }
-
         Node.BlockChain.Add(Block);
         _difficulty.OnBlockMined(Node);
 
-        if (_configuration.Transaction.Enabled && _configuration.Transaction.Type == TransactionContextType.Light && _transactionContext is not null)
-        {
-            _transactionContext.CreateTransactions();
-        }
-        
         _scheduler.TryScheduleReceiveBlockEvents(this);
         _scheduler.TryScheduleMineBlockEvent(this, Node);
     }

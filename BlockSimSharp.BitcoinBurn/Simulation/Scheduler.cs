@@ -1,5 +1,4 @@
 using BlockSimSharp.BitcoinBurn.Model;
-using BlockSimSharp.BitcoinBurn.Simulation.Context.Transaction;
 using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
@@ -16,14 +15,13 @@ public sealed class Scheduler
     private readonly Randomness _randomness;
     private readonly Difficulty _difficulty;
     private readonly Statistics _statistics;
-    private readonly TransactionContext? _transactionContext;
 
     public Event NextEvent() => _queue.Dequeue();
     public bool HasEvents() => _queue.Count != 0;
     
     private readonly PriorityQueue<Event, double> _queue;
     
-    public Scheduler(Configuration configuration, Consensus consensus, IReadOnlyList<Node> nodes, Network network, Randomness randomness, Difficulty difficulty, Statistics statistics, TransactionContext? transactionContext)
+    public Scheduler(Configuration configuration, Consensus consensus, IReadOnlyList<Node> nodes, Network network, Randomness randomness, Difficulty difficulty, Statistics statistics)
     {
         _configuration = configuration;
         _consensus = consensus;
@@ -32,7 +30,6 @@ public sealed class Scheduler
         _randomness = randomness;
         _difficulty = difficulty;
         _statistics = statistics;
-        _transactionContext = transactionContext;
         _queue = new PriorityQueue<Event, double>();
     }
 
@@ -71,7 +68,7 @@ public sealed class Scheduler
         
         foreach (var receiver in _nodes.Where(node => node.NodeId != baseEvent.Block.Miner.NodeId))
         {
-            Enqueue(new ReceiveBlockEvent(_configuration, this, _transactionContext)
+            Enqueue(new ReceiveBlockEvent(_configuration, this)
             {
                 Node = receiver,
                 Block = baseEvent.Block,
@@ -82,7 +79,7 @@ public sealed class Scheduler
 
     private void ScheduleMineBlockEvent(Block block, Node node, double eventTime)
     {
-        Enqueue(new MineBlockEvent(_configuration, this, _difficulty, _statistics, _transactionContext)
+        Enqueue(new MineBlockEvent(_configuration, this, _difficulty, _statistics)
         {
             Node = node,
             EventTime = eventTime,

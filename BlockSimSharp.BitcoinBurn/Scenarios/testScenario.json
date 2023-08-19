@@ -6,14 +6,6 @@
     "AverageIntervalInSeconds": 600,
     "AveragePropogationDelay": 0
   },
-  "Transaction": {
-    "Enabled": false,
-    "Type": "Light",
-    "RatePerSecond": 10,
-    "AverageFee": 0.000062,
-    "AverageSizeInMb": 0.000546,
-    "AveragePropogationDelay": 0
-  },
   "RandomNumberGenerator": {
     "UseStaticSeed": false,
     "StaticSeed": 400400

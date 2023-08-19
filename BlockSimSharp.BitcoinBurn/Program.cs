@@ -29,10 +29,10 @@ internal abstract class Program
         var consensus = new Consensus(configuration, difficulty, randomness, nodes);
         var network = new Network(configuration, randomness);
         var statistics = new Statistics(configuration, difficulty, consensus);
-        var scheduler = new Scheduler(configuration, consensus, nodes, network, randomness, difficulty, statistics, null);
+        var scheduler = new Scheduler(configuration, consensus, nodes, network, randomness, difficulty, statistics);
         var incentives = new Incentives(configuration, consensus);
 
-        var simulator = new Simulator(configuration, null, nodes, scheduler, consensus, incentives, statistics);
+        var simulator = new Simulator(configuration, nodes, scheduler, consensus, incentives, statistics);
         simulator.Simulate();
 
         SaveSimulationStatistics(configuration.ScenarioName, statistics);

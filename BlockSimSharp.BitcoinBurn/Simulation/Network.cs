@@ -22,14 +22,4 @@ public class Network
         
         return _randomness.Expovariate(1.0f / _configuration.Block.AveragePropogationDelay);
     }
-
-    public virtual double TransactionPropogationDelay()
-    {
-        if (_configuration.Transaction.AveragePropogationDelay == 0)
-        {
-            return 0;
-        } 
-        
-        return _randomness.Expovariate(1.0f / _configuration.Transaction.AveragePropogationDelay);
-    }
 }
