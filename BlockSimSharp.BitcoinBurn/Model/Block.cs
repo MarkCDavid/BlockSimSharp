@@ -9,4 +9,5 @@ public class  Block
     public Node? Miner { get; init; }
     public int Depth { get; init;  }
     public double MinedAt { get; init; }
+    public double ScheduledAt { get; init; }
 }

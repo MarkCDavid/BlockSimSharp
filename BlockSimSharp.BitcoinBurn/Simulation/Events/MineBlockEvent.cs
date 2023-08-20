@@ -25,6 +25,9 @@ public sealed class MineBlockEvent: Event
             return;
 
         _statistics.TotalBlocks += 1;
+
+        var timeSpentMining = EventTime - Node.CurrentlyMinedBlock!.ScheduledAt;
+        Node.PowerUsed += timeSpentMining * Node.HashPower;
         
         Node.BlockChain.Add(Block);
         

@@ -68,6 +68,5 @@ public sealed class Consensus
                 GlobalBlockChain = node.BlockChain.ToList();
             }
         }
-    
     }
 }

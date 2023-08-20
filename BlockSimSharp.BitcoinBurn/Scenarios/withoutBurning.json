@@ -1,5 +1,5 @@
 {
-  "ScenarioName": "TestScenario",
+  "ScenarioName": "WithoutBurning",
   "Block": {
     "SizeInMb": 1.0,
     "Reward": 12.5,
@@ -9,15 +9,15 @@
   "RandomNumberGenerator": {
     "UseStaticSeed": false,
     "StaticSeed": 400400,
-    "HashPowerUseStaticSeed": false,
+    "HashPowerUseStaticSeed": true,
     "HashPowerStaticSeed": 400400
   },
   "Difficulty": {
     "AdjustmentFrequencyInBlocks": 2016,
-    "DecreaseByBurnEnabled": true,
+    "DecreaseByBurnEnabled": false,
     "ProbabilityForParticipationThisEpoch": 0.5,
-    "DecreaseAmountHighBound": 2,
-    "DecreaseAmountLowBound": 2
+    "DecreaseAmountHighBound": 0.5,
+    "DecreaseAmountLowBound": 0.5
   },
   "Simulation": {
     "LengthInSeconds": 10000000

@@ -26,7 +26,10 @@ public sealed class Nodes: List<Node>
             // Aoki et al. (2019) SimBlock
             var hashPower = _randomness.NextGaussian() * _configuration.Node.StandardDeviationOfHashRate + _configuration.Node.AverageHashRate;
             hashPower = Math.Max(hashPower, 1);
-            Add(new Node(nodeId, hashPower));
+            
+            var participatesInDifficultyDecrease = nodeId > _configuration.Node.StartingNodeCount / 2;
+            var node = new Node(nodeId, hashPower, participatesInDifficultyDecrease);
+            Add(node);
         }
     }
 }

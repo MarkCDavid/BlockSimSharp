@@ -10,6 +10,7 @@ public class Simulator
     private readonly Configuration _configuration;
     private readonly EventPool _eventPool;
     private readonly Nodes _nodes;
+    private readonly Difficulty _difficulty;
     private readonly Consensus _consensus;
     private readonly Incentives _incentives;
     private readonly Scheduler _scheduler;
@@ -19,6 +20,7 @@ public class Simulator
         Configuration configuration, 
         EventPool eventPool,
         Nodes nodes, 
+        Difficulty difficulty,
         Consensus consensus, 
         Incentives incentives,
         Scheduler scheduler, 
@@ -27,6 +29,7 @@ public class Simulator
         _configuration = configuration;
         _eventPool = eventPool;
         _nodes = nodes;
+        _difficulty = difficulty;
         _consensus = consensus;
         _incentives = incentives;
         _scheduler = scheduler;
@@ -35,6 +38,8 @@ public class Simulator
 
     public void Simulate()
     {
+        _difficulty.UpdateDifficultyDecreaseParticipation();
+        
         ScheduleInitialEvents();
         RunSimulation();
         

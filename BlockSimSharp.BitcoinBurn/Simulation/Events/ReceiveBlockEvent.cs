@@ -11,6 +11,9 @@ public sealed class ReceiveBlockEvent: Event
 
     public override void Handle()
     {
+        var timeSpentMining = EventTime - Node.CurrentlyMinedBlock!.ScheduledAt;
+        Node.PowerUsed += timeSpentMining * Node.HashPower;
+        
         var nextBlockInRecipientBlockChain = Block.PreviousBlock?.BlockId == Node.LastBlock.BlockId;
         
         if (nextBlockInRecipientBlockChain)

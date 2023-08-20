@@ -30,8 +30,8 @@ public sealed class Scheduler
         if (miner.HashPower <= 0)
             return;
 
-        var eventTime = sourceEvent?.EventTime ?? 0;
-        eventTime += _consensus.Protocol(miner);
+        var scheduledEventTime = sourceEvent?.EventTime ?? 0;
+        var eventTime = scheduledEventTime + _consensus.Protocol(miner);
 
         var block = new Block
         {
@@ -39,6 +39,7 @@ public sealed class Scheduler
             PreviousBlock = miner.LastBlock,
             Miner = miner,
             Depth = miner.BlockChain.Count,
+            ScheduledAt = scheduledEventTime,
             MinedAt = eventTime
         };
 

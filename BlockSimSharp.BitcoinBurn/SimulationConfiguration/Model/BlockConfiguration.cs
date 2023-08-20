@@ -1,4 +1,4 @@
-namespace BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+namespace BlockSimSharp.BitcoinBurn.SimulationConfiguration.Model;
 
 public sealed class BlockConfiguration
 {

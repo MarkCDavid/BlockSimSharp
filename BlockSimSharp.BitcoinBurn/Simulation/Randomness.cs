@@ -5,15 +5,26 @@ namespace BlockSimSharp.BitcoinBurn.Simulation;
 public sealed class Randomness
 {
     private readonly Random _randomNumberGenerator;
+    private readonly Random _hashPowerRandomNumberGenerator;
 
     public Randomness(Configuration configuration)
     {
         _randomNumberGenerator = configuration.RandomNumberGenerator.UseStaticSeed
             ? new Random(configuration.RandomNumberGenerator.StaticSeed)
             : new Random();
+        
+        _hashPowerRandomNumberGenerator = configuration.RandomNumberGenerator.HashPowerUseStaticSeed
+            ? new Random(configuration.RandomNumberGenerator.HashPowerStaticSeed)
+            : new Random();
     }
 
     public int Next() => _randomNumberGenerator.Next();
+    public double NextDouble(double lowBound, double highBound)
+    {
+        return lowBound + _randomNumberGenerator.NextDouble() * (highBound - lowBound);
+    }
+    
+    public bool Binary(double probability) => _randomNumberGenerator.NextDouble() < probability;
 
     public double Expovariate(double lambda)
     {
@@ -30,7 +41,7 @@ public sealed class Randomness
 
         double Uniform0To1Inclusive()
         {
-            return 1.0 - _randomNumberGenerator.NextDouble();
+            return 1.0 - _hashPowerRandomNumberGenerator.NextDouble();
         }
     }
 }

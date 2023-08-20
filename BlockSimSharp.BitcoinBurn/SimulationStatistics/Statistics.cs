@@ -6,10 +6,12 @@ namespace BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
 public class Statistics
 {
+    private readonly Nodes _nodes;
     private readonly Consensus _consensus;
 
-    public Statistics(Configuration configuration, Difficulty difficulty, Consensus consensus)
+    public Statistics(Configuration configuration, Nodes nodes, Difficulty difficulty, Consensus consensus)
     {
+        _nodes = nodes;
         _consensus = consensus;
         Configuration = configuration;
         Difficulty = difficulty;
@@ -39,7 +41,7 @@ public class Statistics
         Timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss");
         Nodes = nodes.Select(node => new SimulationNode(node)).ToList();
         
-        // CalculateTotals(context);
+        CalculateTotals();
         CalculateSimulationStatistics();
         // CalculateBlockStatistics(context);
         // CalculateProfitStatistics(context);
@@ -47,12 +49,12 @@ public class Statistics
 
     private void CalculateTotals()
     {
-        // var nodes = contextOld.Get<Nodes>();
-        // Totals = new TotalStatistics()
-        // {
-        //     TotalBitcoinsEarned = nodes.Sum(node => node.Balance),
-        //     // TotalEnergyCostInDollars = nodes.Sum(node => node.TotalPowerCost)
-        // };
+        Totals = new TotalStatistics()
+        {
+            TotalBitcoinsEarned = _nodes.Sum(node => node.Balance),
+            TotalEnergyCost = _nodes.Sum(node => node.PowerUsed),
+            TotalEnergyCostRatioWithHashPower = _nodes.Sum(node => node.PowerUsed) /  _nodes.Sum(node => node.HashPower)
+        };
     }
 
 
