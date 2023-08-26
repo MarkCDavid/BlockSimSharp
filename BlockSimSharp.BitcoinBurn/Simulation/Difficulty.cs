@@ -1,4 +1,5 @@
 using BlockSimSharp.BitcoinBurn.Model;
+using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
@@ -34,6 +35,7 @@ public sealed class Difficulty
 
     public double PercievedHashPower(Node miner)
     {
+        return miner.HashPower;
         if (!_configuration.Difficulty.DecreaseByBurnEnabled)
         {
             return miner.HashPower;
@@ -52,8 +54,9 @@ public sealed class Difficulty
         return miner.HashPower / miner.DifficultyDecrease;
     }
     
-    public void OnBlockMined(Node miner)
+    public void OnBlockMined(SimulationEvent simulationEvent)
     {
+        var miner = simulationEvent.Node;
         if (miner.BlockChainLength % _configuration.Difficulty.AdjustmentFrequencyInBlocks != 0)
             return;
 
@@ -83,6 +86,7 @@ public sealed class Difficulty
 
     private double CalculateAdjustedDifficulty(Node miner)
     {
+        return CurrentDifficulty;
         var lastBlockOfCurrentEpoch = 
             miner.LastBlock;
         

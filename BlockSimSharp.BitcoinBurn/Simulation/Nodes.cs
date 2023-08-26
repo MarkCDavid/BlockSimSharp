@@ -27,8 +27,7 @@ public sealed class Nodes: List<Node>
             var hashPower = _randomness.NextGaussian() * _configuration.Node.StandardDeviationOfHashRate + _configuration.Node.AverageHashRate;
             hashPower = Math.Max(hashPower, 1);
             
-            var participatesInDifficultyDecrease = nodeId > _configuration.Node.StartingNodeCount / 2;
-            var node = new Node(nodeId, hashPower, participatesInDifficultyDecrease);
+            var node = new Node(nodeId, hashPower, false);
             Add(node);
         }
     }

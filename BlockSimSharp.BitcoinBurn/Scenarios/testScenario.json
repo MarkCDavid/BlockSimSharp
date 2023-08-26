@@ -14,17 +14,17 @@
   },
   "Difficulty": {
     "AdjustmentFrequencyInBlocks": 2016,
-    "DecreaseByBurnEnabled": true,
+    "DecreaseByBurnEnabled": false,
     "ProbabilityForParticipationThisEpoch": 0.5,
     "DecreaseAmountHighBound": 2,
     "DecreaseAmountLowBound": 2
   },
   "Simulation": {
-    "LengthInSeconds": 10000000
+    "LengthInSeconds": 100000000
   },
   "Node": {
-    "StartingNodeCount": 10,
-    "StandardDeviationOfHashRate": 500,
+    "StartingNodeCount": 500,
+    "StandardDeviationOfHashRate": 100,
     "AverageHashRate": 1000
   }
 }

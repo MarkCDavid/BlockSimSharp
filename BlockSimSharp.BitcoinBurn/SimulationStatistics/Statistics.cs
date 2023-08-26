@@ -1,5 +1,6 @@
 
 using BlockSimSharp.BitcoinBurn.Simulation;
+using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.SimulationStatistics;
@@ -17,6 +18,11 @@ public class Statistics
         Difficulty = difficulty;
         BlockStatistics = new List<BlockStatistics>();
         ProfitStatistics = new List<ProfitStatistics>();
+    }
+
+    public void OnBlockMined(SimulationEvent simulationEvent)
+    {
+        TotalBlocks += 1;
     }
 
     public string Timestamp { get; set; } = null!;

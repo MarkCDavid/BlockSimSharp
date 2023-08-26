@@ -20,8 +20,9 @@ internal abstract class Program
 
     private static void RunScenario(string configurationPath)
     {
+        var powerUsage = new PowerUsage();
         var configuration = ConfigurationFactory.Build(configurationPath);
-        var eventPool = new EventPool(configuration);
+        var eventPool = new SimulationEventPool(configuration);
         var randomness = new Randomness(configuration);
         var network = new Network(configuration, randomness);
         var nodes = new Nodes(configuration, randomness);
@@ -29,9 +30,18 @@ internal abstract class Program
         var consensus = new Consensus(configuration, randomness, nodes, difficulty);
         var incentives = new Incentives(configuration, consensus);
         var statistics = new Statistics(configuration, nodes, difficulty, consensus);
-        var scheduler = new Scheduler(eventPool, randomness, network, nodes, difficulty, consensus, statistics);
+        var scheduler = new Scheduler(eventPool, randomness, network, nodes, consensus);
 
         var simulator = new Simulator(configuration, eventPool, nodes, difficulty, consensus, incentives, scheduler, statistics);
+        
+        // simulator.BlockMinedIntegrationEvent.Subscribe(difficulty.OnBlockMined, 20);
+        // simulator.BlockMinedIntegrationEvent.Subscribe(powerUsage.OnEvent, 30);
+        simulator.BlockMinedIntegrationEvent.Subscribe(statistics.OnBlockMined, 40);
+        simulator.BlockMinedIntegrationEvent.Subscribe(scheduler.OnBlockMined, 50);
+
+        // simulator.BlockReceivedIntegrationEvent.Subscribe(powerUsage.OnEvent, 30);
+        simulator.BlockMinedIntegrationEvent.Subscribe(scheduler.OnBlockReceived, 50);
+        
         simulator.Simulate();
 
         SaveSimulationStatistics(configuration.ScenarioName, statistics);

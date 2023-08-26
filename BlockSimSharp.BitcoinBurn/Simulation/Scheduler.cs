@@ -1,31 +1,37 @@
 using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.Simulation.Events;
-using BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
 public sealed class Scheduler
 {
     public Scheduler(
-        EventPool eventPool,
+        SimulationEventPool simulationEventPool,
         Randomness randomness, 
         Network network,
-        Nodes nodes, 
-        Difficulty difficulty, 
-        Consensus consensus, 
-        Statistics statistics)
+        Nodes nodes,
+        Consensus consensus)
     {
-        _eventPool = eventPool;
+        _simulationEventPool = simulationEventPool;
         _randomness = randomness;
         _network = network;
         _nodes = nodes;
-        _difficulty = difficulty;
         _consensus = consensus;
-        _statistics = statistics;
+    }
+
+    public void OnBlockMined(SimulationEvent simulationEvent)
+    {
+        ScheduleReceiveBlockEvents(simulationEvent);
+        ScheduleMineBlockEvent(simulationEvent, simulationEvent.Node);
+    }
+
+    public void OnBlockReceived(SimulationEvent simulationEvent)
+    {
+        ScheduleMineBlockEvent(simulationEvent, simulationEvent.Node);
     }
 
     
-    public void ScheduleMineBlockEvent(Event? sourceEvent, Node miner)
+    public void ScheduleMineBlockEvent(SimulationEvent? sourceEvent, Node miner)
     {
         if (miner.HashPower <= 0)
             return;
@@ -45,42 +51,40 @@ public sealed class Scheduler
 
         miner.CurrentlyMinedBlock = block;
         
-        var @event = new MineBlockEvent(this, _difficulty, _statistics)
+        var @event = new BlockMinedSimulationEvent
         {
             Node = miner,
             EventTime = eventTime,
             Block = block,
         };
         
-        _eventPool.Enqueue(@event);
+        _simulationEventPool.Enqueue(@event);
     }
     
-    public void ScheduleReceiveBlockEvents(Event sourceEvent)
+    public void ScheduleReceiveBlockEvents(SimulationEvent sourceSimulationEvent)
     {
-        foreach (var receiver in _nodes.Without(sourceEvent.Block.Miner!.NodeId))
+        foreach (var receiver in _nodes.Without(sourceSimulationEvent.Block.Miner!.NodeId))
         {
-            ScheduleReceiveBlockEvent(sourceEvent, receiver);
+            ScheduleReceiveBlockEvent(sourceSimulationEvent, receiver);
         }
     }
 
-    public void ScheduleReceiveBlockEvent(Event sourceEvent, Node receiver)
+    public void ScheduleReceiveBlockEvent(SimulationEvent sourceSimulationEvent, Node receiver)
     {
-        var eventTime = sourceEvent.EventTime + _network.BlockPropogationDelay();
-        var @event = new ReceiveBlockEvent(this)
+        var eventTime = sourceSimulationEvent.EventTime + _network.BlockPropogationDelay();
+        var @event = new BlockReceivedSimulationEvent
         {
             Node = receiver,
-            Block = sourceEvent.Block,
+            Block = sourceSimulationEvent.Block,
             EventTime = eventTime,
         };
         
-        _eventPool.Enqueue(@event);
+        _simulationEventPool.Enqueue(@event);
     }
     
-    private readonly EventPool _eventPool;
+    private readonly SimulationEventPool _simulationEventPool;
     private readonly Randomness _randomness;
     private readonly Network _network;
     private readonly Nodes _nodes;
-    private readonly Difficulty _difficulty;
     private readonly Consensus _consensus;
-    private readonly Statistics _statistics;
 }

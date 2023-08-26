@@ -7,8 +7,11 @@ namespace BlockSimSharp.BitcoinBurn;
 
 public class Simulator
 {
+    public IntegrationEvent<SimulationEvent> BlockMinedIntegrationEvent { get; } = new();
+    public IntegrationEvent<SimulationEvent> BlockReceivedIntegrationEvent { get; } = new();
+    
     private readonly Configuration _configuration;
-    private readonly EventPool _eventPool;
+    private readonly SimulationEventPool _simulationEventPool;
     private readonly Nodes _nodes;
     private readonly Difficulty _difficulty;
     private readonly Consensus _consensus;
@@ -18,7 +21,7 @@ public class Simulator
 
     public Simulator(
         Configuration configuration, 
-        EventPool eventPool,
+        SimulationEventPool simulationEventPool,
         Nodes nodes, 
         Difficulty difficulty,
         Consensus consensus, 
@@ -27,7 +30,7 @@ public class Simulator
         Statistics statistics)
     {
         _configuration = configuration;
-        _eventPool = eventPool;
+        _simulationEventPool = simulationEventPool;
         _nodes = nodes;
         _difficulty = difficulty;
         _consensus = consensus;
@@ -38,7 +41,7 @@ public class Simulator
 
     public void Simulate()
     {
-        _difficulty.UpdateDifficultyDecreaseParticipation();
+        // _difficulty.UpdateDifficultyDecreaseParticipation();
         
         ScheduleInitialEvents();
         RunSimulation();
@@ -58,14 +61,14 @@ public class Simulator
 
     private void RunSimulation()
     {
-        while (_eventPool.HasEvents())
+        while (_simulationEventPool.HasEvents())
         {
-            var @event = _eventPool.NextEvent();
+            var @event = _simulationEventPool.NextEvent();
             
             if (@event.EventTime >= _configuration.Simulation.LengthInSeconds)
                 return;
            
-            @event.Handle();
+            @event.Handle(this);
         }
     }
 
