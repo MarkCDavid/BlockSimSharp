@@ -1,0 +1,1696 @@
+{
+  "Timestamp": "2023-08-26 10:04:48",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 2.0,
+      "DecreaseAmountLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 100000000
+    },
+    "Node": {
+      "StartingNodeCount": 10,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 1682.7932379595354,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 8142.761451439185
+      },
+      {
+        "Epoch": 2,
+        "Difficulty": 2035.6903628597963
+      },
+      {
+        "Epoch": 3,
+        "Difficulty": 1698.5412681442072
+      },
+      {
+        "Epoch": 4,
+        "Difficulty": 1629.1066216487327
+      },
+      {
+        "Epoch": 5,
+        "Difficulty": 1576.4200118710023
+      },
+      {
+        "Epoch": 6,
+        "Difficulty": 1668.2609067490237
+      },
+      {
+        "Epoch": 7,
+        "Difficulty": 1657.7005685935885
+      },
+      {
+        "Epoch": 8,
+        "Difficulty": 1669.0846899841777
+      },
+      {
+        "Epoch": 9,
+        "Difficulty": 1631.85860012294
+      },
+      {
+        "Epoch": 10,
+        "Difficulty": 1602.4749999835487
+      },
+      {
+        "Epoch": 11,
+        "Difficulty": 1665.2713613621754
+      },
+      {
+        "Epoch": 12,
+        "Difficulty": 1688.7963441498057
+      },
+      {
+        "Epoch": 13,
+        "Difficulty": 1651.6414505341295
+      },
+      {
+        "Epoch": 14,
+        "Difficulty": 1592.0250350703373
+      },
+      {
+        "Epoch": 15,
+        "Difficulty": 1676.1875811409986
+      },
+      {
+        "Epoch": 16,
+        "Difficulty": 1594.2607650444659
+      },
+      {
+        "Epoch": 17,
+        "Difficulty": 1668.6532345395244
+      },
+      {
+        "Epoch": 18,
+        "Difficulty": 1639.2963156247035
+      },
+      {
+        "Epoch": 19,
+        "Difficulty": 1632.767491437315
+      },
+      {
+        "Epoch": 20,
+        "Difficulty": 1628.6406617141831
+      },
+      {
+        "Epoch": 21,
+        "Difficulty": 1619.4082277568264
+      },
+      {
+        "Epoch": 22,
+        "Difficulty": 1646.4327096051672
+      },
+      {
+        "Epoch": 23,
+        "Difficulty": 1594.405598135034
+      },
+      {
+        "Epoch": 24,
+        "Difficulty": 1656.330694909659
+      },
+      {
+        "Epoch": 25,
+        "Difficulty": 1663.0928556880986
+      },
+      {
+        "Epoch": 26,
+        "Difficulty": 1685.8788998529142
+      },
+      {
+        "Epoch": 27,
+        "Difficulty": 1654.6243200014517
+      },
+      {
+        "Epoch": 28,
+        "Difficulty": 1633.211333764116
+      },
+      {
+        "Epoch": 29,
+        "Difficulty": 1706.177530210197
+      },
+      {
+        "Epoch": 30,
+        "Difficulty": 1623.4400587684274
+      },
+      {
+        "Epoch": 31,
+        "Difficulty": 1671.7332486187381
+      },
+      {
+        "Epoch": 32,
+        "Difficulty": 1661.079838198501
+      },
+      {
+        "Epoch": 33,
+        "Difficulty": 1597.9893578030792
+      },
+      {
+        "Epoch": 34,
+        "Difficulty": 1652.2684037472245
+      },
+      {
+        "Epoch": 35,
+        "Difficulty": 1622.4737700673143
+      },
+      {
+        "Epoch": 36,
+        "Difficulty": 1618.7297966651615
+      },
+      {
+        "Epoch": 37,
+        "Difficulty": 1582.3075680448546
+      },
+      {
+        "Epoch": 38,
+        "Difficulty": 1654.4188196978612
+      },
+      {
+        "Epoch": 39,
+        "Difficulty": 1625.113775389202
+      },
+      {
+        "Epoch": 40,
+        "Difficulty": 1651.5938438227522
+      },
+      {
+        "Epoch": 41,
+        "Difficulty": 1622.337093159076
+      },
+      {
+        "Epoch": 42,
+        "Difficulty": 1657.4003888431882
+      },
+      {
+        "Epoch": 43,
+        "Difficulty": 1673.0423109275334
+      },
+      {
+        "Epoch": 44,
+        "Difficulty": 1656.472762616849
+      },
+      {
+        "Epoch": 45,
+        "Difficulty": 1703.3952526468859
+      },
+      {
+        "Epoch": 46,
+        "Difficulty": 1655.9223835332557
+      },
+      {
+        "Epoch": 47,
+        "Difficulty": 1629.0012197487204
+      },
+      {
+        "Epoch": 48,
+        "Difficulty": 1673.531004083329
+      },
+      {
+        "Epoch": 49,
+        "Difficulty": 1603.5320920666848
+      },
+      {
+        "Epoch": 50,
+        "Difficulty": 1667.5399827988317
+      },
+      {
+        "Epoch": 51,
+        "Difficulty": 1621.1071220986871
+      },
+      {
+        "Epoch": 52,
+        "Difficulty": 1641.3503792067854
+      },
+      {
+        "Epoch": 53,
+        "Difficulty": 1680.1960536969698
+      },
+      {
+        "Epoch": 54,
+        "Difficulty": 1599.7200423093282
+      },
+      {
+        "Epoch": 55,
+        "Difficulty": 1653.0561032732264
+      },
+      {
+        "Epoch": 56,
+        "Difficulty": 1650.8867761225856
+      },
+      {
+        "Epoch": 57,
+        "Difficulty": 1646.7943173802669
+      },
+      {
+        "Epoch": 58,
+        "Difficulty": 1615.1913528272396
+      },
+      {
+        "Epoch": 59,
+        "Difficulty": 1575.6664756835694
+      },
+      {
+        "Epoch": 60,
+        "Difficulty": 1709.3154934066163
+      },
+      {
+        "Epoch": 61,
+        "Difficulty": 1670.9780449153793
+      },
+      {
+        "Epoch": 62,
+        "Difficulty": 1578.7364807112247
+      },
+      {
+        "Epoch": 63,
+        "Difficulty": 1643.241069429294
+      },
+      {
+        "Epoch": 64,
+        "Difficulty": 1599.7245881442454
+      },
+      {
+        "Epoch": 65,
+        "Difficulty": 1577.369231313378
+      },
+      {
+        "Epoch": 66,
+        "Difficulty": 1668.6594051910067
+      },
+      {
+        "Epoch": 67,
+        "Difficulty": 1639.4188667383903
+      },
+      {
+        "Epoch": 68,
+        "Difficulty": 1639.4577019866304
+      },
+      {
+        "Epoch": 69,
+        "Difficulty": 1649.7631753627504
+      },
+      {
+        "Epoch": 70,
+        "Difficulty": 1613.6993192328127
+      },
+      {
+        "Epoch": 71,
+        "Difficulty": 1596.2372324914295
+      },
+      {
+        "Epoch": 72,
+        "Difficulty": 1651.7311166131892
+      },
+      {
+        "Epoch": 73,
+        "Difficulty": 1658.5672689994228
+      },
+      {
+        "Epoch": 74,
+        "Difficulty": 1671.0324456234127
+      },
+      {
+        "Epoch": 75,
+        "Difficulty": 1659.56425006406
+      },
+      {
+        "Epoch": 76,
+        "Difficulty": 1650.7403073659882
+      },
+      {
+        "Epoch": 77,
+        "Difficulty": 1665.9467131769545
+      },
+      {
+        "Epoch": 78,
+        "Difficulty": 1660.0576754817541
+      },
+      {
+        "Epoch": 79,
+        "Difficulty": 1682.7932379595354
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 586.5686611578881,
+      "PowerUsed": 4869885036611748.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 1,
+      "HashPower": 817.8638958374241,
+      "PowerUsed": 81785860254.88339,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 2,
+      "HashPower": 37.59823547110841,
+      "PowerUsed": 312152858562739.25,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 3,
+      "HashPower": 1379.6271378373726,
+      "PowerUsed": 11454116115571324.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 4,
+      "HashPower": 979.2003392968247,
+      "PowerUsed": 8129641755448643.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 5,
+      "HashPower": 1014.3717207148264,
+      "PowerUsed": 8421646077238325.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 6,
+      "HashPower": 408.667385215638,
+      "PowerUsed": 3392890408233371.5,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "HashPower": 991.8555881410483,
+      "PowerUsed": 8234709774015085.0,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        }
+      ]
+    },
+    {
+      "Id": 8,
+      "HashPower": 617.8912928478737,
+      "PowerUsed": 5129935778281583.0,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "HashPower": 1309.11719491918,
+      "PowerUsed": 10868719488223646.0,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 2.0
+        }
+      ]
+    }
+  ],
+  "TotalBlocks": 157770,
+  "MainBlocks": 157770,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 633.8299600115341,
+  "Totals": {
+    "TotalBitcoinsEarned": 1972125.0,
+    "TotalEnergyCost": 60813779078046720.0,
+    "TotalEnergyCostRatioWithHashPower": 7468446600176.189
+  },
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

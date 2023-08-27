@@ -1,0 +1,296 @@
+{
+  "Timestamp": "2023-08-20 20:26:42",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": true,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 0.1,
+      "DecreaseAmountLowBound": 0.1
+    },
+    "Simulation": {
+      "LengthInSeconds": 10000000
+    },
+    "Node": {
+      "StartingNodeCount": 10,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 10106.64098214339,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 9965.454877333112
+      },
+      {
+        "Epoch": 2,
+        "Difficulty": 9898.66349004175
+      },
+      {
+        "Epoch": 3,
+        "Difficulty": 9878.069372085898
+      },
+      {
+        "Epoch": 4,
+        "Difficulty": 10030.267881094926
+      },
+      {
+        "Epoch": 5,
+        "Difficulty": 9857.41931170599
+      },
+      {
+        "Epoch": 6,
+        "Difficulty": 10047.482281322324
+      },
+      {
+        "Epoch": 7,
+        "Difficulty": 9960.259769886796
+      },
+      {
+        "Epoch": 8,
+        "Difficulty": 9712.601928158185
+      },
+      {
+        "Epoch": 9,
+        "Difficulty": 10106.64098214339
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1684.4217617520599,
+      "PowerUsed": 16842681425.16078,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 1,
+      "HashPower": 599.5250630339343,
+      "PowerUsed": 5994703863.584015,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 2,
+      "HashPower": 775.4564420114177,
+      "PowerUsed": 7753857203.97113,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 3,
+      "HashPower": 1633.666178644541,
+      "PowerUsed": 16335171883.1687,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 4,
+      "HashPower": 728.1936798537763,
+      "PowerUsed": 7281272686.025772,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 5,
+      "HashPower": 1064.1292389541331,
+      "PowerUsed": 10640321903.856659,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 6,
+      "HashPower": 1123.3381618084536,
+      "PowerUsed": 11232357133.872362,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "HashPower": 248.60085934803953,
+      "PowerUsed": 2485781869.539017,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        }
+      ]
+    },
+    {
+      "Id": 8,
+      "HashPower": 1700.8558142561342,
+      "PowerUsed": 17007006962.348415,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "HashPower": 407.26767767062177,
+      "PowerUsed": 4072305348.6535506,
+      "NodeDifficultyDecreaseParticipationHistory": [
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": true,
+          "DifficultyDecrease": 0.1
+        },
+        {
+          "DifficultyDecreaseDuringCurrentEpoch": false,
+          "DifficultyDecrease": 0.1
+        }
+      ]
+    }
+  ],
+  "TotalBlocks": 16672,
+  "MainBlocks": 16672,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 599.7533589353603,
+  "Totals": {
+    "TotalBitcoinsEarned": 208400.0,
+    "TotalEnergyCost": 99645460280.1804,
+    "TotalEnergyCostRatioWithTotal": 5976815.035999305
+  },
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

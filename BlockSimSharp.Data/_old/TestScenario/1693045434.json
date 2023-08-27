@@ -1,0 +1,68 @@
+{
+  "Timestamp": "2023-08-26 10:23:54",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 2.0,
+      "DecreaseAmountLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 100000000
+    },
+    "Node": {
+      "StartingNodeCount": 2,
+      "StandardDeviationOfHashRate": 100.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 1866.5302162394805,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 1866.5302162394805
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 957.2608771580798,
+      "PowerUsed": 0.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 1,
+      "HashPower": 909.2693390814006,
+      "PowerUsed": 0.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    }
+  ],
+  "TotalBlocks": 171099,
+  "MainBlocks": 171099,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 584.4490043191479,
+  "Totals": {
+    "TotalBitcoinsEarned": 2138737.5,
+    "TotalEnergyCost": 0.0,
+    "TotalEnergyCostRatioWithHashPower": 0.0
+  },
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

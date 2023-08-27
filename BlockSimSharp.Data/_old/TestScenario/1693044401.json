@@ -1,0 +1,436 @@
+{
+  "Timestamp": "2023-08-26 10:06:41",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 2.0,
+      "DecreaseAmountLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 100000000
+    },
+    "Node": {
+      "StartingNodeCount": 10,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 3269.3181608809264,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 10252.663003329806
+      },
+      {
+        "Epoch": 2,
+        "Difficulty": 3212.4376641833
+      },
+      {
+        "Epoch": 3,
+        "Difficulty": 3224.295994981916
+      },
+      {
+        "Epoch": 4,
+        "Difficulty": 3337.0681188247886
+      },
+      {
+        "Epoch": 5,
+        "Difficulty": 3320.9206892691795
+      },
+      {
+        "Epoch": 6,
+        "Difficulty": 3046.322706352414
+      },
+      {
+        "Epoch": 7,
+        "Difficulty": 3206.0659889662898
+      },
+      {
+        "Epoch": 8,
+        "Difficulty": 3207.9178900157485
+      },
+      {
+        "Epoch": 9,
+        "Difficulty": 3256.964580189661
+      },
+      {
+        "Epoch": 10,
+        "Difficulty": 3111.153584391382
+      },
+      {
+        "Epoch": 11,
+        "Difficulty": 3153.288392035825
+      },
+      {
+        "Epoch": 12,
+        "Difficulty": 3389.5058069758993
+      },
+      {
+        "Epoch": 13,
+        "Difficulty": 3227.6877111201875
+      },
+      {
+        "Epoch": 14,
+        "Difficulty": 3343.502162159718
+      },
+      {
+        "Epoch": 15,
+        "Difficulty": 3186.722142852854
+      },
+      {
+        "Epoch": 16,
+        "Difficulty": 3228.6602616911837
+      },
+      {
+        "Epoch": 17,
+        "Difficulty": 3308.331655843474
+      },
+      {
+        "Epoch": 18,
+        "Difficulty": 3126.8432752742033
+      },
+      {
+        "Epoch": 19,
+        "Difficulty": 3270.8852248200565
+      },
+      {
+        "Epoch": 20,
+        "Difficulty": 3216.421439724388
+      },
+      {
+        "Epoch": 21,
+        "Difficulty": 3341.2165032619228
+      },
+      {
+        "Epoch": 22,
+        "Difficulty": 3277.6645460180716
+      },
+      {
+        "Epoch": 23,
+        "Difficulty": 3213.089976363603
+      },
+      {
+        "Epoch": 24,
+        "Difficulty": 3249.6617294663356
+      },
+      {
+        "Epoch": 25,
+        "Difficulty": 3102.7663334807344
+      },
+      {
+        "Epoch": 26,
+        "Difficulty": 3270.978849930027
+      },
+      {
+        "Epoch": 27,
+        "Difficulty": 3297.4082225425936
+      },
+      {
+        "Epoch": 28,
+        "Difficulty": 3412.6360758908295
+      },
+      {
+        "Epoch": 29,
+        "Difficulty": 3252.601427070031
+      },
+      {
+        "Epoch": 30,
+        "Difficulty": 3219.9263758039942
+      },
+      {
+        "Epoch": 31,
+        "Difficulty": 3172.073276225557
+      },
+      {
+        "Epoch": 32,
+        "Difficulty": 3339.7763169608816
+      },
+      {
+        "Epoch": 33,
+        "Difficulty": 3260.286168053615
+      },
+      {
+        "Epoch": 34,
+        "Difficulty": 3225.5524719661007
+      },
+      {
+        "Epoch": 35,
+        "Difficulty": 3051.7445708331693
+      },
+      {
+        "Epoch": 36,
+        "Difficulty": 3129.1631442651556
+      },
+      {
+        "Epoch": 37,
+        "Difficulty": 3223.8301416662466
+      },
+      {
+        "Epoch": 38,
+        "Difficulty": 3259.7671036156003
+      },
+      {
+        "Epoch": 39,
+        "Difficulty": 3176.6636317507114
+      },
+      {
+        "Epoch": 40,
+        "Difficulty": 3131.8399919322815
+      },
+      {
+        "Epoch": 41,
+        "Difficulty": 3125.8598061903867
+      },
+      {
+        "Epoch": 42,
+        "Difficulty": 3302.2616802363145
+      },
+      {
+        "Epoch": 43,
+        "Difficulty": 3314.827213732023
+      },
+      {
+        "Epoch": 44,
+        "Difficulty": 3239.346430943962
+      },
+      {
+        "Epoch": 45,
+        "Difficulty": 3307.2724290906995
+      },
+      {
+        "Epoch": 46,
+        "Difficulty": 3278.336385709817
+      },
+      {
+        "Epoch": 47,
+        "Difficulty": 3184.9195430161635
+      },
+      {
+        "Epoch": 48,
+        "Difficulty": 3235.1320741079508
+      },
+      {
+        "Epoch": 49,
+        "Difficulty": 3211.143882976584
+      },
+      {
+        "Epoch": 50,
+        "Difficulty": 3231.707629845234
+      },
+      {
+        "Epoch": 51,
+        "Difficulty": 3111.6580380075525
+      },
+      {
+        "Epoch": 52,
+        "Difficulty": 3130.166305584155
+      },
+      {
+        "Epoch": 53,
+        "Difficulty": 3269.11268987121
+      },
+      {
+        "Epoch": 54,
+        "Difficulty": 3158.08810036982
+      },
+      {
+        "Epoch": 55,
+        "Difficulty": 3381.2551634831775
+      },
+      {
+        "Epoch": 56,
+        "Difficulty": 3151.2772181620862
+      },
+      {
+        "Epoch": 57,
+        "Difficulty": 3130.982750485653
+      },
+      {
+        "Epoch": 58,
+        "Difficulty": 3120.1064377285566
+      },
+      {
+        "Epoch": 59,
+        "Difficulty": 3274.552466611019
+      },
+      {
+        "Epoch": 60,
+        "Difficulty": 3190.44218512395
+      },
+      {
+        "Epoch": 61,
+        "Difficulty": 3273.729802451098
+      },
+      {
+        "Epoch": 62,
+        "Difficulty": 3151.55421486616
+      },
+      {
+        "Epoch": 63,
+        "Difficulty": 3237.5730893299224
+      },
+      {
+        "Epoch": 64,
+        "Difficulty": 3325.4459117266156
+      },
+      {
+        "Epoch": 65,
+        "Difficulty": 3276.8657884023105
+      },
+      {
+        "Epoch": 66,
+        "Difficulty": 3141.173140041418
+      },
+      {
+        "Epoch": 67,
+        "Difficulty": 3243.806079188148
+      },
+      {
+        "Epoch": 68,
+        "Difficulty": 3354.059838231885
+      },
+      {
+        "Epoch": 69,
+        "Difficulty": 3269.8381271327808
+      },
+      {
+        "Epoch": 70,
+        "Difficulty": 3334.704216853259
+      },
+      {
+        "Epoch": 71,
+        "Difficulty": 3225.443746554063
+      },
+      {
+        "Epoch": 72,
+        "Difficulty": 3351.4791968397385
+      },
+      {
+        "Epoch": 73,
+        "Difficulty": 3334.7509708942785
+      },
+      {
+        "Epoch": 74,
+        "Difficulty": 3280.5039522258057
+      },
+      {
+        "Epoch": 75,
+        "Difficulty": 3144.116772878471
+      },
+      {
+        "Epoch": 76,
+        "Difficulty": 3144.3989599352144
+      },
+      {
+        "Epoch": 77,
+        "Difficulty": 3235.455817920055
+      },
+      {
+        "Epoch": 78,
+        "Difficulty": 3144.2412299499792
+      },
+      {
+        "Epoch": 79,
+        "Difficulty": 3228.313673906166
+      },
+      {
+        "Epoch": 80,
+        "Difficulty": 3249.0625925040504
+      },
+      {
+        "Epoch": 81,
+        "Difficulty": 3269.3181608809264
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 436.5403307193826,
+      "PowerUsed": 3633327803971262.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 1,
+      "HashPower": 1044.350741198749,
+      "PowerUsed": 8692137514172902.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 2,
+      "HashPower": 1437.5369455022278,
+      "PowerUsed": 11964628662652812.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 3,
+      "HashPower": 1566.123737382752,
+      "PowerUsed": 13034857306574670.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 4,
+      "HashPower": 622.2248945982792,
+      "PowerUsed": 5178781548411585.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 5,
+      "HashPower": 270.9155943690996,
+      "PowerUsed": 2254832124968968.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 6,
+      "HashPower": 1316.395696875228,
+      "PowerUsed": 10956369320110794.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 7,
+      "HashPower": 310.9257877354695,
+      "PowerUsed": 2587837205532161.5,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 8,
+      "HashPower": 1612.8029832620616,
+      "PowerUsed": 161280192123.30295,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 9,
+      "HashPower": 1634.8462916865578,
+      "PowerUsed": 13606835540293720.0,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    }
+  ],
+  "TotalBlocks": 162191,
+  "MainBlocks": 162191,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 616.5566162740835,
+  "Totals": {
+    "TotalBitcoinsEarned": 2027387.5,
+    "TotalEnergyCost": 71909768306880990.0,
+    "TotalEnergyCostRatioWithHashPower": 7013764939267.634
+  },
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

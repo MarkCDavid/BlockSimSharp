@@ -1,0 +1,56 @@
+{
+  "Scenario": "TestScenario",
+  "Timestamp": "2023-08-14 21:34:34",
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 1,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 2,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 3,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 4,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 5,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 6,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 7,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 8,
+      "HashPower": 1.0
+    },
+    {
+      "Id": 9,
+      "HashPower": 1.0
+    }
+  ],
+  "TotalBlocks": 8323,
+  "MainBlocks": 0,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 0.0,
+  "Settings": null,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

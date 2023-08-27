@@ -1,0 +1,6784 @@
+{
+  "Timestamp": "2023-08-27 15:46:59",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 20.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 2.0,
+      "DecreaseAmountLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 1000000
+    },
+    "Node": {
+      "StartingNodeCount": 50,
+      "StandardDeviationOfHashRate": 200.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Blocks": {
+    "Total": 1642,
+    "Main": 1596,
+    "Stale": 46,
+    "StaleRate": 0.03,
+    "Chain": [
+      {
+        "MinedAt": 0.0,
+        "MinedBy": -1
+      },
+      {
+        "MinedAt": 1234.910799245156,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 1855.4342760928462,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 2808.997931810784,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 3262.422727461968,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 3617.532602089589,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 3935.4457231191723,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 3980.9001296892793,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 4249.960926293236,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 4636.14883690747,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 5101.120915037832,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 5274.045326600915,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 5336.630461544177,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 8124.585022234949,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 9741.0274357968,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 10077.733839180255,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 10139.34476794059,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 10204.215970514013,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 10338.078312891763,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 10406.419755868987,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 11807.741820500243,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 12077.806551701395,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 12273.241163549705,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 12472.68882878878,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 13224.597747955948,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 14220.87283630963,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 14820.01769866543,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 15247.599385039306,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 15537.109492876258,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 15592.770307193943,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 15625.084099356354,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 15975.748160596728,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 16583.283842960773,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 17562.971937144604,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 18127.315316105778,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 18286.54825186217,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 18804.12020792839,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 18833.165721942034,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 19058.76529579387,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 19568.814704389515,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 19954.811625931987,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 20339.108110356898,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 20354.24112336876,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 20995.633666798043,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 22839.442752158462,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 23481.937370998636,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 24094.683726314877,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 24129.67434800597,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 24829.338225670006,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 25481.703313996855,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 25753.326646846075,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 25840.870833314213,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 27091.88865806527,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 27594.431143812963,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 28664.84210005433,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 29063.01591204956,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 30784.033498299388,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 31602.674934822924,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 31899.251368623372,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 32425.967988856337,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 34553.58009006074,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 34810.937115149565,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 34820.983897393264,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 35407.77607626499,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 35822.286597265585,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 35889.776486010196,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 37213.435878922166,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 37324.72057233455,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 38987.68773979101,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 39187.86171163586,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 39454.3203795929,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 40301.92544280368,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 40415.73290664663,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 40607.29386832413,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 41058.96954813845,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 42899.22873594611,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 45485.37310123337,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 45654.79619469896,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 46653.09402851073,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 47544.05985710799,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 48330.82707050825,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 50096.64229103779,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 50276.8408750663,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 50378.57892895469,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 50889.86159166588,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 53018.7294553568,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 54652.26970843031,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 54891.70710052478,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 55452.87093474945,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 56783.9775606325,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 57033.00393042893,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 57169.873803126226,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 57584.63505379468,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 58352.189252113756,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 59062.405191406346,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 59102.59194842064,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 59805.405008762435,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 60199.91559618532,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 60321.54342324234,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 60875.50270781176,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 61011.277639859756,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 61078.95219274188,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 61727.44825007713,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 62507.19189016697,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 62719.226403210734,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 63742.59501502124,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 65035.75793697042,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 65615.16568805274,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 65772.30594956454,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 66290.31326126195,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 66677.48856029769,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 67824.5659855155,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 68117.62280741868,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 68325.23061763709,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 69843.42190328952,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 69886.32689985105,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 70380.61420193767,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 70704.50220989085,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 71641.90695955075,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 71783.06455486947,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 72128.4912387884,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 73506.99560782783,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 74665.24571986945,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 75726.16703336865,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 75895.15516112192,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 76033.91154788104,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 77340.02495660925,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 77513.85480470382,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 78653.74527565272,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 78775.21937655576,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 79323.53214228891,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 79481.03675871938,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 79839.33636023277,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 79886.40456571266,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 80216.30794131785,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 80436.98417990103,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 81722.83491501534,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 81908.45686461074,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 84054.26858009347,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 85381.91046967065,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 87076.18061826493,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 87443.65231822069,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 88629.0461777796,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 88858.76878473982,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 89090.59246523774,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 89598.8938479151,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 91569.36580224967,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 91758.09603493767,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 93515.37317275487,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 95568.37006174587,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 95712.0074164346,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 95979.22283074693,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 98064.12531292059,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 98496.04868527873,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 98533.89525913636,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 99169.65934093381,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 99279.6050001949,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 99607.42706302715,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 100996.84362735583,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 101701.39311987109,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 101774.46043420363,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 102291.9553706302,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 103718.5372924852,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 103894.21810208673,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 104609.2532804266,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 104903.81547595213,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 105802.74504301342,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 106262.61544939612,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 107514.95484748072,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 107632.09100496379,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 108246.06335167197,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 108918.68933162633,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 109572.4473405693,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 110672.52453970195,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 111194.2685387253,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 111462.20731139698,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 112433.74944690436,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 112479.77763379323,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 112762.21422351577,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 113520.19691256239,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 114969.49134799824,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 115133.6980877753,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 116156.29754405614,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 116439.41780805503,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 117520.76086606401,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 117575.06012964509,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 118104.76452848774,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 118169.8161938583,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 119547.70817774736,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 119947.19157187035,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 120185.74641975209,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 120340.33570893532,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 120365.74713073937,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 121568.8372575464,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 122535.30807661598,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 122840.23726134305,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 122972.868559677,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 123386.74422129404,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 124763.45472732784,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 125648.9103267878,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 125912.10172912055,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 126191.43615037405,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 126593.03111398408,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 127133.3028748786,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 127471.94281193207,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 127719.488844094,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 129126.24266793708,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 130215.18311381977,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 130385.00255020673,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 130859.83487072094,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 131139.13431156456,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 131251.70027195825,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 131813.4626413303,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 132438.76786487794,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 132736.2491126784,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 133153.86418569175,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 134597.5816959927,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 134683.52399014795,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 135269.46804794495,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 135575.92355084667,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 135997.97378169524,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 136023.96458934897,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 136029.70180230823,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 136205.15942138096,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 136323.4524971327,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 136559.2074622927,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 138071.4066035721,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 138327.58651469985,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 138361.78610623613,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 138599.50701330113,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 139127.3187298618,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 139178.01311463647,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 140864.55322098278,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 141360.53038415642,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 142543.10280005544,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 143336.73469272704,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 145435.33883335014,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 145915.65643771994,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 147241.31147815046,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 147468.53055535463,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 147654.57953947008,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 148452.93015836348,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 148671.53459339365,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 148897.826169476,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 149098.81111363418,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 150713.2953819575,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 150770.5082267811,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 150809.89339523466,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 151992.207306823,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 153814.0714462454,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 153883.33189069474,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 154683.26233306626,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 155106.4611305519,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 155901.59717459106,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 156884.42990611785,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 157961.81391448976,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 159913.90597040876,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 161355.50070293664,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 161651.8985032342,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 163166.10872365415,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 164267.72266939533,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 164986.6021923604,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 166599.44939852357,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 167236.8042891658,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 168420.5900899781,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 169450.02831128248,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 169480.1612049731,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 169786.62317439687,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 170216.09042578167,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 170267.24074684325,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 170364.65312711603,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 171690.75549358022,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 171757.448325679,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 173593.5168237951,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 173849.348280549,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 174561.08230026544,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 176855.67310141167,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 177021.995471883,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 177050.33165888983,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 177788.96545029493,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 178433.12753638625,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 178838.794536941,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 179100.4497128077,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 180400.39268929308,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 181222.14981646204,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 181798.08837132822,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 182865.54679859855,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 182895.17358025713,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 182977.06074959936,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 183013.55910833622,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 183510.5127639601,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 184633.80830415798,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 184852.46677195973,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 184908.6680787317,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 186654.15511134674,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 187155.13195941944,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 187592.2083974986,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 188535.85722045813,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 189102.0948150775,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 189550.51533188674,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 189576.04451720836,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 190550.90293794067,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 190664.2179479291,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 192343.64953457817,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 193968.45511811064,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 194565.13530175362,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 194768.73878553152,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 195295.78291898363,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 196223.17245398927,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 196828.30926582936,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 196896.3587820459,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 197445.39070319946,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 200337.9653296131,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 200699.64274779567,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 200754.2808411179,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 201475.37345671633,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 201624.03533957328,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 202136.35604978463,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 202471.32433221934,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 202663.93169568988,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 203819.72646621478,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 204115.6832819393,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 205206.35393831908,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 205806.9079232231,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 205955.54674182553,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 206627.9399749873,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 206842.1013240404,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 208314.59680994408,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 208418.03170850122,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 209549.51812709757,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 209975.4416690187,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 210034.71804305696,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 213576.97854397292,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 214703.27677539,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 215262.02058806995,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 215988.04649939097,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 216273.15505676361,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 216723.34252824474,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 217165.95337128686,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 217804.6513139396,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 218129.8972802653,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 219873.1131245122,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 220120.62261127823,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 220395.54196746417,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 220769.15535333983,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 221488.89905475974,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 221533.7684559649,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 221538.94233502928,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 221611.40667201302,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 221679.4128076183,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 222149.21069037222,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 223713.92854759132,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 224381.73554092334,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 224566.61341317865,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 225143.7124360322,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 226249.62708569365,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 226309.5638745901,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 226543.71734843912,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 227025.88335354254,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 228572.97911604162,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 229267.0261196538,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 230376.57829512027,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 230435.69862051617,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 231342.99362006874,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 231671.89955025556,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 231690.8840182224,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 233314.7571989134,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 233548.38072306153,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 233663.09525265192,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 235348.39852644032,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 236312.3009570597,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 237202.1899029683,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 237214.87732908994,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 237796.50707103562,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 238402.73038088786,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 239546.76908389395,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 240302.23495553262,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 240691.37148086794,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 241711.3228803431,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 242137.13806768655,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 242455.7665206743,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 243244.14105971903,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 243646.9169165487,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 243692.88975437605,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 244628.34617503703,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 246619.74229944212,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 246836.3937383841,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 246980.87219599643,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 248990.29028549526,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 249079.77682546456,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 250484.8883389785,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 250736.3030360454,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 252411.37858694294,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 252498.86928831978,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 252739.66510409297,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 253356.00036656918,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 254240.88175751356,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 254822.03841774655,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 255122.70002534406,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 256032.46807636178,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 256166.39522707506,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 257112.78479765847,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 257392.8416088604,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 257659.17756457353,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 258004.63062230102,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 258260.24479003306,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 258395.09439605696,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 260197.16075293484,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 261288.94334236038,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 261676.93337677562,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 263057.47234113,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 263430.21617733286,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 263472.83232823905,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 264517.51607231976,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 265829.3012594456,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 266948.4022836731,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 267352.67709887953,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 267422.07003104565,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 267729.9623055673,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 267962.6616347485,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 268324.1042534618,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 268380.5535692053,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 268684.78567486623,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 269518.19588295737,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 269629.7269689699,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 269844.2228405916,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 271810.26921437006,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 272553.18740913324,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 273423.7032224115,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 274154.356438819,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 274360.0944053197,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 275515.91592699045,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 275619.82523270225,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 278263.7358582154,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 278796.66514241614,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 279683.85752546595,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 279761.1444783748,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 280506.74766458606,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 281593.7199027773,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 281842.3398724813,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 281992.5423729198,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 282244.2310880258,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 282376.9887586465,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 282628.8254113592,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 282981.6623545552,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 284124.0039199393,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 284401.6251698121,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 284826.81097550364,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 285318.0124634302,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 289032.10882971593,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 289874.38370654196,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 290036.49344504904,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 290539.8117252319,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 290638.0584935455,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 291406.7513578827,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 292096.32854626584,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 292959.18204311584,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 293416.65344875515,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 294354.40691330173,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 294497.683982405,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 294707.4682960388,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 294820.411354828,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 294899.8874826514,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 295541.3166179685,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 296068.0417613101,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 296093.25287596707,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 296634.34510408057,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 298301.54009822756,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 298729.57406133297,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 299553.5400779143,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 300590.50679530395,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 301197.0139881351,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 301465.8660249842,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 301482.50596696377,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 301770.47601070843,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 302063.9337478885,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 303499.44337041327,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 303778.5593071392,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 304265.7696920268,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 304608.7016974898,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 304955.2299621287,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 307208.5198318832,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 307707.69526270503,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 307905.33896161686,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 308264.03382448043,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 309419.4692612185,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 309792.95781347196,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 310068.5100334123,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 310863.48318817373,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 311248.8013802198,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 311332.149083407,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 311764.7046358109,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 314308.57969229325,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 315302.62226755626,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 315871.85881337797,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 316784.98049827234,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 317402.23877177667,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 318164.6506532033,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 320550.6875372103,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 321243.9389897966,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 321604.62163772446,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 322301.86238707486,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 323194.8530697925,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 323936.93962271325,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 324568.5669016269,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 327009.5901093162,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 327386.6943923932,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 328020.98527655384,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 328140.19734695513,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 328484.5339776673,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 329051.22325790516,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 330152.011106111,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 331090.2338627267,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 331371.6893550214,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 332547.4516490306,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 333487.67538485356,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 333905.3724031892,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 333991.2075545201,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 334778.94350248144,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 335473.1250778612,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 336435.81035758153,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 337544.6735012996,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 337897.60165093763,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 338886.4993997865,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 339170.25967340765,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 339912.7128138668,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 340517.65719075315,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 340584.80257760145,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 343708.3587123394,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 343859.84133354545,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 345425.0854021834,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 345589.9174191318,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 345687.8682308537,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 345760.4674628103,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 347920.6164230119,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 348806.6836971083,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 349830.9553573904,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 351522.7181043879,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 352486.957351844,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 352628.21181376657,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 352798.37894000206,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 353091.56924696785,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 354433.0828391697,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 354837.2633316182,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 355266.0884431392,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 357126.03817351756,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 357157.99105979124,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 357939.8368487362,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 358168.2354517876,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 358908.56173199223,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 360594.9192376396,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 361511.44113164296,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 362827.026197566,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 363983.3057273143,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 364617.816981649,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 364850.00816077815,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 365522.6812628211,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 366190.1425987832,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 367047.12812673557,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 367841.1875352086,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 368226.03137724736,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 368425.8776608762,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 368693.55699073937,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 369032.0370091016,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 370272.91661202954,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 370683.36770054855,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 370755.59392361477,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 371207.0865210767,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 371505.3025177238,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 371927.6931685634,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 373192.9135826621,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 373483.8796513887,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 374707.55692303355,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 375245.48920755665,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 375744.3443387386,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 376276.324368836,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 377032.0295647775,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 377683.77835174,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 378600.25791154715,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 379040.3326794148,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 379244.90898319095,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 380150.13264778076,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 380196.4302986723,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 380293.1614992203,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 380552.0703546181,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 380573.8854612813,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 380613.4745132908,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 380788.9383660003,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 380972.72485940316,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 382079.6372072494,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 386030.72147057496,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 386205.21693873877,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 387104.31279568473,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 388547.1249473027,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 388849.7239789234,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 388978.7659065984,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 389216.77105975733,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 389253.95562111534,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 391683.28223236493,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 393441.2802608369,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 394005.73245322227,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 394199.1860027584,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 394293.66513029364,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 395697.9248253734,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 396081.63072239404,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 397722.8535122828,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 398492.491363302,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 399002.36883668776,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 399295.25088483753,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 400052.23380269064,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 400637.22599043907,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 401091.7022338214,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 401224.18530271336,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 401585.22206821636,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 401833.5119156542,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 402453.390391399,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 402958.2113019684,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 403790.2703254654,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 403924.2777186006,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 405706.3215412608,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 405843.27399196435,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 406192.8104115521,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 408642.8472149837,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 409339.0958382873,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 409603.91583830834,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 411107.1216388817,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 414933.5328052922,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 415401.0406693587,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 416434.2232167647,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 417884.9593979424,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 418251.04447693593,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 418524.3810046769,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 419001.57316533756,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 419068.1196816319,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 420350.7756320515,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 421046.9037106036,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 421738.45212832757,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 422063.0028529728,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 422135.2773917171,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 422476.49791144533,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 424560.433716022,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 425768.26651143166,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 425781.82040681876,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 426590.9660778836,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 426948.1722454593,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 427087.4768640746,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 428072.5259014595,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 428265.727922276,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 428690.2933236692,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 428878.0774486162,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 429033.67338255065,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 429206.10595389974,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 429975.4583498313,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 430831.51412249665,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 431064.91134201473,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 431280.8413512455,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 431483.4566390439,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 431782.34083012945,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 432464.4784292436,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 433349.0683920513,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 433730.21923464065,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 433880.02853762807,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 434946.5174007617,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 435682.6940537382,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 436591.6669041673,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 436909.23494525446,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 436948.3138436324,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 437186.70096502383,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 437493.9935298195,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 437664.27568264777,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 439313.2803936913,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 440424.0528925588,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 440990.4426766822,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 441560.70521448366,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 442555.7588599637,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 442739.92008554644,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 444598.16528628726,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 444932.6669802952,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 445822.0264045235,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 446366.3899254509,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 446466.33334825723,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 449036.63020293,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 449438.3587467725,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 449974.32758032146,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 450223.845201699,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 450585.21176058426,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 451064.0176464203,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 451226.0749165401,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 451317.4075721165,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 451772.20915338816,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 452812.6959063922,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 453215.3461272863,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 453489.6984629559,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 453577.35962209885,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 454236.2979695188,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 456787.4334516441,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 457621.27079859306,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 459108.5637563464,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 459205.75587515655,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 459446.3654246588,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 460110.94446566125,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 461284.5959813976,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 462386.87881480245,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 462946.381885804,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 463276.94565955846,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 465461.56590541697,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 465770.8177291086,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 466633.68300975667,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 466863.7860423846,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 467378.32873433013,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 467728.0144808324,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 468418.35208184377,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 469497.4279636033,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 469523.92981657054,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 472119.61335310823,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 472906.9949086292,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 473311.7478754661,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 473590.95604315854,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 474767.1632350112,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 475785.98291063955,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 476272.5070286042,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 478140.03734096914,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 480155.31701601675,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 480603.3555915392,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 480629.3940111388,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 480729.97600597516,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 481853.8419366086,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 482337.2694548614,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 484250.88987536356,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 484859.82689906785,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 486227.50853126316,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 486846.40342863696,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 487362.3562879497,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 487691.6063079851,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 488265.432502232,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 490493.12594042736,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 491551.1179740306,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 493089.1427519986,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 493358.27748759696,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 493455.62621518085,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 496508.79894016706,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 496542.66216543247,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 497533.1048997498,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 498288.44141082634,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 498447.4098616651,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 499303.1463079132,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 499526.6210043926,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 499674.38167416386,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 499907.4254003929,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 500877.1809642782,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 501796.3127417042,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 502767.035319499,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 503491.5731931002,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 503853.46476508066,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 504732.3877336292,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 505072.4488042963,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 505746.7584422081,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 506386.0363325704,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 507032.8275612026,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 508802.9533284441,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 508834.1188804844,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 508877.04083738185,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 509314.05228877225,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 509380.0434029401,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 509432.9525084002,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 509499.8347301461,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 510572.9444634226,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 511154.3134765762,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 511297.5905137021,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 511478.21671169216,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 511746.5630335067,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 511862.0993146889,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 514486.45401399996,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 515155.2544308161,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 516672.05165148206,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 516908.0750218916,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 517467.4341110429,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 518011.74021835224,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 518954.4655758972,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 519038.78599642066,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 519323.1582511081,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 519343.27095672226,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 520035.68959114153,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 520157.10330653214,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 521279.75583756017,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 521807.5850510288,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 522313.38503535895,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 522793.60925083916,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 522914.73597217194,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 523670.2621814691,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 524121.0906208028,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 524293.8670102434,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 524839.566614391,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 525183.2719042044,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 525212.473013309,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 525485.4350556941,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 526041.4424508878,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 528297.9210421406,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 529672.5760684918,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 529903.622206178,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 530581.0013636244,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 531984.3029381415,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 532146.639225965,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 532468.329131228,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 532798.29168262,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 533449.0481169873,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 533825.5295495194,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 533893.4273981946,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 534678.7879699126,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 534993.7405931946,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 535653.2512573694,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 535746.2758730111,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 535759.1799146911,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 536972.1771546735,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 537554.4501604468,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 538031.769182627,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 538036.3106545561,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 538169.6860103591,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 538466.1152591101,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 539063.6014758559,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 540207.5666736915,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 540337.5132606592,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 540727.2325603943,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 540890.0182655466,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 542259.9328756277,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 542568.4471647019,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 543655.568816575,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 543917.9986957285,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 544079.7854705257,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 544645.8795612792,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 547065.1985405297,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 547196.2730973643,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 547748.7230820548,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 549836.1407293587,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 550495.3863559731,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 551196.7409999726,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 551342.5867185175,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 551749.0391652406,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 551856.315633708,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 552759.5321175824,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 552814.9271063699,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 553580.0580935418,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 555113.3046794083,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 555625.6794035287,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 555803.6031707709,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 556271.2262671673,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 556711.297037289,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 556806.2352416409,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 558897.7688321437,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 559320.0889411237,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 559732.9413021293,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 561304.0917833328,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 561427.6449182866,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 562456.7766978639,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 562767.7928910243,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 564278.3998778561,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 564587.9543993673,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 565463.9449730081,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 567303.6992355867,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 568573.4397216766,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 568669.7151777102,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 568775.0628760932,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 569319.3597031137,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 570254.9035775821,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 570510.03726119,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 571490.4794080894,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 571601.1341493854,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 571630.9415907158,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 573059.6686767102,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 573712.0132822141,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 575430.7140175899,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 576367.2521821377,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 576608.7719811054,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 577264.0881866225,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 577567.8520563692,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 578895.4224007243,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 578962.3802221221,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 581389.9416549641,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 584061.0671814375,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 584301.803315529,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 584550.1863942252,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 584813.4492168986,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 584942.8827240878,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 585007.5806702737,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 586490.460190612,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 587975.5644100942,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 588784.5402805369,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 589697.6157935683,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 589881.2164040034,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 590060.5187814053,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 590915.0896953922,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 592362.3078194074,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 593023.9712770422,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 593974.4797672353,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 594737.3692293916,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 595381.5069881005,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 595413.8751821734,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 595620.0625460524,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 596154.0976441506,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 597459.6304313575,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 598155.908761019,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 598726.0756426578,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 598921.6132232174,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 600995.2530839395,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 601354.977126547,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 602106.3990259256,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 602479.1575265572,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 602985.3965282126,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 603554.6013920126,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 604323.76139696,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 604371.4304070525,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 604949.7200305609,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 605398.9358807547,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 606053.8640001297,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 606141.390850479,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 606255.8702924012,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 607142.6416901383,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 607319.7964619781,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 607662.9135110072,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 608306.7359799981,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 608426.5585501171,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 608790.0569765059,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 610656.6157780258,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 611025.5461783288,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 611113.9949425043,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 611304.3446001597,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 611796.4368602207,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 611899.137559762,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 612309.9752849912,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 612473.6941153028,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 612532.4520220933,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 613708.0231733066,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 613896.8641251788,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 613924.3439083849,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 614505.445769511,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 614770.8318009949,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 615245.5848078453,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 615969.8828824839,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 616084.9886930984,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 616164.5382933142,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 616228.3945696008,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 616261.2932634548,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 616829.187655147,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 617094.2426383926,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 617639.1904035418,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 618290.3821753488,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 618768.6152993584,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 619195.652986818,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 619996.0220289081,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 620135.8597619503,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 620248.6455558261,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 620614.309322628,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 620821.6043177916,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 622960.2592616056,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 626722.8507125084,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 627152.4700905785,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 627300.7857299513,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 629024.322866822,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 629386.8514836857,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 631307.000650206,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 631390.1784181399,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 631804.7915854146,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 632386.6859600935,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 632439.0834120562,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 632467.0562402694,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 632607.5784473214,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 633504.8177861007,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 635049.2858151987,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 635135.4945516937,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 635655.1851913921,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 636633.9929086226,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 636749.7137115488,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 637744.6443621657,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 637994.5674610946,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 638247.5032047662,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 638648.6727206423,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 639809.0587662735,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 641975.7751348632,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 642190.553692321,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 643047.4957752594,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 644326.6361375655,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 646311.5109283131,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 647040.6800048086,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 647525.0636738852,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 647887.3054789432,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 649445.2849891855,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 649743.8679461727,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 650319.6438630826,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 651089.0750555159,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 652410.277402685,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 652777.1599868439,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 652877.6950795321,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 653273.8896806092,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 653375.7726128568,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 654232.1311957922,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 654259.2473222094,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 654832.5569050363,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 655139.1097224134,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 655217.022540842,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 655493.6095531471,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 656087.6074552375,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 657802.6218044115,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 658047.2586286281,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 658205.8603488709,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 658694.7287631334,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 659675.0552260069,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 660998.3676344225,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 663070.1107922777,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 665029.5812422115,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 665190.959956069,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 665562.7597699208,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 665797.7547400552,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 666635.45813886,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 666663.1943900438,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 667400.0802793254,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 667511.1367701615,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 668041.7331788959,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 668463.8231982971,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 668776.3350857043,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 669223.241953814,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 669638.7415365574,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 670598.5533682697,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 670720.7597676534,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 671286.6105628096,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 671343.6818949685,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 671511.1490925207,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 671534.3910345277,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 673009.1744274877,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 673722.4639609504,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 674747.2239450458,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 676280.1796155957,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 676425.5903323876,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 676703.0595956245,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 676938.5147200255,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 678050.5171143091,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 678310.705190794,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 679239.8136716355,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 679458.3446254359,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 679872.5423904533,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 680225.6962489582,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 680623.2949578798,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 681292.3252929997,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 681523.7209351601,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 681658.5458295818,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 681801.2841774629,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 682023.8082214023,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 682098.671909653,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 683033.0433728794,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 683068.620715343,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 683151.0813267467,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 683713.5517168914,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 684304.1340459392,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 684562.4293824747,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 685813.1444556637,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 686555.5909530778,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 686796.359101865,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 686895.9929040885,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 687113.6275166944,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 687160.4081445509,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 687457.3727341043,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 687920.6768131437,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 688153.3554268396,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 688693.173106124,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 688747.089833317,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 689524.6196020093,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 690530.5193124763,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 690569.8739512998,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 692965.318491924,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 693581.2471876761,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 694470.3850379955,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 694900.8335355963,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 695449.0777123888,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 695936.9210991274,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 697353.3406504409,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 698253.4154886693,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 698544.2422783839,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 698555.9438671693,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 698827.0641371035,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 699126.2982178539,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 700332.4770971009,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 700779.7178573917,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 700892.9117622919,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 701422.935876522,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 702696.7501258341,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 704022.6422797675,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 704960.8114007695,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 705021.2320959377,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 705039.0297047751,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 705355.2435080265,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 705547.8040910795,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 706252.3607734594,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 707014.4131123141,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 707419.004528277,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 708411.9143013135,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 708700.6076794957,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 709131.3349783882,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 709580.4573987027,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 709625.2358498854,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 710837.6774867651,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 711418.9351322376,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 712096.5919375045,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 712629.8802036665,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 712742.9215332903,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 712862.1088134714,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 713303.1516672587,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 713519.6176344877,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 714031.454074727,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 714374.3178532133,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 714406.2836242741,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 714727.0132710024,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 716356.4069728854,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 716603.5605633399,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 717591.0253610349,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 719146.9558709199,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 719660.6865469351,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 721094.6814090816,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 721297.5762102008,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 721772.868778289,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 722596.8003340772,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 722913.4350535234,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 723228.841243688,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 723638.5548170772,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 724160.5509755192,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 724987.9705831988,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 725101.4795831592,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 725277.6623166212,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 725738.6829135068,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 726008.5844455741,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 726905.784056254,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 726922.1756506513,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 727337.3939757876,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 728179.78381318,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 728228.8913260525,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 728680.1909515725,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 729236.7480806413,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 729634.7647869487,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 730182.8382293785,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 730991.7955337899,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 731078.0432206693,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 731571.9983139341,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 731659.1184401523,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 732913.8089358978,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 735385.6378920735,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 736580.9975109426,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 738027.519294724,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 738226.1398588365,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 738564.2220644817,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 739119.4896148407,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 739576.3191236793,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 739603.6865365425,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 740199.0988054596,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 741291.6596119514,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 743730.8898773697,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 744123.8317469402,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 744810.1482367817,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 744948.6408246976,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 745115.8067646855,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 745832.3895417581,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 746369.1926652298,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 746820.0008609587,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 747148.8325083358,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 748984.3398660731,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 749209.5974872184,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 749996.9456788737,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 750561.8954577283,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 750653.685493644,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 751069.9084675685,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 751309.9818586961,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 752101.6815494263,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 752698.7483822686,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 752751.0969715191,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 752861.7005875785,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 753142.9225450975,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 753445.6105798252,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 754143.0738806163,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 755066.0959758849,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 755191.5068318784,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 755428.8760315455,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 756397.1723240218,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 756440.925781248,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 756668.9923664551,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 756872.0134434401,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 757100.014784893,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 757528.5352460443,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 757778.4452887425,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 758476.0254617875,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 759412.0172011015,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 759828.671743102,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 760149.9712887788,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 760299.5275289243,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 761523.1090757806,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 761538.3109226243,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 761694.6807284127,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 762301.0847160431,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 762968.6378996718,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 763790.8543691175,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 764212.6314924648,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 765524.3624273727,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 765641.5523061883,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 766994.3859375847,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 767864.0676454479,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 768018.7322288634,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 768709.8968491816,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 769389.8327307396,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 769801.2598741225,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 770624.0560325797,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 770840.7750923792,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 772895.3654289255,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 773135.3508424913,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 774869.8673645009,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 774943.9934297842,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 775147.636392399,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 776188.0761966367,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 776278.6415141589,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 777184.6789124036,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 778018.0314633908,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 778091.997896389,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 779562.0688670394,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 780040.1981159409,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 780380.888178605,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 782012.7428630332,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 783421.2275344322,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 784810.8372906578,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 785238.2926768452,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 785699.016969159,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 786489.5357033059,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 786583.0260549746,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 787413.9051862968,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 787443.8971955288,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 787728.5298594626,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 787809.0820525637,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 788276.6168483952,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 789355.7133566556,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 789678.2756786945,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 789780.9074962209,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 789872.0162477429,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 790061.5807660145,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 790623.5806481709,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 790765.5459048935,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 793421.5993979955,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 793477.475907703,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 793538.83657801,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 794167.16099941,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 794250.8002885155,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 794642.5309660138,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 794906.551438787,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 797194.5235275114,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 799404.3632419308,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 800449.6477153534,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 801741.9671874194,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 802245.1083229886,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 802524.2814532912,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 802604.9308024208,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 803449.0493203577,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 803771.2339936884,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 805278.0915805082,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 805871.0725626297,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 806421.8749892871,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 807560.3826799738,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 807818.0074044436,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 808469.0621750732,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 809101.2900907258,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 809398.5710739038,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 809794.5297499447,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 810322.6599398179,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 810448.6023437346,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 811759.495300155,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 811958.238479948,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 812071.2208000284,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 812503.2433192657,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 813119.8880688805,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 814176.8443572884,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 814909.0694946304,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 815138.9286822852,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 817076.9204994871,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 817172.6939566894,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 817292.4911716786,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 817853.3475793047,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 818480.675972692,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 818978.4967954631,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 818994.0193178327,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 819301.8619727392,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 819886.4562872286,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 819947.0856632505,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 820172.839182577,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 820610.1958827418,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 821111.3110995315,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 821546.1691736398,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 822280.1281462124,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 823554.7392769434,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 823629.9371568024,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 824488.0934904505,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 824513.6533503344,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 824809.0689402199,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 825023.5802679175,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 825315.9656679453,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 825879.7513243271,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 826650.1817822596,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 827924.3636808383,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 828937.0227922021,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 830376.4979631095,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 830515.1997983081,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 833282.8374913379,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 833619.1073145032,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 833699.8564234475,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 833973.9554114743,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 834159.2749418697,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 834177.1769020901,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 834295.7450547281,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 834564.8173363368,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 835290.754916861,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 837153.008074429,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 837304.4555338608,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 838755.3746302018,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 839331.134870338,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 839415.6831161212,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 839470.9228514661,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 839770.2724233882,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 840148.8893525738,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 840446.57777387,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 841056.2882500709,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 841230.2910855801,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 841403.1129964513,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 841535.7452191261,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 841720.9575071778,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 842204.0352857023,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 842897.1749192603,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 842923.3476489735,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 843121.0566162916,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 843387.7816601996,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 844830.9247237396,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 844881.354647198,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 844989.0714418907,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 847058.9839173565,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 848294.0572910006,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 848353.2226546941,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 848488.9839818866,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 849087.1075525724,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 849184.9805788248,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 849981.0389210022,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 850655.9100602238,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 850948.4482173393,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 851916.0222480963,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 852101.0195562,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 852343.8631974021,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 852989.2617156691,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 853319.8684558298,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 853936.3139502002,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 854157.436824396,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 854397.4843588832,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 854454.3790580743,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 855415.731197049,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 855844.587520693,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 855959.7372800106,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 855999.0788112567,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 856114.1872886562,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 856307.7137626045,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 856692.1120890786,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 857307.6367711261,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 857621.9886850918,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 858060.4742218241,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 858725.9312208517,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 859075.6932687368,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 859710.758246056,
+        "MinedBy": 33
+      },
+      {
+        "MinedAt": 860687.8037004886,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 861042.4309497547,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 861447.7895926632,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 861567.5284218141,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 861877.5854834212,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 861918.8869547236,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 862132.3297474086,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 862204.4954772604,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 862826.2421494949,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 863114.5933375267,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 863283.0017676761,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 863680.860660244,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 864222.7983196719,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 864700.494623905,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 864760.4005347318,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 866256.9014193369,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 866730.1073352429,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 867492.5598573886,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 869374.5526761011,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 870445.0748432371,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 870773.3686266978,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 871085.9285360156,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 871147.1251883917,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 871579.5586055206,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 873357.2852666492,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 873980.826297836,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 874191.3244201062,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 874627.5262558811,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 875097.7335937108,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 875724.5238780356,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 875823.1629772899,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 875865.18580769,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 876673.1508937964,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 877168.6176780383,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 877498.306150889,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 878524.5546793167,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 878659.0678211389,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 879622.2029063618,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 882317.0405861437,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 882754.9376115132,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 882880.2042391461,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 884612.2618085664,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 884892.3425259774,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 884973.4301417051,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 885166.6126860627,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 886821.6030507094,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 888733.0440381372,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 890740.6996228558,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 891051.3514922241,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 892709.2222808341,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 894005.7718352121,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 894122.6565540475,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 894586.4488254882,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 894671.1057651901,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 895246.4470042577,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 895452.1199609414,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 895891.764982436,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 897250.2652987946,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 897435.0726510329,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 898235.5930337055,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 898341.4522831428,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 898807.0152320855,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 899018.0339976733,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 899237.7751552276,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 900269.0417724793,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 901072.1514807296,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 901283.7807968152,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 901430.220758953,
+        "MinedBy": 43
+      },
+      {
+        "MinedAt": 901501.1465191048,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 902471.0507569034,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 902679.9649823073,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 903383.1394631164,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 903922.0224602806,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 903993.9730380925,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 904099.2031350696,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 904578.4735813058,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 904811.2204057756,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 906502.7691799835,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 906668.7410459142,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 906719.1057568889,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 907298.7694348426,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 907794.0479706766,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 909677.6390764319,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 910420.398194132,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 911432.5300728546,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 911501.3578865874,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 911703.6942741773,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 911798.3793823085,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 914295.5709431164,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 915579.1988264477,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 915797.8657622687,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 916204.2522369276,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 916631.2691203087,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 916886.4023761995,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 917598.7893566432,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 917713.6056348447,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 918469.9004009498,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 918511.8918153895,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 919082.5251942064,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 919102.1826106115,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 919748.6813963979,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 920373.7499877334,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 921021.4895734336,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 922319.4730643964,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 922969.909171363,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 924575.0148031861,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 925310.6967410353,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 926449.3979883646,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 926812.6550269566,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 927219.6019709542,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 927760.0703992256,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 927869.376229169,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 928012.0086543899,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 928387.0576639305,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 929444.2567735331,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 929461.8577793905,
+        "MinedBy": 17
+      },
+      {
+        "MinedAt": 930484.9185098829,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 931810.0474194139,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 933791.2506695695,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 934121.7083410288,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 934955.4191470993,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 935019.9009371544,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 935221.6999622413,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 935725.6425343257,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 936222.8684063253,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 936526.683128653,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 936761.5643636028,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 937036.5275104463,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 937636.2569454593,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 938334.5379095679,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 938643.1421974867,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 938733.5023282367,
+        "MinedBy": 47
+      },
+      {
+        "MinedAt": 939996.1938658728,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 940383.3232537691,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 941335.9309528827,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 941401.259541263,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 941900.3348137977,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 943204.581510665,
+        "MinedBy": 49
+      },
+      {
+        "MinedAt": 944145.8798551324,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 944949.7796560203,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 945732.8274117525,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 945916.6759120367,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 946427.7129972349,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 947314.4586113666,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 947530.5284328082,
+        "MinedBy": 10
+      },
+      {
+        "MinedAt": 948458.4882767666,
+        "MinedBy": 8
+      },
+      {
+        "MinedAt": 949859.7686001637,
+        "MinedBy": 3
+      },
+      {
+        "MinedAt": 950064.0347342116,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 950753.7801475294,
+        "MinedBy": 46
+      },
+      {
+        "MinedAt": 951603.3329485636,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 951754.583198427,
+        "MinedBy": 32
+      },
+      {
+        "MinedAt": 951816.5502975282,
+        "MinedBy": 6
+      },
+      {
+        "MinedAt": 952461.9626193957,
+        "MinedBy": 0
+      },
+      {
+        "MinedAt": 953211.9226377752,
+        "MinedBy": 20
+      },
+      {
+        "MinedAt": 953498.280028801,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 953560.511063739,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 954135.8694208865,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 954212.4230669909,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 956840.4333950226,
+        "MinedBy": 38
+      },
+      {
+        "MinedAt": 956901.1969690807,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 958005.1039574367,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 958713.4621228734,
+        "MinedBy": 41
+      },
+      {
+        "MinedAt": 958991.9006283382,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 960599.2961457812,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 961409.0673597392,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 961735.6710856641,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 962177.6685310046,
+        "MinedBy": 48
+      },
+      {
+        "MinedAt": 962461.2469103493,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 962823.9085044554,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 962841.550963514,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 962974.4319905264,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 964245.4522149795,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 966425.8553204668,
+        "MinedBy": 18
+      },
+      {
+        "MinedAt": 966801.3950654225,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 966927.0968811734,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 967830.3344161633,
+        "MinedBy": 1
+      },
+      {
+        "MinedAt": 968440.1037681778,
+        "MinedBy": 40
+      },
+      {
+        "MinedAt": 968549.5913349641,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 970773.6584077969,
+        "MinedBy": 21
+      },
+      {
+        "MinedAt": 970825.2811857911,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 971049.5506535039,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 971281.3184882218,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 972540.9466168715,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 973182.446513746,
+        "MinedBy": 5
+      },
+      {
+        "MinedAt": 974046.6430054948,
+        "MinedBy": 36
+      },
+      {
+        "MinedAt": 974311.3444965258,
+        "MinedBy": 23
+      },
+      {
+        "MinedAt": 974366.8438933367,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 974475.8377696536,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 974644.6504186493,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 975257.5957838162,
+        "MinedBy": 31
+      },
+      {
+        "MinedAt": 975558.792447413,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 975706.2337119782,
+        "MinedBy": 13
+      },
+      {
+        "MinedAt": 977095.8575358209,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 977174.1847750755,
+        "MinedBy": 39
+      },
+      {
+        "MinedAt": 977733.9857054155,
+        "MinedBy": 27
+      },
+      {
+        "MinedAt": 978068.789176363,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 978614.3737731315,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 979434.0268461958,
+        "MinedBy": 34
+      },
+      {
+        "MinedAt": 981103.3202507709,
+        "MinedBy": 29
+      },
+      {
+        "MinedAt": 983138.5240982207,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 983694.7512357229,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 983897.8114518644,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 984198.221134904,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 986370.2179576951,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 986409.284646227,
+        "MinedBy": 22
+      },
+      {
+        "MinedAt": 987266.4190633376,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 987542.2703478632,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 987619.5206364659,
+        "MinedBy": 24
+      },
+      {
+        "MinedAt": 988192.5707945069,
+        "MinedBy": 15
+      },
+      {
+        "MinedAt": 988510.3331180526,
+        "MinedBy": 4
+      },
+      {
+        "MinedAt": 988557.6318844078,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 988668.6188801003,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 989051.2158604185,
+        "MinedBy": 2
+      },
+      {
+        "MinedAt": 989557.1346346813,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 989792.6925485526,
+        "MinedBy": 30
+      },
+      {
+        "MinedAt": 989896.5623281024,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 990121.4278294287,
+        "MinedBy": 19
+      },
+      {
+        "MinedAt": 990192.7193705172,
+        "MinedBy": 26
+      },
+      {
+        "MinedAt": 990577.3391556102,
+        "MinedBy": 28
+      },
+      {
+        "MinedAt": 991232.8639574901,
+        "MinedBy": 35
+      },
+      {
+        "MinedAt": 991444.5751653898,
+        "MinedBy": 16
+      },
+      {
+        "MinedAt": 992073.4687628386,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 992190.3423327041,
+        "MinedBy": 9
+      },
+      {
+        "MinedAt": 992313.7202089387,
+        "MinedBy": 7
+      },
+      {
+        "MinedAt": 992668.1418775695,
+        "MinedBy": 42
+      },
+      {
+        "MinedAt": 992891.5077988129,
+        "MinedBy": 45
+      },
+      {
+        "MinedAt": 993482.2009732949,
+        "MinedBy": 14
+      },
+      {
+        "MinedAt": 993683.7062109032,
+        "MinedBy": 11
+      },
+      {
+        "MinedAt": 996196.7241134525,
+        "MinedBy": 12
+      },
+      {
+        "MinedAt": 996408.4236464927,
+        "MinedBy": 44
+      },
+      {
+        "MinedAt": 996663.8302862992,
+        "MinedBy": 25
+      },
+      {
+        "MinedAt": 998229.3718639077,
+        "MinedBy": 37
+      },
+      {
+        "MinedAt": 998970.0275397785,
+        "MinedBy": 39
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "NodeId": 0,
+      "BlocksMined": 22,
+      "Balance": 275.0,
+      "PowerUsed": 806739368.6804036,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 1,
+      "BlocksMined": 31,
+      "Balance": 387.5,
+      "PowerUsed": 967459989.648944,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 2,
+      "BlocksMined": 28,
+      "Balance": 350.0,
+      "PowerUsed": 837668466.130841,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 3,
+      "BlocksMined": 29,
+      "Balance": 362.5,
+      "PowerUsed": 783009589.3327062,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 4,
+      "BlocksMined": 32,
+      "Balance": 400.0,
+      "PowerUsed": 972223337.439186,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 5,
+      "BlocksMined": 31,
+      "Balance": 387.5,
+      "PowerUsed": 1088374255.7785661,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 6,
+      "BlocksMined": 36,
+      "Balance": 450.0,
+      "PowerUsed": 1084996795.7362297,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 7,
+      "BlocksMined": 37,
+      "Balance": 462.5,
+      "PowerUsed": 1132715711.731211,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 8,
+      "BlocksMined": 32,
+      "Balance": 400.0,
+      "PowerUsed": 1112089908.7458994,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 9,
+      "BlocksMined": 39,
+      "Balance": 487.5,
+      "PowerUsed": 892401560.4563127,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 10,
+      "BlocksMined": 41,
+      "Balance": 512.5,
+      "PowerUsed": 877064455.8668221,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 11,
+      "BlocksMined": 36,
+      "Balance": 450.0,
+      "PowerUsed": 1155792493.1166236,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 12,
+      "BlocksMined": 43,
+      "Balance": 537.5,
+      "PowerUsed": 803053241.979041,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 13,
+      "BlocksMined": 33,
+      "Balance": 412.5,
+      "PowerUsed": 1031626777.2579134,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 14,
+      "BlocksMined": 31,
+      "Balance": 387.5,
+      "PowerUsed": 1143803019.512841,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 15,
+      "BlocksMined": 46,
+      "Balance": 575.0,
+      "PowerUsed": 1191258029.3391726,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 16,
+      "BlocksMined": 45,
+      "Balance": 562.5,
+      "PowerUsed": 1288051392.0973022,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 17,
+      "BlocksMined": 27,
+      "Balance": 337.5,
+      "PowerUsed": 961168305.2243611,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 18,
+      "BlocksMined": 24,
+      "Balance": 300.0,
+      "PowerUsed": 910279765.5463691,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 19,
+      "BlocksMined": 34,
+      "Balance": 425.0,
+      "PowerUsed": 1037434725.9619682,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 20,
+      "BlocksMined": 28,
+      "Balance": 350.0,
+      "PowerUsed": 1030040849.2925001,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 21,
+      "BlocksMined": 35,
+      "Balance": 437.5,
+      "PowerUsed": 905911923.2055563,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 22,
+      "BlocksMined": 21,
+      "Balance": 262.5,
+      "PowerUsed": 1009269370.4917134,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 23,
+      "BlocksMined": 26,
+      "Balance": 325.0,
+      "PowerUsed": 852628316.9653661,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 24,
+      "BlocksMined": 38,
+      "Balance": 475.0,
+      "PowerUsed": 1145745775.5805898,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 25,
+      "BlocksMined": 34,
+      "Balance": 425.0,
+      "PowerUsed": 1269710339.8169274,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 26,
+      "BlocksMined": 49,
+      "Balance": 612.5,
+      "PowerUsed": 1309156700.385016,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 27,
+      "BlocksMined": 20,
+      "Balance": 250.0,
+      "PowerUsed": 993118039.4698886,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 28,
+      "BlocksMined": 54,
+      "Balance": 675.0,
+      "PowerUsed": 1242649404.0254302,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 29,
+      "BlocksMined": 38,
+      "Balance": 475.0,
+      "PowerUsed": 1029323686.4839557,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 30,
+      "BlocksMined": 31,
+      "Balance": 387.5,
+      "PowerUsed": 777917987.3311181,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 31,
+      "BlocksMined": 14,
+      "Balance": 175.0,
+      "PowerUsed": 425618547.86837953,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 32,
+      "BlocksMined": 48,
+      "Balance": 600.0,
+      "PowerUsed": 1200833891.2261994,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 33,
+      "BlocksMined": 38,
+      "Balance": 475.0,
+      "PowerUsed": 1329500668.7311242,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 34,
+      "BlocksMined": 21,
+      "Balance": 262.5,
+      "PowerUsed": 722874452.1543416,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 35,
+      "BlocksMined": 19,
+      "Balance": 237.5,
+      "PowerUsed": 840706035.2742487,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 36,
+      "BlocksMined": 26,
+      "Balance": 325.0,
+      "PowerUsed": 1039011765.9802881,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 37,
+      "BlocksMined": 33,
+      "Balance": 412.5,
+      "PowerUsed": 818303483.7515447,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 38,
+      "BlocksMined": 31,
+      "Balance": 387.5,
+      "PowerUsed": 915579927.2716591,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 39,
+      "BlocksMined": 39,
+      "Balance": 487.5,
+      "PowerUsed": 1012789996.8256072,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 40,
+      "BlocksMined": 23,
+      "Balance": 287.5,
+      "PowerUsed": 1070656510.0561874,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 41,
+      "BlocksMined": 35,
+      "Balance": 437.5,
+      "PowerUsed": 1025422727.4386357,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 42,
+      "BlocksMined": 27,
+      "Balance": 337.5,
+      "PowerUsed": 1196628505.0358086,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 43,
+      "BlocksMined": 26,
+      "Balance": 325.0,
+      "PowerUsed": 877549254.5150094,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 44,
+      "BlocksMined": 32,
+      "Balance": 400.0,
+      "PowerUsed": 968148549.9181746,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 45,
+      "BlocksMined": 34,
+      "Balance": 425.0,
+      "PowerUsed": 869897030.0891496,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 46,
+      "BlocksMined": 20,
+      "Balance": 250.0,
+      "PowerUsed": 590175433.4674854,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 47,
+      "BlocksMined": 33,
+      "Balance": 412.5,
+      "PowerUsed": 968564571.464659,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 48,
+      "BlocksMined": 27,
+      "Balance": 337.5,
+      "PowerUsed": 941313796.5056683,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 49,
+      "BlocksMined": 19,
+      "Balance": 237.5,
+      "PowerUsed": 680424857.36323,
+      "DifficultyReductionParticipationHistory": []
+    }
+  ],
+  "DifficultyChangeHistory": [
+    49117.10561551245
+  ],
+  "AverageBlockMiningTimeInSeconds": 0.0
+}

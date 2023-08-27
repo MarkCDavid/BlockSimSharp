@@ -1,0 +1,120 @@
+{
+  "Timestamp": "2023-08-19 21:40:53",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016
+    },
+    "Simulation": {
+      "LengthInSeconds": 10000000
+    },
+    "Node": {
+      "StartingNodeCount": 10,
+      "NodeJoinChance": 0.0,
+      "NodeQuitChance": 0.0,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 11135.41140159944,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 11279.170313531264
+      },
+      {
+        "Epoch": 2,
+        "Difficulty": 11121.739123380548
+      },
+      {
+        "Epoch": 3,
+        "Difficulty": 11489.015544213906
+      },
+      {
+        "Epoch": 4,
+        "Difficulty": 11191.86019375525
+      },
+      {
+        "Epoch": 5,
+        "Difficulty": 11212.993698442671
+      },
+      {
+        "Epoch": 6,
+        "Difficulty": 11064.87058660705
+      },
+      {
+        "Epoch": 7,
+        "Difficulty": 10552.1785424266
+      },
+      {
+        "Epoch": 8,
+        "Difficulty": 11168.435093420625
+      },
+      {
+        "Epoch": 9,
+        "Difficulty": 11135.41140159944
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1114.354783009785
+    },
+    {
+      "Id": 1,
+      "HashPower": 970.8145661904109
+    },
+    {
+      "Id": 2,
+      "HashPower": 756.3897863537829
+    },
+    {
+      "Id": 3,
+      "HashPower": 1132.7508820698977
+    },
+    {
+      "Id": 4,
+      "HashPower": 1260.9803369255346
+    },
+    {
+      "Id": 5,
+      "HashPower": 539.1006174497941
+    },
+    {
+      "Id": 6,
+      "HashPower": 543.8864136973089
+    },
+    {
+      "Id": 7,
+      "HashPower": 1930.6341967688427
+    },
+    {
+      "Id": 8,
+      "HashPower": 1359.5280843835017
+    },
+    {
+      "Id": 9,
+      "HashPower": 1670.7306466824043
+    }
+  ],
+  "TotalBlocks": 16678,
+  "MainBlocks": 16678,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 599.5791250942674,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

@@ -1,0 +1,96 @@
+{
+  "Scenario": "TestScenario",
+  "Timestamp": "2023-08-14 21:43:01",
+  "Settings": {
+    "BlockSettings": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "TransactionSettings": {
+      "Enabled": false,
+      "Type": 0,
+      "RatePerSecond": 10,
+      "AverageFee": 6.2E-05,
+      "AverageSizeInMb": 0.000546,
+      "AveragePropogationDelay": 0.0
+    },
+    "SimulationSettings": {
+      "LengthInSeconds": 10000000
+    },
+    "RandomNumberGenerationSettings": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    "ScenarioSettings": {
+      "ScenarioName": "TestScenario"
+    },
+    "BurnSettings": {
+      "AveragePowerCostPerSecond": 1.0,
+      "MaximumPowerCostVarianceInDecimalPercentage": 0.1,
+      "BitcoinCostPerDifficultyLevel": 0.15,
+      "DefaultHashDifficulty": 17,
+      "ExponentialBaseOfDifficulty": 2,
+      "ExponentialBaseOfDifficultyCost": 3
+    },
+    "NodeSettings": {
+      "StartingNodeCount": 10,
+      "NodeJoinChance": 0.0,
+      "NodeQuitChance": 0.0,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1712.4275
+    },
+    {
+      "Id": 1,
+      "HashPower": 1524.3236
+    },
+    {
+      "Id": 2,
+      "HashPower": 871.4486
+    },
+    {
+      "Id": 3,
+      "HashPower": 933.6618
+    },
+    {
+      "Id": 4,
+      "HashPower": 1173.2783
+    },
+    {
+      "Id": 5,
+      "HashPower": 354.6289
+    },
+    {
+      "Id": 6,
+      "HashPower": 568.76166
+    },
+    {
+      "Id": 7,
+      "HashPower": 628.01526
+    },
+    {
+      "Id": 8,
+      "HashPower": 1422.224
+    },
+    {
+      "Id": 9,
+      "HashPower": 1704.1956
+    }
+  ],
+  "TotalBlocks": 8319,
+  "MainBlocks": 0,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 0.0,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

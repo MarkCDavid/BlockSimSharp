@@ -5,9 +5,11 @@ namespace BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 public sealed class Configuration
 {
     public string ScenarioName { get; init; } = null!;
-    public BlockConfiguration Block { get; } = new();
-    public RandomNumberGeneratorConfiguration RandomNumberGenerator { get; } = new();
-    public DifficultyConfiguration Difficulty { get; } = new();
-    public Model.SimulationConfiguration Simulation { get; } = new();
-    public NodeConfiguration Node { get; } = new();
+    public string DataStoragePath { get; init; } = null!;
+    public BlockSettings Block { get; } = new();
+    public RandomNumberGeneratorSettings RandomNumberGenerator { get; } = new();
+    public DifficultySettings Difficulty { get; } = new();
+    public SimulationSettings Simulation { get; } = new();
+    public NodeSettings Node { get; } = new();
+    public StatisticsSettings Statistics { get; } = new();
 }

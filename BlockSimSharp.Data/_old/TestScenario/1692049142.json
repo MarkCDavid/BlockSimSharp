@@ -1,0 +1,96 @@
+{
+  "Scenario": "TestScenario",
+  "Timestamp": "2023-08-14 21:39:02",
+  "Settings": [
+    {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    {
+      "Enabled": false,
+      "Type": 0,
+      "RatePerSecond": 10,
+      "AverageFee": 6.2E-05,
+      "AverageSizeInMb": 0.000546,
+      "AveragePropogationDelay": 0.0
+    },
+    {
+      "LengthInSeconds": 10000000
+    },
+    {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    {
+      "ScenarioName": "TestScenario"
+    },
+    {
+      "AveragePowerCostPerSecond": 1.0,
+      "MaximumPowerCostVarianceInDecimalPercentage": 0.1,
+      "BitcoinCostPerDifficultyLevel": 0.15,
+      "DefaultHashDifficulty": 17,
+      "ExponentialBaseOfDifficulty": 2,
+      "ExponentialBaseOfDifficultyCost": 3
+    },
+    {
+      "StartingNodeCount": 10,
+      "NodeJoinChance": 0.0,
+      "NodeQuitChance": 0.0,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  ],
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1143.2183
+    },
+    {
+      "Id": 1,
+      "HashPower": 1046.2905
+    },
+    {
+      "Id": 2,
+      "HashPower": 1089.0369
+    },
+    {
+      "Id": 3,
+      "HashPower": 569.2075
+    },
+    {
+      "Id": 4,
+      "HashPower": 886.14246
+    },
+    {
+      "Id": 5,
+      "HashPower": 735.04364
+    },
+    {
+      "Id": 6,
+      "HashPower": 745.793
+    },
+    {
+      "Id": 7,
+      "HashPower": 382.95862
+    },
+    {
+      "Id": 8,
+      "HashPower": 976.68164
+    },
+    {
+      "Id": 9,
+      "HashPower": 1163.1678
+    }
+  ],
+  "TotalBlocks": 8250,
+  "MainBlocks": 0,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 0.0,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

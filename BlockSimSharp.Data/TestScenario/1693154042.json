@@ -1,0 +1,464 @@
+{
+  "Timestamp": "2023-08-27 16:34:01",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "DataStoragePath": "git/BlockSimSharp/BlockSimSharp.Data",
+    "Block": {
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.25
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": false,
+      "ProbabilityForParticipationThisEpoch": 0.2,
+      "ReductionHighBound": 2.0,
+      "ReductionLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 10000000
+    },
+    "Node": {
+      "StartingNodeCount": 50,
+      "StandardDeviationOfHashRate": 200.0,
+      "AverageHashRate": 1000.0
+    },
+    "Statistics": {
+      "IncludeGlobalBlockChain": false
+    }
+  },
+  "Average": {
+    "BlockMiningTimeInSeconds": 600.058671046971
+  },
+  "Power": {
+    "TotalPowerUsed": 506703213518.61475,
+    "TotalPowerUsedPerHashPower": 9999980.740169777,
+    "TotalPowerUsedPerHashPowerPerBlockMined": 599.7709314562333
+  },
+  "Blocks": {
+    "Total": 16673,
+    "Main": 16665,
+    "Stale": 8,
+    "StaleRate": 0.0,
+    "Chain": []
+  },
+  "Nodes": [
+    {
+      "NodeId": 0,
+      "HashPower": 1000.4930743071841,
+      "BlocksMined": 333,
+      "Balance": 4162.5,
+      "PowerUsed": 10004910605.899485,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 1,
+      "HashPower": 1289.6795054371573,
+      "BlocksMined": 432,
+      "Balance": 5400.0,
+      "PowerUsed": 12896770972.392176,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 2,
+      "HashPower": 822.6453212185733,
+      "BlocksMined": 262,
+      "Balance": 3275.0,
+      "PowerUsed": 8226438266.831532,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 3,
+      "HashPower": 830.2799765097739,
+      "BlocksMined": 278,
+      "Balance": 3475.0,
+      "PowerUsed": 8302782579.417716,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 4,
+      "HashPower": 780.3132547679025,
+      "BlocksMined": 226,
+      "Balance": 2825.0,
+      "PowerUsed": 7803118226.828116,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 5,
+      "HashPower": 814.08747208477,
+      "BlocksMined": 280,
+      "Balance": 3500.0,
+      "PowerUsed": 8140860054.31495,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 6,
+      "HashPower": 864.965531817156,
+      "BlocksMined": 288,
+      "Balance": 3600.0,
+      "PowerUsed": 8649637999.873955,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 7,
+      "HashPower": 767.5919898620775,
+      "BlocksMined": 238,
+      "Balance": 2975.0,
+      "PowerUsed": 7675904727.229444,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 8,
+      "HashPower": 1107.7753100865175,
+      "BlocksMined": 367,
+      "Balance": 4587.5,
+      "PowerUsed": 11077731384.275309,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 9,
+      "HashPower": 1186.3477762869484,
+      "BlocksMined": 400,
+      "Balance": 5000.0,
+      "PowerUsed": 11863454064.114367,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 10,
+      "HashPower": 1022.2194569880141,
+      "BlocksMined": 326,
+      "Balance": 4075.0,
+      "PowerUsed": 10222176065.819756,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 11,
+      "HashPower": 1207.8063136295764,
+      "BlocksMined": 407,
+      "Balance": 5087.5,
+      "PowerUsed": 12078040539.298716,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 12,
+      "HashPower": 1298.5643564397692,
+      "BlocksMined": 405,
+      "Balance": 5062.5,
+      "PowerUsed": 12985619728.573557,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 13,
+      "HashPower": 750.792320281101,
+      "BlocksMined": 210,
+      "Balance": 2625.0,
+      "PowerUsed": 7507908389.404127,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 14,
+      "HashPower": 981.1884153796562,
+      "BlocksMined": 311,
+      "Balance": 3887.5,
+      "PowerUsed": 9811864612.239964,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 15,
+      "HashPower": 1089.1198778211426,
+      "BlocksMined": 367,
+      "Balance": 4587.5,
+      "PowerUsed": 10891179831.619112,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 16,
+      "HashPower": 1046.583596260038,
+      "BlocksMined": 352,
+      "Balance": 4400.0,
+      "PowerUsed": 10465816082.605976,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 17,
+      "HashPower": 1272.2269917554536,
+      "BlocksMined": 413,
+      "Balance": 5162.5,
+      "PowerUsed": 12722247648.2083,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 18,
+      "HashPower": 1257.6035667936326,
+      "BlocksMined": 413,
+      "Balance": 5162.5,
+      "PowerUsed": 12576011018.54146,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 19,
+      "HashPower": 691.9448440445163,
+      "BlocksMined": 217,
+      "Balance": 2712.5,
+      "PowerUsed": 6919436434.518146,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 20,
+      "HashPower": 945.6503576241132,
+      "BlocksMined": 311,
+      "Balance": 3887.5,
+      "PowerUsed": 9456485042.094137,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 21,
+      "HashPower": 973.6055260624474,
+      "BlocksMined": 329,
+      "Balance": 4112.5,
+      "PowerUsed": 9736037090.014475,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 22,
+      "HashPower": 1270.1239556827945,
+      "BlocksMined": 429,
+      "Balance": 5362.5,
+      "PowerUsed": 12701213401.858921,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 23,
+      "HashPower": 881.39924400536,
+      "BlocksMined": 262,
+      "Balance": 3275.0,
+      "PowerUsed": 8813975415.484056,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 24,
+      "HashPower": 898.963622047278,
+      "BlocksMined": 298,
+      "Balance": 3725.0,
+      "PowerUsed": 8989618635.142363,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 25,
+      "HashPower": 1021.350549924331,
+      "BlocksMined": 362,
+      "Balance": 4525.0,
+      "PowerUsed": 10213486533.777584,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 26,
+      "HashPower": 1125.715435931252,
+      "BlocksMined": 370,
+      "Balance": 4625.0,
+      "PowerUsed": 11257132266.42078,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 27,
+      "HashPower": 688.9060550139029,
+      "BlocksMined": 235,
+      "Balance": 2937.5,
+      "PowerUsed": 6889048407.404324,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 28,
+      "HashPower": 1070.197578114845,
+      "BlocksMined": 355,
+      "Balance": 4437.5,
+      "PowerUsed": 10701953733.434738,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 29,
+      "HashPower": 754.4406635245077,
+      "BlocksMined": 212,
+      "Balance": 2650.0,
+      "PowerUsed": 7544391360.936464,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 30,
+      "HashPower": 1041.009324630674,
+      "BlocksMined": 365,
+      "Balance": 4562.5,
+      "PowerUsed": 10410073066.730751,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 31,
+      "HashPower": 1260.7487883649917,
+      "BlocksMined": 410,
+      "Balance": 5125.0,
+      "PowerUsed": 12607462817.267336,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 32,
+      "HashPower": 908.6589272214399,
+      "BlocksMined": 301,
+      "Balance": 3762.5,
+      "PowerUsed": 9086570681.47193,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 33,
+      "HashPower": 942.3878836155592,
+      "BlocksMined": 317,
+      "Balance": 3962.5,
+      "PowerUsed": 9423860403.884161,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 34,
+      "HashPower": 725.3850301591515,
+      "BlocksMined": 245,
+      "Balance": 3062.5,
+      "PowerUsed": 7253836331.847555,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 35,
+      "HashPower": 1020.3578549904543,
+      "BlocksMined": 339,
+      "Balance": 4237.5,
+      "PowerUsed": 10203558044.745775,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 36,
+      "HashPower": 1076.7010686355782,
+      "BlocksMined": 358,
+      "Balance": 4475.0,
+      "PowerUsed": 10766989670.267723,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 37,
+      "HashPower": 974.0821476773402,
+      "BlocksMined": 327,
+      "Balance": 4087.5,
+      "PowerUsed": 9740803130.897745,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 38,
+      "HashPower": 959.1350412079827,
+      "BlocksMined": 288,
+      "Balance": 3600.0,
+      "PowerUsed": 9591331122.769672,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 39,
+      "HashPower": 1233.5929107773675,
+      "BlocksMined": 385,
+      "Balance": 4812.5,
+      "PowerUsed": 12335904923.224827,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 40,
+      "HashPower": 1009.9232419711859,
+      "BlocksMined": 304,
+      "Balance": 3800.0,
+      "PowerUsed": 10099213068.366438,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 41,
+      "HashPower": 1037.754335868211,
+      "BlocksMined": 406,
+      "Balance": 5075.0,
+      "PowerUsed": 10377525603.47313,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 42,
+      "HashPower": 703.1791056790844,
+      "BlocksMined": 244,
+      "Balance": 3050.0,
+      "PowerUsed": 7031776439.466074,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 43,
+      "HashPower": 1070.189400868764,
+      "BlocksMined": 347,
+      "Balance": 4337.5,
+      "PowerUsed": 10701873957.961857,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 44,
+      "HashPower": 899.2306279145002,
+      "BlocksMined": 286,
+      "Balance": 3575.0,
+      "PowerUsed": 8992288221.803856,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 45,
+      "HashPower": 1205.2841051290982,
+      "BlocksMined": 382,
+      "Balance": 4775.0,
+      "PowerUsed": 12052817302.825212,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 46,
+      "HashPower": 1298.4462108748733,
+      "BlocksMined": 413,
+      "Balance": 5162.5,
+      "PowerUsed": 12984437359.6169,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 47,
+      "HashPower": 1196.0419618124456,
+      "BlocksMined": 411,
+      "Balance": 5137.5,
+      "PowerUsed": 11960396886.066545,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 48,
+      "HashPower": 1147.5643074280604,
+      "BlocksMined": 407,
+      "Balance": 5087.5,
+      "PowerUsed": 11475620840.240377,
+      "DifficultyReductionParticipationHistory": []
+    },
+    {
+      "NodeId": 49,
+      "HashPower": 1248.1647276995407,
+      "BlocksMined": 442,
+      "Balance": 5525.0,
+      "PowerUsed": 12481622527.11295,
+      "DifficultyReductionParticipationHistory": []
+    }
+  ],
+  "DifficultyChangeHistory": [
+    50670.41894222809,
+    50891.467937682384,
+    49732.74164468104,
+    52677.3583656993,
+    49902.37021205286,
+    51728.665247208985,
+    50450.23785641142,
+    50881.62617838709,
+    51172.10498185793
+  ]
+}

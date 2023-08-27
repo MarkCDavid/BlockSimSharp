@@ -6,81 +6,74 @@ namespace BlockSimSharp.BitcoinBurn.Simulation;
 
 public sealed class Difficulty
 {
-    private readonly Configuration _configuration;
-    private readonly Randomness _randomness;
-    private readonly Nodes _nodes;
+    public IntegrationEvent<double> DifficultyChangeIntegrationEvent { get; } = new();
+    public IntegrationEvent EpochChangeIntegrationEvent { get; } = new();
 
-    public double CurrentDifficulty { get; private set; }
-    public List<DifficultyHistory> History { get; init; }
-
+    private double CurrentDifficulty
+    {
+        get => _difficulty;
+        set
+        {
+            _difficulty = value;
+            DifficultyChangeIntegrationEvent.Invoke(value);
+            EpochChangeIntegrationEvent.Invoke();
+        }
+    }
     
     public Difficulty(Configuration configuration, Randomness randomness, Nodes nodes)
     {
         _configuration = configuration;
         _randomness = randomness;
-        _randomness = randomness;
         _nodes = nodes;
-        
-        CurrentDifficulty = nodes.TotalHashPower;
-        History = new List<DifficultyHistory>
-        {
-            new(0, CurrentDifficulty)
-        };
+    }
+
+    public void Initialize()
+    {
+        CurrentDifficulty = _nodes.TotalHashPower;
     }
 
     public double GetRelativeHashPower(Node miner)
     {
         return PercievedHashPower(miner) / CurrentDifficulty;
     }
-
-    public double PercievedHashPower(Node miner)
-    {
-        if (!_configuration.Difficulty.DecreaseByBurnEnabled)
-        {
-            return miner.HashPower;
-        }
-
-        if (!miner.ParticipatesInDifficultyDecrease)
-        {
-            return miner.HashPower;
-        }
-
-        if (!miner.DifficultyDecreaseDuringCurrentEpoch)
-        {
-            return miner.HashPower;
-        }
-
-        return miner.HashPower / miner.DifficultyDecrease;
-    }
     
-    public void OnBlockMined(SimulationEvent simulationEvent)
+    public void OnBlockMined(BlockMinedSimulationEvent simulationEvent)
     {
-        var miner = simulationEvent.Node;
-        if (miner.BlockChainLength % _configuration.Difficulty.AdjustmentFrequencyInBlocks != 0)
+        if (simulationEvent.Miner.BlockChainLength % _configuration.Difficulty.AdjustmentFrequencyInBlocks != 0)
             return;
 
-        var epoch = miner.BlockChainLength / _configuration.Difficulty.AdjustmentFrequencyInBlocks + 1;
-
-        CurrentDifficulty = CalculateAdjustedDifficulty(miner);
-        History.Add(new DifficultyHistory(epoch, CurrentDifficulty));
+        CurrentDifficulty = CalculateAdjustedDifficulty(simulationEvent.Miner);
 
         UpdateDifficultyDecreaseParticipation();
     }
 
     public void UpdateDifficultyDecreaseParticipation()
     {
-        foreach (var node in _nodes.Where(node => node.ParticipatesInDifficultyDecrease))
+        if (!_configuration.Difficulty.DecreaseByBurnEnabled)
         {
-            var difficultyDecreaseDuringCurrentEpoch =
-                _randomness.Binary(_configuration.Difficulty.ProbabilityForParticipationThisEpoch);
-
-            var difficultyDecrease = 
-                    _randomness.NextDouble(
-                        _configuration.Difficulty.DecreaseAmountLowBound,
-                        _configuration.Difficulty.DecreaseAmountHighBound);
-            
-            node.UpdateDifficultyDecreaseParticipation(difficultyDecreaseDuringCurrentEpoch, difficultyDecrease);
+            return ;
         }
+        
+        foreach (var node in _nodes)
+        {
+            var participatesInReduction = _randomness.Binary(_configuration.Difficulty.ProbabilityForParticipationThisEpoch);
+            
+            var difficultyDecrease = participatesInReduction
+                ? _randomness.NextDouble(_configuration.Difficulty.ReductionLowBound, _configuration.Difficulty.ReductionHighBound)
+                : 1.0;
+            
+            node.UpdateDifficultyDecreaseParticipation(difficultyDecrease, participatesInReduction);
+        }
+    }
+
+    private double PercievedHashPower(Node miner)
+    {
+        if (!_configuration.Difficulty.DecreaseByBurnEnabled)
+        {
+            return miner.HashPower;
+        }
+
+        return miner.HashPower * miner.DifficultyReduction;
     }
 
     private double CalculateAdjustedDifficulty(Node miner)
@@ -109,6 +102,9 @@ public sealed class Difficulty
             _ => difficultyChangeRatio
         };
     }
+    
+    private readonly Configuration _configuration;
+    private readonly Randomness _randomness;
+    private readonly Nodes _nodes;
+    private double _difficulty;
 }
-
-public sealed record DifficultyHistory(int Epoch, double Difficulty);

@@ -18,6 +18,7 @@ public static class ConfigurationFactory
         configuration.GetSection("Difficulty").Bind(settings.Difficulty);
         configuration.GetSection("Simulation").Bind(settings.Simulation);
         configuration.GetSection("Node").Bind(settings.Node);
+        configuration.GetSection("Statistics").Bind(settings.Statistics);
 
         return settings;
     }

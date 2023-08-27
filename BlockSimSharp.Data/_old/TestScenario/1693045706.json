@@ -1,0 +1,3088 @@
+{
+  "Timestamp": "2023-08-26 10:28:26",
+  "Configuration": {
+    "ScenarioName": "TestScenario",
+    "Block": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "RandomNumberGenerator": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400,
+      "HashPowerUseStaticSeed": false,
+      "HashPowerStaticSeed": 400400
+    },
+    "Difficulty": {
+      "AdjustmentFrequencyInBlocks": 2016,
+      "DecreaseByBurnEnabled": true,
+      "ProbabilityForParticipationThisEpoch": 0.5,
+      "DecreaseAmountHighBound": 2.0,
+      "DecreaseAmountLowBound": 2.0
+    },
+    "Simulation": {
+      "LengthInSeconds": 10000000
+    },
+    "Node": {
+      "StartingNodeCount": 500,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Difficulty": {
+    "CurrentDifficulty": 493645.98230575974,
+    "History": [
+      {
+        "Epoch": 0,
+        "Difficulty": 486978.49818121415
+      },
+      {
+        "Epoch": 2,
+        "Difficulty": 497414.528952703
+      },
+      {
+        "Epoch": 3,
+        "Difficulty": 495423.7970349615
+      },
+      {
+        "Epoch": 4,
+        "Difficulty": 491278.231624478
+      },
+      {
+        "Epoch": 5,
+        "Difficulty": 474226.30644343887
+      },
+      {
+        "Epoch": 6,
+        "Difficulty": 478227.7082459973
+      },
+      {
+        "Epoch": 7,
+        "Difficulty": 488752.8352924018
+      },
+      {
+        "Epoch": 8,
+        "Difficulty": 482864.63591107924
+      },
+      {
+        "Epoch": 9,
+        "Difficulty": 493645.98230575974
+      }
+    ]
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1743.7672561387153,
+      "PowerUsed": 17435318781.86306,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 1,
+      "HashPower": 1594.7950432742966,
+      "PowerUsed": 15945797739.541046,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 2,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 3,
+      "HashPower": 330.4811967458894,
+      "PowerUsed": 3304365875.888313,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 4,
+      "HashPower": 1014.46270376205,
+      "PowerUsed": 10143257691.148573,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 5,
+      "HashPower": 906.2748460732959,
+      "PowerUsed": 9061525148.867052,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 6,
+      "HashPower": 1464.7640236373586,
+      "PowerUsed": 14645663062.20983,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 7,
+      "HashPower": 1015.3142714532033,
+      "PowerUsed": 10151772218.593355,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 8,
+      "HashPower": 930.5887446176163,
+      "PowerUsed": 9304631314.817608,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 9,
+      "HashPower": 829.5542729734926,
+      "PowerUsed": 8294422977.167626,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 10,
+      "HashPower": 1290.1038139262128,
+      "PowerUsed": 12899296725.70454,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 11,
+      "HashPower": 1527.8078553590635,
+      "PowerUsed": 15276016281.326853,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 12,
+      "HashPower": 1629.2468365630143,
+      "PowerUsed": 16290269168.558388,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 13,
+      "HashPower": 2041.424755193668,
+      "PowerUsed": 20411491987.068768,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 14,
+      "HashPower": 1005.7593778341254,
+      "PowerUsed": 10056236179.830694,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 15,
+      "HashPower": 1715.5292586554328,
+      "PowerUsed": 17152976923.36723,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 16,
+      "HashPower": 341.11874615512534,
+      "PowerUsed": 3410727011.157324,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 17,
+      "HashPower": 510.37630361039606,
+      "PowerUsed": 5103074117.735509,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 18,
+      "HashPower": 420.8774807311787,
+      "PowerUsed": 4208206696.6348677,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 19,
+      "HashPower": 737.4489535264156,
+      "PowerUsed": 7373494108.700917,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 20,
+      "HashPower": 639.8255196908774,
+      "PowerUsed": 6397391544.834812,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 21,
+      "HashPower": 1067.2172227810631,
+      "PowerUsed": 10670731672.00366,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 22,
+      "HashPower": 372.5035548084429,
+      "PowerUsed": 3724532733.711216,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 23,
+      "HashPower": 739.1374946179973,
+      "PowerUsed": 7390377240.382815,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 24,
+      "HashPower": 964.2537265405656,
+      "PowerUsed": 9641235692.234425,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 25,
+      "HashPower": 1479.491597000716,
+      "PowerUsed": 14792918916.206045,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 26,
+      "HashPower": 1245.8356998199454,
+      "PowerUsed": 12456675338.820671,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 27,
+      "HashPower": 1214.723583731004,
+      "PowerUsed": 12145596173.82352,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 28,
+      "HashPower": 940.2456696368585,
+      "PowerUsed": 9401187529.857447,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 29,
+      "HashPower": 1245.4363934999915,
+      "PowerUsed": 12452682814.614548,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 30,
+      "HashPower": 1044.342966779872,
+      "PowerUsed": 10442019988.219864,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 31,
+      "HashPower": 1085.261077444361,
+      "PowerUsed": 10851145862.602116,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 32,
+      "HashPower": 873.4735907093436,
+      "PowerUsed": 8733556871.161057,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 33,
+      "HashPower": 533.7912043651224,
+      "PowerUsed": 5337191519.279319,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 34,
+      "HashPower": 964.4330788467471,
+      "PowerUsed": 9643028973.201998,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 35,
+      "HashPower": 373.40884701924233,
+      "PowerUsed": 3733584433.8337226,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 36,
+      "HashPower": 1086.301777440679,
+      "PowerUsed": 10861551457.803051,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 37,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 38,
+      "HashPower": 861.9745635090202,
+      "PowerUsed": 8618582120.824883,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 39,
+      "HashPower": 343.6768069859345,
+      "PowerUsed": 3436304166.5326166,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 40,
+      "HashPower": 1173.0216441137804,
+      "PowerUsed": 11728633067.945398,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 41,
+      "HashPower": 1616.3106369137083,
+      "PowerUsed": 16160924633.66278,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 42,
+      "HashPower": 479.0135765583842,
+      "PowerUsed": 4789489181.388463,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 43,
+      "HashPower": 1072.1974107913002,
+      "PowerUsed": 10720526829.727032,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 44,
+      "HashPower": 517.6799396024028,
+      "PowerUsed": 5176100619.029805,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 45,
+      "HashPower": 1015.3698077218564,
+      "PowerUsed": 10152327506.315598,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 46,
+      "HashPower": 1632.4512137963616,
+      "PowerUsed": 16322308615.545385,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 47,
+      "HashPower": 1745.1305844801711,
+      "PowerUsed": 17448950225.023865,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 48,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 49,
+      "HashPower": 1321.2256096889105,
+      "PowerUsed": 13210472674.3734,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 50,
+      "HashPower": 49.121841829182245,
+      "PowerUsed": 491152112.43301296,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 51,
+      "HashPower": 2884.885586343805,
+      "PowerUsed": 28844961774.592022,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 52,
+      "HashPower": 1317.2036473434732,
+      "PowerUsed": 13170258479.861752,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 53,
+      "HashPower": 1161.658849281996,
+      "PowerUsed": 11615020457.404724,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 54,
+      "HashPower": 349.40558975828435,
+      "PowerUsed": 3493584261.4055524,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 55,
+      "HashPower": 671.2429932366158,
+      "PowerUsed": 6711523872.221068,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 56,
+      "HashPower": 1584.1007259279486,
+      "PowerUsed": 15838869001.527775,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 57,
+      "HashPower": 557.7647149983252,
+      "PowerUsed": 5576894265.582633,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 58,
+      "HashPower": 1837.819052687715,
+      "PowerUsed": 18375709793.946735,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 59,
+      "HashPower": 1293.7271359290057,
+      "PowerUsed": 12935525054.884106,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 60,
+      "HashPower": 1102.350639020803,
+      "PowerUsed": 11022018410.459959,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 61,
+      "HashPower": 1212.3920637982023,
+      "PowerUsed": 12122284121.63791,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 62,
+      "HashPower": 1309.3549062733878,
+      "PowerUsed": 13091781663.582846,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 63,
+      "HashPower": 716.9932267920565,
+      "PowerUsed": 7168964452.995595,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 64,
+      "HashPower": 643.2674661250111,
+      "PowerUsed": 6431806363.153063,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 65,
+      "HashPower": 765.5000496472717,
+      "PowerUsed": 7653967205.856583,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 66,
+      "HashPower": 591.5533722353663,
+      "PowerUsed": 5914735229.200357,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 67,
+      "HashPower": 231.82901929238062,
+      "PowerUsed": 2317977264.4657288,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 68,
+      "HashPower": 1207.902573720443,
+      "PowerUsed": 12077395280.88348,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 69,
+      "HashPower": 2054.0251066732076,
+      "PowerUsed": 20537478493.602818,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 70,
+      "HashPower": 1847.5158167157015,
+      "PowerUsed": 18472664345.298363,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 71,
+      "HashPower": 648.5598012695455,
+      "PowerUsed": 6484722570.875434,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 72,
+      "HashPower": 931.5817077774165,
+      "PowerUsed": 9314559606.08974,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 73,
+      "HashPower": 534.7700324550773,
+      "PowerUsed": 5346978478.932854,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 74,
+      "HashPower": 691.5713370515791,
+      "PowerUsed": 6914779870.6769905,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 75,
+      "HashPower": 1535.785425588101,
+      "PowerUsed": 15355781215.298649,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 76,
+      "HashPower": 1758.5780256634234,
+      "PowerUsed": 17583406485.172592,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 77,
+      "HashPower": 1542.3788233795858,
+      "PowerUsed": 15421706293.284462,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 78,
+      "HashPower": 503.62981528155325,
+      "PowerUsed": 5035618341.0213995,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 79,
+      "HashPower": 1375.0730714010413,
+      "PowerUsed": 13748874606.87898,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 80,
+      "HashPower": 1389.7384461096815,
+      "PowerUsed": 13895508558.28539,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 81,
+      "HashPower": 55.93664837270546,
+      "PowerUsed": 559290979.0763499,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 82,
+      "HashPower": 1029.47259075732,
+      "PowerUsed": 10293336300.390125,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 83,
+      "HashPower": 902.3526769249444,
+      "PowerUsed": 9022308751.622921,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 84,
+      "HashPower": 894.7765326611751,
+      "PowerUsed": 8946557535.4494,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 85,
+      "HashPower": 465.8785786177035,
+      "PowerUsed": 4658156931.921868,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 86,
+      "HashPower": 756.5427045736619,
+      "PowerUsed": 7564405845.963043,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 87,
+      "HashPower": 332.70087018911966,
+      "PowerUsed": 3326559614.1513367,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 88,
+      "HashPower": 778.2545397447356,
+      "PowerUsed": 7781494890.509704,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 89,
+      "HashPower": 1904.135083239658,
+      "PowerUsed": 19038780584.47259,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 90,
+      "HashPower": 1041.679762367636,
+      "PowerUsed": 10415391538.955662,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 91,
+      "HashPower": 1212.488358833757,
+      "PowerUsed": 12123246942.01218,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 92,
+      "HashPower": 1428.2799098477599,
+      "PowerUsed": 14280871171.459454,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 93,
+      "HashPower": 743.6611960614906,
+      "PowerUsed": 7435608148.615335,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 94,
+      "HashPower": 779.4764658305161,
+      "PowerUsed": 7793712501.9819355,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 95,
+      "HashPower": 1009.0871440664417,
+      "PowerUsed": 10089509350.253946,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 96,
+      "HashPower": 1048.0931547937585,
+      "PowerUsed": 10479516806.263542,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 97,
+      "HashPower": 1071.5988248737774,
+      "PowerUsed": 10714541778.537592,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 98,
+      "HashPower": 1035.2119633526943,
+      "PowerUsed": 10350722279.19893,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 99,
+      "HashPower": 1408.1539218644657,
+      "PowerUsed": 14079638458.175392,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 100,
+      "HashPower": 858.8303128397516,
+      "PowerUsed": 8587143858.31834,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 101,
+      "HashPower": 639.1964302552133,
+      "PowerUsed": 6391101499.638423,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 102,
+      "HashPower": 1323.6773868676983,
+      "PowerUsed": 13234987136.69277,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 103,
+      "HashPower": 1005.9236217757701,
+      "PowerUsed": 10057878397.546701,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 104,
+      "HashPower": 944.9529594459426,
+      "PowerUsed": 9448254073.93374,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 105,
+      "HashPower": 590.5181428941934,
+      "PowerUsed": 5904384333.166391,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 106,
+      "HashPower": 1084.8278905537074,
+      "PowerUsed": 10846814578.421762,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 107,
+      "HashPower": 895.4950040494905,
+      "PowerUsed": 8953741279.522333,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 108,
+      "HashPower": 416.2354197580984,
+      "PowerUsed": 4161792352.8710303,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 109,
+      "HashPower": 2050.226517797133,
+      "PowerUsed": 20499497732.26996,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 110,
+      "HashPower": 1246.4869583528462,
+      "PowerUsed": 12463187045.065105,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 111,
+      "HashPower": 1683.8747081578276,
+      "PowerUsed": 16836474146.474546,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 112,
+      "HashPower": 1441.7938687072526,
+      "PowerUsed": 14415992518.583454,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 113,
+      "HashPower": 1659.7095334994417,
+      "PowerUsed": 16594855018.632168,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 114,
+      "HashPower": 1227.1656367799228,
+      "PowerUsed": 12269999909.72636,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 115,
+      "HashPower": 635.8869868343617,
+      "PowerUsed": 6358011532.597286,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 116,
+      "HashPower": 1015.8521589766231,
+      "PowerUsed": 10157150367.773823,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 117,
+      "HashPower": 258.1642769777209,
+      "PowerUsed": 2581294293.346723,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 118,
+      "HashPower": 1623.7690331433575,
+      "PowerUsed": 16235498528.434353,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 119,
+      "HashPower": 930.5290980949612,
+      "PowerUsed": 9304034930.103374,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 120,
+      "HashPower": 1331.9328735787776,
+      "PowerUsed": 13317530860.346401,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 121,
+      "HashPower": 795.9391744330444,
+      "PowerUsed": 7958317366.242088,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 122,
+      "HashPower": 626.184364443015,
+      "PowerUsed": 6260998405.519895,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 123,
+      "HashPower": 724.3417641241157,
+      "PowerUsed": 7242439907.081452,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 124,
+      "HashPower": 1091.2719737622194,
+      "PowerUsed": 10911246712.126373,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 125,
+      "HashPower": 663.7537699019947,
+      "PowerUsed": 6636641748.010956,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 126,
+      "HashPower": 262.440566590701,
+      "PowerUsed": 2624051417.2366176,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 127,
+      "HashPower": 1179.9465998605915,
+      "PowerUsed": 11797873277.939505,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 128,
+      "HashPower": 1510.843804211834,
+      "PowerUsed": 15106398668.344105,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 129,
+      "HashPower": 883.8845219224621,
+      "PowerUsed": 8837652130.363752,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 130,
+      "HashPower": 1256.229407460639,
+      "PowerUsed": 12560598385.547888,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 131,
+      "HashPower": 1213.5563127356133,
+      "PowerUsed": 12133925039.480553,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 132,
+      "HashPower": 1603.0785937602536,
+      "PowerUsed": 16028622063.062338,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 133,
+      "HashPower": 1300.1306954045904,
+      "PowerUsed": 12999552005.95944,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 134,
+      "HashPower": 1230.0218184927433,
+      "PowerUsed": 12298557871.510933,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 135,
+      "HashPower": 896.160870311855,
+      "PowerUsed": 8960399043.343464,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 136,
+      "HashPower": 1442.7858266671115,
+      "PowerUsed": 14425910759.213089,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 137,
+      "HashPower": 953.3719316302507,
+      "PowerUsed": 9532432431.643114,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 138,
+      "HashPower": 1438.2605302769653,
+      "PowerUsed": 14380663903.666828,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 139,
+      "HashPower": 1403.6148847495751,
+      "PowerUsed": 14034254213.929363,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 140,
+      "HashPower": 1381.3790834597864,
+      "PowerUsed": 13811926215.457794,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 141,
+      "HashPower": 1005.0436240302067,
+      "PowerUsed": 10049079607.933483,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 142,
+      "HashPower": 574.4609187581219,
+      "PowerUsed": 5743833766.238058,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 143,
+      "HashPower": 620.5036697815049,
+      "PowerUsed": 6204199126.844843,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 144,
+      "HashPower": 867.6601159113654,
+      "PowerUsed": 8675429970.351215,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 145,
+      "HashPower": 655.4200570162907,
+      "PowerUsed": 6553315868.202568,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 146,
+      "HashPower": 1302.004360495169,
+      "PowerUsed": 13018286127.746403,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 147,
+      "HashPower": 1441.8139979003756,
+      "PowerUsed": 14416193783.34375,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 148,
+      "HashPower": 2016.8546777425572,
+      "PowerUsed": 20165824377.84683,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 149,
+      "HashPower": 359.6085284273199,
+      "PowerUsed": 3595599875.9207387,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 150,
+      "HashPower": 2327.5020559776713,
+      "PowerUsed": 23271878840.798878,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 151,
+      "HashPower": 418.6318608169805,
+      "PowerUsed": 4185753528.6853395,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 152,
+      "HashPower": 80.71246444382598,
+      "PowerUsed": 807015696.7874326,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 153,
+      "HashPower": 507.2298762791857,
+      "PowerUsed": 5071614091.547666,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 154,
+      "HashPower": 408.0775846517947,
+      "PowerUsed": 4080225013.4525704,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 155,
+      "HashPower": 1364.1541274484337,
+      "PowerUsed": 13639699906.009535,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 156,
+      "HashPower": 1295.6591683846354,
+      "PowerUsed": 12954842771.535992,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 157,
+      "HashPower": 1232.4753299633803,
+      "PowerUsed": 12323089674.407732,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 158,
+      "HashPower": 482.37825607279376,
+      "PowerUsed": 4823131434.806177,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 159,
+      "HashPower": 488.1469915446458,
+      "PowerUsed": 4880811002.7449665,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 160,
+      "HashPower": 977.2411366669827,
+      "PowerUsed": 9771092262.775963,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 161,
+      "HashPower": 1039.087642921412,
+      "PowerUsed": 10389473843.399391,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 162,
+      "HashPower": 1369.3894391177,
+      "PowerUsed": 13692045955.950848,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 163,
+      "HashPower": 1238.613808867392,
+      "PowerUsed": 12384466177.57958,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 164,
+      "HashPower": 1140.231484922207,
+      "PowerUsed": 11400775736.985308,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 165,
+      "HashPower": 669.3229532393752,
+      "PowerUsed": 6692326063.96539,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 166,
+      "HashPower": 2074.52642121032,
+      "PowerUsed": 20742463965.800274,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 167,
+      "HashPower": 924.7424000314202,
+      "PowerUsed": 9246175760.494036,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 168,
+      "HashPower": 670.6541011037509,
+      "PowerUsed": 6705635745.793389,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 169,
+      "HashPower": 904.5976767231396,
+      "PowerUsed": 9044755719.249525,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 170,
+      "HashPower": 1124.4310044574006,
+      "PowerUsed": 11242792260.210787,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 171,
+      "HashPower": 809.0982238207772,
+      "PowerUsed": 8089890097.713959,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 172,
+      "HashPower": 1520.9584714288344,
+      "PowerUsed": 15207531687.489998,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 173,
+      "HashPower": 1069.3210142141645,
+      "PowerUsed": 10691766746.585829,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 174,
+      "HashPower": 790.8050450286488,
+      "PowerUsed": 7906983002.371063,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 175,
+      "HashPower": 1324.8724028123438,
+      "PowerUsed": 13246935683.077501,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 176,
+      "HashPower": 1735.7738398197562,
+      "PowerUsed": 17355395408.381588,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 177,
+      "HashPower": 1581.519809469526,
+      "PowerUsed": 15813063320.727467,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 178,
+      "HashPower": 129.95970574565786,
+      "PowerUsed": 1299421634.679671,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 179,
+      "HashPower": 1052.6477975066327,
+      "PowerUsed": 10525057085.42463,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 180,
+      "HashPower": 1366.228956663733,
+      "PowerUsed": 13660445397.507471,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 181,
+      "HashPower": 1499.378889027695,
+      "PowerUsed": 14991764992.124592,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 182,
+      "HashPower": 706.576579840003,
+      "PowerUsed": 7064812044.118894,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 183,
+      "HashPower": 1528.4190148908242,
+      "PowerUsed": 15282127051.686447,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 184,
+      "HashPower": 1038.18924115287,
+      "PowerUsed": 10380491038.398642,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 185,
+      "HashPower": 1737.6272312078727,
+      "PowerUsed": 17373926820.50995,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 186,
+      "HashPower": 962.946925285782,
+      "PowerUsed": 9628169443.638678,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 187,
+      "HashPower": 1252.9860745175642,
+      "PowerUsed": 12528169434.046942,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 188,
+      "HashPower": 2042.9430926343407,
+      "PowerUsed": 20426673311.98667,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 189,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 190,
+      "HashPower": 1166.3226672868698,
+      "PowerUsed": 11661652342.118431,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 191,
+      "HashPower": 1142.0303918968089,
+      "PowerUsed": 11418762378.522938,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 192,
+      "HashPower": 221.72859413065748,
+      "PowerUsed": 2216986646.648458,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 193,
+      "HashPower": 751.5857450421122,
+      "PowerUsed": 7514842941.672301,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 194,
+      "HashPower": 1061.2390652169884,
+      "PowerUsed": 10610958165.8257,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 195,
+      "HashPower": 482.005415637106,
+      "PowerUsed": 4819403533.718403,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 196,
+      "HashPower": 417.265941459803,
+      "PowerUsed": 4172096178.864835,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 197,
+      "HashPower": 856.6942029364525,
+      "PowerUsed": 8565785642.658548,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 198,
+      "HashPower": 442.89127637152706,
+      "PowerUsed": 4428314938.280694,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 199,
+      "HashPower": 309.6917207176018,
+      "PowerUsed": 3096499177.746661,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 200,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 201,
+      "HashPower": 709.9324342349565,
+      "PowerUsed": 7098366058.254422,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 202,
+      "HashPower": 1407.1348649233005,
+      "PowerUsed": 14069449264.3117,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 203,
+      "HashPower": 678.1001010098672,
+      "PowerUsed": 6780085694.062426,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 204,
+      "HashPower": 390.5520741437574,
+      "PowerUsed": 3904993564.7332587,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 205,
+      "HashPower": 442.9019807023308,
+      "PowerUsed": 4428421967.139748,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 206,
+      "HashPower": 812.5813704288222,
+      "PowerUsed": 8124716862.158254,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 207,
+      "HashPower": 1012.1745578737039,
+      "PowerUsed": 10120379320.860144,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 208,
+      "HashPower": 1154.7928057819674,
+      "PowerUsed": 11546369290.357271,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 209,
+      "HashPower": 1531.0262333987453,
+      "PowerUsed": 15308195717.478647,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 210,
+      "HashPower": 359.7070825042431,
+      "PowerUsed": 3596585283.659267,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 211,
+      "HashPower": 1229.6128529779269,
+      "PowerUsed": 12294468768.394373,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 212,
+      "HashPower": 668.1232967309735,
+      "PowerUsed": 6680331118.206964,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 213,
+      "HashPower": 754.3614492341277,
+      "PowerUsed": 7542596236.879298,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 214,
+      "HashPower": 1016.6207576271865,
+      "PowerUsed": 10164835316.806221,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 215,
+      "HashPower": 513.7569150842762,
+      "PowerUsed": 5136875669.242604,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 216,
+      "HashPower": 1682.6451452014353,
+      "PowerUsed": 16824180176.604685,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 217,
+      "HashPower": 396.8229927030302,
+      "PowerUsed": 3967694285.6873364,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 218,
+      "HashPower": 867.0864644186562,
+      "PowerUsed": 8669694229.75284,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 219,
+      "HashPower": 2025.8350459124838,
+      "PowerUsed": 20255615937.62641,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 220,
+      "HashPower": 1061.6135232211436,
+      "PowerUsed": 10614702240.414717,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 221,
+      "HashPower": 1128.5154886917217,
+      "PowerUsed": 11283631589.217613,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 222,
+      "HashPower": 1725.1478130732642,
+      "PowerUsed": 17249149484.186337,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 223,
+      "HashPower": 1240.3647131868456,
+      "PowerUsed": 12401972857.36078,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 224,
+      "HashPower": 1043.4748075498237,
+      "PowerUsed": 10433339567.781841,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 225,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 226,
+      "HashPower": 383.3827335984655,
+      "PowerUsed": 3833309836.6308618,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 227,
+      "HashPower": 1387.3414840378023,
+      "PowerUsed": 13871542173.044397,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 228,
+      "HashPower": 1571.1808051170615,
+      "PowerUsed": 15709687233.042679,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 229,
+      "HashPower": 1186.096312568927,
+      "PowerUsed": 11859362103.990788,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 230,
+      "HashPower": 587.9533113711843,
+      "PowerUsed": 5878739480.008448,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 231,
+      "HashPower": 352.51804125852686,
+      "PowerUsed": 3524704575.145103,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 232,
+      "HashPower": 1438.764751803768,
+      "PowerUsed": 14385705438.32452,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 233,
+      "HashPower": 1308.2172894553696,
+      "PowerUsed": 13080407030.985603,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 234,
+      "HashPower": 1336.380771256238,
+      "PowerUsed": 13362003833.240349,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 235,
+      "HashPower": 835.5365078523566,
+      "PowerUsed": 8354237250.989866,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 236,
+      "HashPower": 981.8753336580558,
+      "PowerUsed": 9817427977.334734,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 237,
+      "HashPower": 1150.446613844984,
+      "PowerUsed": 11502913237.583166,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 238,
+      "HashPower": 367.3663016207081,
+      "PowerUsed": 3673167136.223326,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 239,
+      "HashPower": 214.42508828494397,
+      "PowerUsed": 2143961446.641433,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 240,
+      "HashPower": 491.2380917142959,
+      "PowerUsed": 4911717831.999194,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 241,
+      "HashPower": 873.3832951002229,
+      "PowerUsed": 8732654036.953035,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 242,
+      "HashPower": 739.5967261690224,
+      "PowerUsed": 7394968936.011054,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 243,
+      "HashPower": 456.9682679005841,
+      "PowerUsed": 4569065852.105169,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 244,
+      "HashPower": 1234.3414962112333,
+      "PowerUsed": 12341748817.889666,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 245,
+      "HashPower": 1093.8368533335856,
+      "PowerUsed": 10936892045.703169,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 246,
+      "HashPower": 547.7006577992986,
+      "PowerUsed": 5476267278.301959,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 247,
+      "HashPower": 513.799629823224,
+      "PowerUsed": 5137302758.974688,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 248,
+      "HashPower": 382.340411262412,
+      "PowerUsed": 3822888020.2224216,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 249,
+      "HashPower": 1222.6872627763182,
+      "PowerUsed": 12225222214.708696,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 250,
+      "HashPower": 848.9857024928294,
+      "PowerUsed": 8488711043.344065,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 251,
+      "HashPower": 1220.3643331208855,
+      "PowerUsed": 12201996053.701427,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 252,
+      "HashPower": 1018.1238940537866,
+      "PowerUsed": 10179864652.102144,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 253,
+      "HashPower": 1475.4406909407435,
+      "PowerUsed": 14752415323.618074,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 254,
+      "HashPower": 1371.0254378836828,
+      "PowerUsed": 13708403735.299723,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 255,
+      "HashPower": 713.1563795290589,
+      "PowerUsed": 7130601159.435549,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 256,
+      "HashPower": 909.0875757115574,
+      "PowerUsed": 9089648648.558626,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 257,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 258,
+      "HashPower": 1694.0396347151498,
+      "PowerUsed": 16938109691.182287,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 259,
+      "HashPower": 918.995161841294,
+      "PowerUsed": 9188711136.354889,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 260,
+      "HashPower": 523.3291003399228,
+      "PowerUsed": 5232584601.03022,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 261,
+      "HashPower": 812.5244572836227,
+      "PowerUsed": 8124147807.529063,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 262,
+      "HashPower": 978.3511101337446,
+      "PowerUsed": 9782190499.174343,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 263,
+      "HashPower": 1068.6448088450466,
+      "PowerUsed": 10685005605.653103,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 264,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 265,
+      "HashPower": 1303.834781290531,
+      "PowerUsed": 13036587864.953371,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 266,
+      "HashPower": 1007.3093065255849,
+      "PowerUsed": 10071733374.613785,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 267,
+      "HashPower": 613.6957721278513,
+      "PowerUsed": 6136129339.77445,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 268,
+      "HashPower": 1312.3615566391616,
+      "PowerUsed": 13121844108.79066,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 269,
+      "HashPower": 1840.0082276698645,
+      "PowerUsed": 18397598588.766544,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 270,
+      "HashPower": 1835.3085885856717,
+      "PowerUsed": 18350608541.611908,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 271,
+      "HashPower": 212.18413860409544,
+      "PowerUsed": 2121554974.7214334,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 272,
+      "HashPower": 915.9549724588362,
+      "PowerUsed": 9158313346.252012,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 273,
+      "HashPower": 1336.681171018196,
+      "PowerUsed": 13365007425.373074,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 274,
+      "HashPower": 729.0822114871412,
+      "PowerUsed": 7289837981.940379,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 275,
+      "HashPower": 623.5522314644186,
+      "PowerUsed": 6234680628.651128,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 276,
+      "HashPower": 1506.848087650017,
+      "PowerUsed": 15066446896.241531,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 277,
+      "HashPower": 787.7137927350233,
+      "PowerUsed": 7876074652.082473,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 278,
+      "HashPower": 1939.547689526228,
+      "PowerUsed": 19392858846.53957,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 279,
+      "HashPower": 557.5556735677553,
+      "PowerUsed": 5574804133.446168,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 280,
+      "HashPower": 1340.4551177387498,
+      "PowerUsed": 13402741798.413296,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 281,
+      "HashPower": 797.5387501427714,
+      "PowerUsed": 7974310964.193098,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 282,
+      "HashPower": 245.25877907208542,
+      "PowerUsed": 2452256734.4458447,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 283,
+      "HashPower": 1585.0011705447437,
+      "PowerUsed": 15847872232.253532,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 284,
+      "HashPower": 1128.8064851298705,
+      "PowerUsed": 11286541160.805128,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 285,
+      "HashPower": 685.5021384366637,
+      "PowerUsed": 6854096076.879926,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 286,
+      "HashPower": 609.1652945827968,
+      "PowerUsed": 6090830679.6728,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 287,
+      "HashPower": 1465.8274302511493,
+      "PowerUsed": 14656295692.935549,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 288,
+      "HashPower": 1079.9079914973895,
+      "PowerUsed": 10797622228.858149,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 289,
+      "HashPower": 1475.7317753321352,
+      "PowerUsed": 14755325774.619184,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 290,
+      "HashPower": 746.658507964117,
+      "PowerUsed": 7465577221.796978,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 291,
+      "HashPower": 946.8989882933065,
+      "PowerUsed": 9467711735.610294,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 292,
+      "HashPower": 376.05789779849295,
+      "PowerUsed": 3760071365.872931,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 293,
+      "HashPower": 1399.707561453678,
+      "PowerUsed": 13995186255.170599,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 294,
+      "HashPower": 179.67586696964224,
+      "PowerUsed": 1796516138.833908,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 295,
+      "HashPower": 1201.6523443788917,
+      "PowerUsed": 12014901424.17979,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 296,
+      "HashPower": 517.7665709604637,
+      "PowerUsed": 5176966815.673268,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 297,
+      "HashPower": 884.8073254161787,
+      "PowerUsed": 8846878919.678226,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 298,
+      "HashPower": 1133.2601027594296,
+      "PowerUsed": 11331071325.49904,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 299,
+      "HashPower": 1496.8552103814052,
+      "PowerUsed": 14966531612.184626,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 300,
+      "HashPower": 166.0411842200823,
+      "PowerUsed": 1660187715.765256,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 301,
+      "HashPower": 470.5078506448816,
+      "PowerUsed": 4704443403.489504,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 302,
+      "HashPower": 427.37227943028586,
+      "PowerUsed": 4273145916.7884135,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 303,
+      "HashPower": 20.05262971401271,
+      "PowerUsed": 200499229.61201656,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 304,
+      "HashPower": 776.3602094369653,
+      "PowerUsed": 7762554144.445233,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 305,
+      "HashPower": 648.8475738571468,
+      "PowerUsed": 6487599908.309004,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 306,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 307,
+      "HashPower": 897.4841776429321,
+      "PowerUsed": 8973630330.421734,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 308,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 309,
+      "HashPower": 863.3784243533407,
+      "PowerUsed": 8632618834.30255,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 310,
+      "HashPower": 1414.2211712665198,
+      "PowerUsed": 14140302762.474897,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 311,
+      "HashPower": 815.4523303574715,
+      "PowerUsed": 8153422586.153102,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 312,
+      "HashPower": 748.7404406787172,
+      "PowerUsed": 7486393738.699499,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 313,
+      "HashPower": 541.4915369354999,
+      "PowerUsed": 5414184450.886595,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 314,
+      "HashPower": 1587.0616252033105,
+      "PowerUsed": 15868473997.587427,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 315,
+      "HashPower": 853.1698513237402,
+      "PowerUsed": 8530546883.787132,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 316,
+      "HashPower": 1442.7188332701935,
+      "PowerUsed": 14425240915.673307,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 317,
+      "HashPower": 1430.1827015622212,
+      "PowerUsed": 14299896520.169434,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 318,
+      "HashPower": 1262.3742165079677,
+      "PowerUsed": 12622038181.608124,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 319,
+      "HashPower": 596.619160315835,
+      "PowerUsed": 5965386272.08089,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 320,
+      "HashPower": 1181.7520714599223,
+      "PowerUsed": 11815925556.863346,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 321,
+      "HashPower": 819.7145208630884,
+      "PowerUsed": 8196038738.000647,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 322,
+      "HashPower": 1243.1330647143977,
+      "PowerUsed": 12429652635.847927,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 323,
+      "HashPower": 975.5234010985246,
+      "PowerUsed": 9753917225.732649,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 324,
+      "HashPower": 1321.3824183538861,
+      "PowerUsed": 13212040549.358957,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 325,
+      "HashPower": 168.55490337549202,
+      "PowerUsed": 1685321514.2400007,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 326,
+      "HashPower": 939.3748804743065,
+      "PowerUsed": 9392480813.644287,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 327,
+      "HashPower": 758.4403255430617,
+      "PowerUsed": 7583379494.202022,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 328,
+      "HashPower": 26.923459676733273,
+      "PowerUsed": 269198254.8255509,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 329,
+      "HashPower": 659.3718299633884,
+      "PowerUsed": 6592828263.474184,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 330,
+      "HashPower": 1464.821422047049,
+      "PowerUsed": 14646236968.829,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 331,
+      "HashPower": 1312.333728433542,
+      "PowerUsed": 13121565864.297619,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 332,
+      "HashPower": 687.2846137754827,
+      "PowerUsed": 6871918424.239433,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 333,
+      "HashPower": 959.7518712643622,
+      "PowerUsed": 9596223216.186222,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 334,
+      "HashPower": 1056.5888490640955,
+      "PowerUsed": 10564462281.27181,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 335,
+      "HashPower": 1073.709943790925,
+      "PowerUsed": 10735650118.06935,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 336,
+      "HashPower": 1207.5388389459977,
+      "PowerUsed": 12073758424.11705,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 337,
+      "HashPower": 1188.7237314585316,
+      "PowerUsed": 11885632746.332827,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 338,
+      "HashPower": 584.895215279287,
+      "PowerUsed": 5848162646.98203,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 339,
+      "HashPower": 856.976300802403,
+      "PowerUsed": 8568606240.535501,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 340,
+      "HashPower": 1293.7554207566716,
+      "PowerUsed": 12935807864.981237,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 341,
+      "HashPower": 660.0456071432832,
+      "PowerUsed": 6599565125.79224,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 342,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 343,
+      "HashPower": 2132.291756692466,
+      "PowerUsed": 21320039347.56442,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 344,
+      "HashPower": 1240.6357761005122,
+      "PowerUsed": 12404683120.610052,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 345,
+      "HashPower": 435.68608145641565,
+      "PowerUsed": 4356272714.877198,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 346,
+      "HashPower": 1341.532727602904,
+      "PowerUsed": 13413516442.470798,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 347,
+      "HashPower": 1666.145764760371,
+      "PowerUsed": 16659208643.459795,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 348,
+      "HashPower": 1615.1147843836425,
+      "PowerUsed": 16148967722.55292,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 349,
+      "HashPower": 515.2621815563045,
+      "PowerUsed": 5151926302.117513,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 350,
+      "HashPower": 792.9341173556695,
+      "PowerUsed": 7928270851.767576,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 351,
+      "HashPower": 1875.7995788682504,
+      "PowerUsed": 18755463788.71278,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 352,
+      "HashPower": 395.8664135657534,
+      "PowerUsed": 3958129785.528365,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 353,
+      "HashPower": 1712.1501948127566,
+      "PowerUsed": 17119190846.08316,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 354,
+      "HashPower": 718.6315117140526,
+      "PowerUsed": 7185345090.818658,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 355,
+      "HashPower": 1328.3990574895963,
+      "PowerUsed": 13282197469.48564,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 356,
+      "HashPower": 887.4149367166156,
+      "PowerUsed": 8872951512.865316,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 357,
+      "HashPower": 883.0767104668568,
+      "PowerUsed": 8829575106.211227,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 358,
+      "HashPower": 1283.185742382788,
+      "PowerUsed": 12830125348.451809,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 359,
+      "HashPower": 1098.4226551055974,
+      "PowerUsed": 10982743873.396255,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 360,
+      "HashPower": 856.8631895847203,
+      "PowerUsed": 8567475281.038926,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 361,
+      "HashPower": 1466.4831877376046,
+      "PowerUsed": 14662852382.642706,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 362,
+      "HashPower": 516.0216380211821,
+      "PowerUsed": 5159519841.633456,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 363,
+      "HashPower": 467.12601963462555,
+      "PowerUsed": 4670629658.264781,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 364,
+      "HashPower": 862.7761320008356,
+      "PowerUsed": 8626596723.766445,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 365,
+      "HashPower": 986.2074397698593,
+      "PowerUsed": 9860743190.870317,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 366,
+      "HashPower": 849.8554540734328,
+      "PowerUsed": 8497407385.13822,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 367,
+      "HashPower": 1160.3640018273586,
+      "PowerUsed": 11602073730.675035,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 368,
+      "HashPower": 1084.332687107262,
+      "PowerUsed": 10841863212.39498,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 369,
+      "HashPower": 1320.9336808095454,
+      "PowerUsed": 13207553779.632454,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 370,
+      "HashPower": 264.3180581836434,
+      "PowerUsed": 2642823798.882163,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 371,
+      "HashPower": 294.21583638847244,
+      "PowerUsed": 2941761224.181068,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 372,
+      "HashPower": 608.154167993632,
+      "PowerUsed": 6080720778.624505,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 373,
+      "HashPower": 1531.1080035472332,
+      "PowerUsed": 15309013308.58829,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 374,
+      "HashPower": 1013.2560243626756,
+      "PowerUsed": 10131192525.960049,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 375,
+      "HashPower": 376.03610597892555,
+      "PowerUsed": 3759853477.0923767,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 376,
+      "HashPower": 1443.7000167967285,
+      "PowerUsed": 14435051426.513124,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 377,
+      "HashPower": 1295.4509758153847,
+      "PowerUsed": 12952761126.866936,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 378,
+      "HashPower": 362.0327773894702,
+      "PowerUsed": 3619839093.231905,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 379,
+      "HashPower": 677.1805373667195,
+      "PowerUsed": 6770891298.88033,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 380,
+      "HashPower": 1553.7182657822282,
+      "PowerUsed": 15535085411.055359,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 381,
+      "HashPower": 280.7289995220509,
+      "PowerUsed": 2806911060.377825,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 382,
+      "HashPower": 2057.5412285722628,
+      "PowerUsed": 20572634966.446423,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 383,
+      "HashPower": 1828.6702044047079,
+      "PowerUsed": 18284233660.454964,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 384,
+      "HashPower": 2014.2507570694147,
+      "PowerUsed": 20139788685.95086,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 385,
+      "HashPower": 1150.5386753630391,
+      "PowerUsed": 11503833728.496895,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 386,
+      "HashPower": 994.6972272004399,
+      "PowerUsed": 9945629605.454252,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 387,
+      "HashPower": 618.4726290448739,
+      "PowerUsed": 6183891461.02682,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 388,
+      "HashPower": 1124.4229940661937,
+      "PowerUsed": 11242712167.111229,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 389,
+      "HashPower": 287.3229007576135,
+      "PowerUsed": 2872841172.1249166,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 390,
+      "HashPower": 1169.105843944008,
+      "PowerUsed": 11689480351.89012,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 391,
+      "HashPower": 864.041201935497,
+      "PowerUsed": 8639245715.490818,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 392,
+      "HashPower": 559.5826315724257,
+      "PowerUsed": 5595070977.455582,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 393,
+      "HashPower": 1110.9312134403485,
+      "PowerUsed": 11107812572.38708,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 394,
+      "HashPower": 409.5771386830555,
+      "PowerUsed": 4095218529.630641,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 395,
+      "HashPower": 1575.0545952213795,
+      "PowerUsed": 15748419905.149626,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 396,
+      "HashPower": 943.8594436440258,
+      "PowerUsed": 9437320391.968933,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 397,
+      "HashPower": 1187.3195459276285,
+      "PowerUsed": 11871592786.427593,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 398,
+      "HashPower": 1095.5292703896616,
+      "PowerUsed": 10953813931.798111,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 399,
+      "HashPower": 1820.4444237542968,
+      "PowerUsed": 18201986957.31002,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 400,
+      "HashPower": 1227.425168305976,
+      "PowerUsed": 12272594874.664968,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 401,
+      "HashPower": 579.4753628931886,
+      "PowerUsed": 5793971438.969886,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 402,
+      "HashPower": 874.5379771317458,
+      "PowerUsed": 8744199298.650383,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 403,
+      "HashPower": 594.5335183215423,
+      "PowerUsed": 5944532667.388343,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 404,
+      "HashPower": 866.433191434187,
+      "PowerUsed": 8663162381.711998,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 405,
+      "HashPower": 1205.6024303508743,
+      "PowerUsed": 12054396951.977293,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 406,
+      "HashPower": 1881.971715341046,
+      "PowerUsed": 18817176822.14041,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 407,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 408,
+      "HashPower": 739.9494431530616,
+      "PowerUsed": 7398495629.745563,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 409,
+      "HashPower": 1765.0279144465355,
+      "PowerUsed": 17647896666.786602,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 410,
+      "HashPower": 1518.3103180923836,
+      "PowerUsed": 15181053728.667309,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 411,
+      "HashPower": 845.778325597745,
+      "PowerUsed": 8456641603.7886715,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 412,
+      "HashPower": 506.423108727243,
+      "PowerUsed": 5063547505.022778,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 413,
+      "HashPower": 916.2977773985572,
+      "PowerUsed": 9161740932.922718,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 414,
+      "HashPower": 1202.1494236935264,
+      "PowerUsed": 12019871546.356298,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 415,
+      "HashPower": 549.7134389275254,
+      "PowerUsed": 5496392372.683257,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 416,
+      "HashPower": 1041.5205991124483,
+      "PowerUsed": 10413800121.24621,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 417,
+      "HashPower": 1764.8419284417582,
+      "PowerUsed": 17646037057.787407,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 418,
+      "HashPower": 1.0,
+      "PowerUsed": 9998650.175637953,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 419,
+      "HashPower": 851.4951428908167,
+      "PowerUsed": 8513802060.020115,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 420,
+      "HashPower": 563.4367796780543,
+      "PowerUsed": 5633607256.088815,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 421,
+      "HashPower": 1532.5599860058007,
+      "PowerUsed": 15323531173.252537,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 422,
+      "HashPower": 1442.142538151069,
+      "PowerUsed": 14419478742.379135,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 423,
+      "HashPower": 1015.8017250604415,
+      "PowerUsed": 10156646096.68888,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 424,
+      "HashPower": 1191.8797541329582,
+      "PowerUsed": 11917188713.00081,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 425,
+      "HashPower": 1056.0800885082865,
+      "PowerUsed": 10559375362.451126,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 426,
+      "HashPower": 87.15509599016832,
+      "PowerUsed": 871433315.8298411,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 427,
+      "HashPower": 2066.953573278828,
+      "PowerUsed": 20666745708.49986,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 428,
+      "HashPower": 194.0958897933259,
+      "PowerUsed": 1940696902.572648,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 429,
+      "HashPower": 1156.5279711723779,
+      "PowerUsed": 11563718602.092945,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 430,
+      "HashPower": 1057.8072248243,
+      "PowerUsed": 10576644394.28059,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 431,
+      "HashPower": 789.8465571795668,
+      "PowerUsed": 7897399417.670497,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 432,
+      "HashPower": 1049.68931580381,
+      "PowerUsed": 10495476261.82699,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 433,
+      "HashPower": 1227.6594379286237,
+      "PowerUsed": 12274937254.6686,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 434,
+      "HashPower": 449.1873204585271,
+      "PowerUsed": 4491266880.596956,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 435,
+      "HashPower": 527.8677929400009,
+      "PowerUsed": 5277965400.593158,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 436,
+      "HashPower": 47.13193294450957,
+      "PowerUsed": 471255709.6137755,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 437,
+      "HashPower": 1070.5644488179116,
+      "PowerUsed": 10704199414.204891,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 438,
+      "HashPower": 1022.69635130557,
+      "PowerUsed": 10225583052.605696,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 439,
+      "HashPower": 1138.9700578971347,
+      "PowerUsed": 11388163169.43959,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 440,
+      "HashPower": 243.73048303659732,
+      "PowerUsed": 2436975837.0221987,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 441,
+      "HashPower": 1286.7638858975545,
+      "PowerUsed": 12865901953.734098,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 442,
+      "HashPower": 1628.6132278560544,
+      "PowerUsed": 16283933936.749226,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 443,
+      "HashPower": 857.3319802183296,
+      "PowerUsed": 8572162554.590019,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 444,
+      "HashPower": 228.34880942544453,
+      "PowerUsed": 2283179863.468432,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 445,
+      "HashPower": 1385.7614549045936,
+      "PowerUsed": 13855744014.474087,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 446,
+      "HashPower": 1229.1447895266408,
+      "PowerUsed": 12289788765.68504,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 447,
+      "HashPower": 587.4534742963804,
+      "PowerUsed": 5873741783.952639,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 448,
+      "HashPower": 1027.789763775162,
+      "PowerUsed": 10276510302.089342,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 449,
+      "HashPower": 1386.4166304388286,
+      "PowerUsed": 13862294885.444628,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 450,
+      "HashPower": 1355.756363714264,
+      "PowerUsed": 13555733604.173838,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 451,
+      "HashPower": 1053.6592991629411,
+      "PowerUsed": 10535170736.638075,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 452,
+      "HashPower": 528.0729711957678,
+      "PowerUsed": 5280016906.196213,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 453,
+      "HashPower": 583.3781893078747,
+      "PowerUsed": 5832994434.98654,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 454,
+      "HashPower": 1875.5335346162506,
+      "PowerUsed": 18752803705.30563,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 455,
+      "HashPower": 686.723079973759,
+      "PowerUsed": 6866303844.19424,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 456,
+      "HashPower": 1417.9071750259143,
+      "PowerUsed": 14177157824.61117,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 457,
+      "HashPower": 631.5645517192655,
+      "PowerUsed": 6314793015.974557,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 458,
+      "HashPower": 1601.3145768625727,
+      "PowerUsed": 16010984275.198442,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 459,
+      "HashPower": 1282.0654892444877,
+      "PowerUsed": 12818924329.213741,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 460,
+      "HashPower": 1168.0959036097217,
+      "PowerUsed": 11679382311.7893,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 461,
+      "HashPower": 70.54285967663168,
+      "PowerUsed": 705333376.295756,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 462,
+      "HashPower": 1198.5913263446266,
+      "PowerUsed": 11984295375.673859,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 463,
+      "HashPower": 1599.5593729700222,
+      "PowerUsed": 15993434605.49003,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 464,
+      "HashPower": 1044.5913767981622,
+      "PowerUsed": 10444503753.092772,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 465,
+      "HashPower": 1191.7143054611006,
+      "PowerUsed": 11915534449.608912,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 466,
+      "HashPower": 1051.5048596147767,
+      "PowerUsed": 10513629249.271372,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 467,
+      "HashPower": 851.930805295502,
+      "PowerUsed": 8518158095.999287,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 468,
+      "HashPower": 557.0601844707905,
+      "PowerUsed": 5569849911.2997465,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 469,
+      "HashPower": 696.8306282642561,
+      "PowerUsed": 6967365683.684334,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 470,
+      "HashPower": 576.3275445212714,
+      "PowerUsed": 5762497504.252605,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 471,
+      "HashPower": 1828.7288290922615,
+      "PowerUsed": 18284819828.197563,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 472,
+      "HashPower": 501.28296599232505,
+      "PowerUsed": 5012153015.963454,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 473,
+      "HashPower": 63.379219805862704,
+      "PowerUsed": 633706647.2436851,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 474,
+      "HashPower": 714.9456594985736,
+      "PowerUsed": 7148491543.917015,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 475,
+      "HashPower": 786.9518078897436,
+      "PowerUsed": 7868455832.175331,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 476,
+      "HashPower": 1740.3459687807845,
+      "PowerUsed": 17401110526.420784,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 477,
+      "HashPower": 1142.0317737163925,
+      "PowerUsed": 11418776194.853523,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 478,
+      "HashPower": 268.02614893469695,
+      "PowerUsed": 2679899701.1214647,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 479,
+      "HashPower": 45.11973478928394,
+      "PowerUsed": 451136444.17561,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 480,
+      "HashPower": 1013.2287609527187,
+      "PowerUsed": 10130919928.661345,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 481,
+      "HashPower": 1364.5436942075899,
+      "PowerUsed": 13643595047.75442,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 482,
+      "HashPower": 974.4424342255378,
+      "PowerUsed": 9743109016.118242,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 483,
+      "HashPower": 1108.745240200514,
+      "PowerUsed": 11085955790.66861,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 484,
+      "HashPower": 1092.0276571476318,
+      "PowerUsed": 10918802525.940624,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 485,
+      "HashPower": 1043.5646595876256,
+      "PowerUsed": 10434237966.875366,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 486,
+      "HashPower": 1337.5953998507355,
+      "PowerUsed": 13374148479.650032,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 487,
+      "HashPower": 1569.9642190658915,
+      "PowerUsed": 15697523014.708513,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 488,
+      "HashPower": 773.9173308630758,
+      "PowerUsed": 7738128656.163372,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 489,
+      "HashPower": 136.4682709003929,
+      "PowerUsed": 1364498500.8072152,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 490,
+      "HashPower": 957.3418341025309,
+      "PowerUsed": 9572126097.694841,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 491,
+      "HashPower": 224.90122259580357,
+      "PowerUsed": 2248708648.808719,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 492,
+      "HashPower": 1088.0384837725492,
+      "PowerUsed": 10878916176.873322,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 493,
+      "HashPower": 758.8574168680667,
+      "PowerUsed": 7587549844.452046,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 494,
+      "HashPower": 847.742367336801,
+      "PowerUsed": 8476279370.067877,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 495,
+      "HashPower": 1285.5127263964582,
+      "PowerUsed": 12853392047.568777,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 496,
+      "HashPower": 146.80634208512777,
+      "PowerUsed": 1467865258.0742285,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 497,
+      "HashPower": 640.6539238693736,
+      "PowerUsed": 6405674468.419592,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 498,
+      "HashPower": 1054.0641188391028,
+      "PowerUsed": 10539218386.964287,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    },
+    {
+      "Id": 499,
+      "HashPower": 463.0773960752731,
+      "PowerUsed": 4630148887.602005,
+      "NodeDifficultyDecreaseParticipationHistory": []
+    }
+  ],
+  "TotalBlocks": 16694,
+  "MainBlocks": 16694,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "AverageBlockMiningTimeInSeconds": 598.9367542612848,
+  "Totals": {
+    "TotalBitcoinsEarned": 208675.0,
+    "TotalEnergyCost": 4869127646371.51,
+    "TotalEnergyCostRatioWithHashPower": 9998650.175637966
+  },
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

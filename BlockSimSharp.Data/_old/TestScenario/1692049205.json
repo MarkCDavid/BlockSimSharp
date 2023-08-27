@@ -1,0 +1,96 @@
+{
+  "Scenario": "TestScenario",
+  "Timestamp": "2023-08-14 21:40:05",
+  "Settings": {
+    "BlockSimSharp.Core.Configuration.Model.BlockSettings": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "BlockSimSharp.Core.Configuration.Model.TransactionSettings": {
+      "Enabled": false,
+      "Type": 0,
+      "RatePerSecond": 10,
+      "AverageFee": 6.2E-05,
+      "AverageSizeInMb": 0.000546,
+      "AveragePropogationDelay": 0.0
+    },
+    "BlockSimSharp.Core.Configuration.Model.SimulationSettings": {
+      "LengthInSeconds": 10000000
+    },
+    "BlockSimSharp.Core.Configuration.Model.RandomNumberGenerationSettings": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    "BlockSimSharp.BitcoinBurn.Configuration.ScenarioSettings": {
+      "ScenarioName": "TestScenario"
+    },
+    "BlockSimSharp.BitcoinBurn.Configuration.BurnSettings": {
+      "AveragePowerCostPerSecond": 1.0,
+      "MaximumPowerCostVarianceInDecimalPercentage": 0.1,
+      "BitcoinCostPerDifficultyLevel": 0.15,
+      "DefaultHashDifficulty": 17,
+      "ExponentialBaseOfDifficulty": 2,
+      "ExponentialBaseOfDifficultyCost": 3
+    },
+    "BlockSimSharp.BitcoinBurn.Configuration.NodeSettings": {
+      "StartingNodeCount": 10,
+      "NodeJoinChance": 0.0,
+      "NodeQuitChance": 0.0,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 770.44226
+    },
+    {
+      "Id": 1,
+      "HashPower": 1087.8328
+    },
+    {
+      "Id": 2,
+      "HashPower": 1059.1003
+    },
+    {
+      "Id": 3,
+      "HashPower": 1255.1644
+    },
+    {
+      "Id": 4,
+      "HashPower": 1023.35474
+    },
+    {
+      "Id": 5,
+      "HashPower": 1044.8182
+    },
+    {
+      "Id": 6,
+      "HashPower": 1610.2112
+    },
+    {
+      "Id": 7,
+      "HashPower": 1313.9353
+    },
+    {
+      "Id": 8,
+      "HashPower": 1488.9664
+    },
+    {
+      "Id": 9,
+      "HashPower": 757.37976
+    }
+  ],
+  "TotalBlocks": 8299,
+  "MainBlocks": 0,
+  "StaleBlocks": 0,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 0.0,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

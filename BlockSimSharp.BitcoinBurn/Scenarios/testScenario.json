@@ -1,29 +1,33 @@
 {
   "ScenarioName": "TestScenario",
+  "DataStoragePath": "git/BlockSimSharp/BlockSimSharp.Data",
   "Block": {
     "Reward": 12.5,
     "AverageIntervalInSeconds": 600,
-    "AveragePropogationDelay": 0
+    "AveragePropogationDelay": 0.42
   },
   "RandomNumberGenerator": {
     "UseStaticSeed": false,
     "StaticSeed": 400400,
-    "HashPowerUseStaticSeed": false,
-    "HashPowerStaticSeed": 400400
+    "HashPowerUseStaticSeed": true,
+    "HashPowerStaticSeed": 123456
   },
   "Difficulty": {
     "AdjustmentFrequencyInBlocks": 2016,
-    "DecreaseByBurnEnabled": false,
-    "ProbabilityForParticipationThisEpoch": 0.5,
-    "DecreaseAmountHighBound": 2,
-    "DecreaseAmountLowBound": 2
+    "DecreaseByBurnEnabled": true,
+    "ProbabilityForParticipationThisEpoch": 0.1,
+    "ReductionHighBound": 2,
+    "ReductionLowBound": 16
   },
   "Simulation": {
-    "LengthInSeconds": 1000000
+    "LengthInSeconds": 10000000
   },
   "Node": {
     "StartingNodeCount": 50,
     "StandardDeviationOfHashRate": 200,
     "AverageHashRate": 1000
+  },
+  "Statistics": {
+    "IncludeGlobalBlockChain": false
   }
 }

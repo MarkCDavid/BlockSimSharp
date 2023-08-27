@@ -2,49 +2,30 @@ namespace BlockSimSharp.BitcoinBurn.Model;
 
 public class Node
 {
+
+    public IntegrationEvent<Node> DifficultyDecreaseParticipationIntegrationEvent { get; } = new();
+    
     public int NodeId { get; }
     public List<Block> BlockChain { get; }
-    public int Blocks { get; set; }
-    public double Balance { get; set; } 
     public Block? CurrentlyMinedBlock { get; set; }
     public double HashPower { get; set; }
-
-    public bool ParticipatesInDifficultyDecrease { get; set; }
-    public bool DifficultyDecreaseDuringCurrentEpoch { get; set; }
-    public double DifficultyDecrease { get; set; }
+    public double DifficultyReduction { get; set; }
     
-    public double PowerUsed { get; set; }
-    
-    public List<NodeDifficultyDecreaseParticipationHistory> NodeDifficultyDecreaseParticipationHistory { get; set; }
-
-    public Node(int nodeId, double hashPower, bool participatesInDifficultyDecrease)
+    public Node(int nodeId, double hashPower)
     {
         NodeId = nodeId;
         BlockChain = new List<Block> { new() };
-        Blocks = 0;
-        Balance = 0.0;
         HashPower = hashPower;
-        ParticipatesInDifficultyDecrease = participatesInDifficultyDecrease;
-        NodeDifficultyDecreaseParticipationHistory = new List<NodeDifficultyDecreaseParticipationHistory>();
     }
 
-    public void UpdateDifficultyDecreaseParticipation(bool difficultyDecreaseDuringCurrentEpoch, double difficultyDecrease)
+    public void UpdateDifficultyDecreaseParticipation(double difficultyReduction, bool participatesInReduction)
     {
-        if (!ParticipatesInDifficultyDecrease)
+        DifficultyReduction = difficultyReduction;
+
+        if (participatesInReduction)
         {
-            return;
+            DifficultyDecreaseParticipationIntegrationEvent.Invoke(this);
         }
-
-        DifficultyDecreaseDuringCurrentEpoch = difficultyDecreaseDuringCurrentEpoch;
-        DifficultyDecrease = difficultyDecrease;
-
-        var historyEntry = new NodeDifficultyDecreaseParticipationHistory()
-        {
-            DifficultyDecreaseDuringCurrentEpoch = difficultyDecreaseDuringCurrentEpoch,
-            DifficultyDecrease = difficultyDecrease,
-        };
-
-        NodeDifficultyDecreaseParticipationHistory.Add(historyEntry);
     }
     
     public int BlockChainLength => BlockChain.Count - 1;
@@ -72,10 +53,4 @@ public class Node
             }
         }
     }
-}
-
-public class NodeDifficultyDecreaseParticipationHistory
-{
-    public bool DifficultyDecreaseDuringCurrentEpoch { get; set; }
-    public double DifficultyDecrease { get; set; }
 }

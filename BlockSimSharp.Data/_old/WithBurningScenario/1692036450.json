@@ -1,0 +1,134 @@
+{
+  "TotalBlocks": 9370,
+  "MainBlocks": 9336,
+  "StaleBlocks": 34,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 107.09596,
+  "Settings": {
+    "BlockSettings": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.42
+    },
+    "TransactionSettings": {
+      "Enabled": false,
+      "Type": 0,
+      "RatePerSecond": 10,
+      "AverageFee": 6.2E-05,
+      "AverageSizeInMb": 0.000546,
+      "AveragePropogationDelay": 0.0
+    },
+    "SimulationSettings": {
+      "LengthInSeconds": 1000000
+    },
+    "RandomNumberGenerationSettings": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    "BurnSettings": {
+      "AveragePowerCostPerSecond": 1.0,
+      "MaximumPowerCostVarianceInDecimalPercentage": 0.1,
+      "BitcoinCostPerDifficultyLevel": 0.15,
+      "DefaultHashDifficulty": 17,
+      "ExponentialBaseOfDifficulty": 2,
+      "ExponentialBaseOfDifficultyCost": 3
+    }
+  },
+  "Totals": {
+    "TotalBitcoinsEarned": 116700.0,
+    "TotalEnergyCostInDollars": 499936.16
+  },
+  "ProfitStatistics": [
+    {
+      "NodeId": 0,
+      "Blocks": 248,
+      "PercentageOfAllBlocks": 0.03,
+      "Balance": 3100.0,
+      "TotalPowerCost": 135138.53,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 100.0,
+      "PercievedHashPower": 100.0,
+      "PercentageOfAllHashPower": 0.13513513
+    },
+    {
+      "NodeId": 1,
+      "Blocks": 222,
+      "PercentageOfAllBlocks": 0.02,
+      "Balance": 2775.0,
+      "TotalPowerCost": 135137.77,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 100.0,
+      "PercievedHashPower": 100.0,
+      "PercentageOfAllHashPower": 0.13513513
+    },
+    {
+      "NodeId": 2,
+      "Blocks": 126,
+      "PercentageOfAllBlocks": 0.01,
+      "Balance": 1575.0,
+      "TotalPowerCost": 67568.98,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 50.0,
+      "PercievedHashPower": 50.0,
+      "PercentageOfAllHashPower": 0.067567565
+    },
+    {
+      "NodeId": 3,
+      "Blocks": 1763,
+      "PercentageOfAllBlocks": 0.19,
+      "Balance": 22037.5,
+      "TotalPowerCost": 67569.3,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 50.0,
+      "PercievedHashPower": 800.0,
+      "PercentageOfAllHashPower": 0.067567565
+    },
+    {
+      "NodeId": 4,
+      "Blocks": 54,
+      "PercentageOfAllBlocks": 0.01,
+      "Balance": 675.0,
+      "TotalPowerCost": 33784.527,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 25.0,
+      "PercievedHashPower": 25.0,
+      "PercentageOfAllHashPower": 0.033783782
+    },
+    {
+      "NodeId": 5,
+      "Blocks": 883,
+      "PercentageOfAllBlocks": 0.09,
+      "Balance": 11037.5,
+      "TotalPowerCost": 33784.457,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 25.0,
+      "PercievedHashPower": 400.0,
+      "PercentageOfAllHashPower": 0.033783782
+    },
+    {
+      "NodeId": 6,
+      "Blocks": 5722,
+      "PercentageOfAllBlocks": 0.61,
+      "Balance": 71525.0,
+      "TotalPowerCost": 13513.868,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 10.0,
+      "PercievedHashPower": 2560.0,
+      "PercentageOfAllHashPower": 0.013513514
+    },
+    {
+      "NodeId": 7,
+      "Blocks": 318,
+      "PercentageOfAllBlocks": 0.03,
+      "Balance": 3975.0,
+      "TotalPowerCost": 13513.876,
+      "TotalDifficultyReductionCostInBitcoins": 0.0,
+      "HashPower": 10.0,
+      "PercievedHashPower": 160.0,
+      "PercentageOfAllHashPower": 0.013513514
+    }
+  ],
+  "BlockStatistics": []
+}

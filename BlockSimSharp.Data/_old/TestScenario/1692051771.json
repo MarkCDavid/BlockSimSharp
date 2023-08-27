@@ -1,0 +1,102 @@
+{
+  "Scenario": "TestScenario",
+  "Timestamp": "2023-08-14 22:22:51",
+  "Configuration": {
+    "BlockSettings": {
+      "SizeInMb": 1.0,
+      "Reward": 12.5,
+      "AverageIntervalInSeconds": 600,
+      "AveragePropogationDelay": 0.0
+    },
+    "TransactionSettings": {
+      "Enabled": false,
+      "Type": 0,
+      "RatePerSecond": 10,
+      "AverageFee": 6.2E-05,
+      "AverageSizeInMb": 0.000546,
+      "AveragePropogationDelay": 0.0
+    },
+    "SimulationSettings": {
+      "LengthInSeconds": 100000000.0
+    },
+    "RandomNumberGenerationSettings": {
+      "UseStaticSeed": false,
+      "StaticSeed": 400400
+    },
+    "ScenarioSettings": {
+      "ScenarioName": "TestScenario"
+    },
+    "DifficultySettings": {
+      "DifficultyAdjustmentFrequencyInBlocks": 2016
+    },
+    "BurnSettings": {
+      "AveragePowerCostPerSecond": 1.0,
+      "MaximumPowerCostVarianceInDecimalPercentage": 0.1,
+      "BitcoinCostPerDifficultyLevel": 0.15,
+      "DefaultHashDifficulty": 17,
+      "ExponentialBaseOfDifficulty": 2,
+      "ExponentialBaseOfDifficultyCost": 3
+    },
+    "NodeSettings": {
+      "StartingNodeCount": 10,
+      "NodeJoinChance": 0.0,
+      "NodeQuitChance": 0.0,
+      "StandardDeviationOfHashRate": 500.0,
+      "AverageHashRate": 1000.0
+    }
+  },
+  "Nodes": [
+    {
+      "Id": 0,
+      "HashPower": 1660.0566
+    },
+    {
+      "Id": 1,
+      "HashPower": 797.5509
+    },
+    {
+      "Id": 2,
+      "HashPower": 1170.9619
+    },
+    {
+      "Id": 3,
+      "HashPower": 923.9028
+    },
+    {
+      "Id": 4,
+      "HashPower": 715.39746
+    },
+    {
+      "Id": 5,
+      "HashPower": 637.65
+    },
+    {
+      "Id": 6,
+      "HashPower": 533.7238
+    },
+    {
+      "Id": 7,
+      "HashPower": 998.58075
+    },
+    {
+      "Id": 8,
+      "HashPower": 1454.5662
+    },
+    {
+      "Id": 9,
+      "HashPower": 1337.8524
+    }
+  ],
+  "HistoryOfDifficulty": {
+    "0": 10230.243
+  },
+  "TotalBlocks": 167039,
+  "MainBlocks": 166512,
+  "StaleBlocks": 527,
+  "StaleRate": 0.0,
+  "TotalTransactions": 0,
+  "AverageBlockMiningTimeInSeconds": 600.5541,
+  "Totals": null,
+  "ProfitStatistics": [],
+  "BlockStatistics": []
+}

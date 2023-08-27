@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using BlockSimSharp.BitcoinBurn.Simulation;
+using BlockSimSharp.BitcoinBurn.Simulation.Data;
 using BlockSimSharp.BitcoinBurn.Simulation.Events;
+using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration.Factory;
 using BlockSimSharp.BitcoinBurn.SimulationStatistics;
 
@@ -29,10 +31,18 @@ internal abstract class Program
         var eventPool = new SimulationEventPool(configuration);
         var scheduler = new Scheduler(eventPool, eventTimeDeltas, randomness, nodes);
         var simulator = new Simulator(eventPool);
-        
-        var powerUsage = new PowerUsage();
+
         var globalBlockChain = new GlobalBlockChain();
-        var statistics = new Statistics(configuration, nodes, difficulty, globalBlockChain);
+        var incentives = new Incentives();
+        var powerUsage = new PowerUsage();
+        var difficultyHistory = new DifficultyHistory(configuration);
+        var statistics = new Statistics(configuration, nodes, globalBlockChain, incentives, powerUsage, difficultyHistory);
+        
+        difficulty.DifficultyChangeIntegrationEvent.Subscribe(difficultyHistory.OnDifficultyChange, 0);
+        foreach (var node in nodes)
+        {
+            node.DifficultyDecreaseParticipationIntegrationEvent.Subscribe(difficultyHistory.OnDifficultyParticipation, 0);
+        }
         
         // OnSimulationStarting
         simulator.SimulationStartingIntegrationEvent.Subscribe(difficulty.UpdateDifficultyDecreaseParticipation, 0);
@@ -40,22 +50,28 @@ internal abstract class Program
         
         // OnBlockMined
         simulator.BlockMinedIntegrationEvent.Subscribe(difficulty.OnBlockMined, 20);
-        simulator.BlockMinedIntegrationEvent.Subscribe(powerUsage.AdjustPowerUsed, 30);
+        simulator.BlockMinedIntegrationEvent.Subscribe(powerUsage.OnBlockMined, 30);
         simulator.BlockMinedIntegrationEvent.Subscribe(statistics.OnBlockMined, 40);
         simulator.BlockMinedIntegrationEvent.Subscribe(scheduler.OnBlockMined, int.MaxValue);
 
         // OnBlockReceived
-        simulator.BlockReceivedIntegrationEvent.Subscribe(powerUsage.AdjustPowerUsed, 30);
+        simulator.BlockReceivedIntegrationEvent.Subscribe(powerUsage.OnBlockReceived, 30);
         simulator.BlockReceivedIntegrationEvent.Subscribe(scheduler.OnBlockReceived, int.MaxValue);
         
         // OnSimulationStopping
-        simulator.SimulationStoppingIntegrationEvent.Subscribe(() => globalBlockChain.ResolveForks(nodes), 0);
-        simulator.SimulationStoppingIntegrationEvent.Subscribe(() => globalBlockChain.DistributeRewards(configuration), 10);
-        simulator.SimulationStoppingIntegrationEvent.Subscribe(() => statistics.Calculate(nodes), int.MaxValue);
+        simulator.SimulationStoppingIntegrationEvent
+            .Subscribe(() => globalBlockChain.ResolveForks(nodes), 0);
         
+        simulator.SimulationStoppingIntegrationEvent
+            .Subscribe(() => incentives.DistributeRewards(configuration, globalBlockChain), 10);
+        
+        simulator.SimulationStoppingIntegrationEvent
+            .Subscribe(() => statistics.Calculate(), int.MaxValue);
+
+        difficulty.Initialize();
         simulator.Simulate();
 
-        SaveSimulationStatistics(configuration.ScenarioName, statistics);
+        SaveSimulationStatistics(configuration, statistics);
     }
 
     private static void EnsureConfigurationWasProvided(IReadOnlyCollection<string> args)
@@ -66,11 +82,16 @@ internal abstract class Program
         }
     }
 
-    private static void SaveSimulationStatistics(string scenarioName, Statistics statistics)
+    private static void SaveSimulationStatistics(Configuration configuration, Statistics statistics)
     {
-        var homePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-        var directoryPath = Path.Combine(homePath, "BlockSimSharp", scenarioName);
-    
+        var directoryPath = configuration.DataStoragePath;
+
+        if (!Path.IsPathRooted(directoryPath))
+        {
+            var homePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            directoryPath = Path.Combine(homePath, directoryPath, configuration.ScenarioName);
+        }
+
         Directory.CreateDirectory(directoryPath);
     
         var fileName = $"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}.json";
