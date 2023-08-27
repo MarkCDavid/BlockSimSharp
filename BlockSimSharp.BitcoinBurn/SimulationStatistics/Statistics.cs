@@ -8,12 +8,12 @@ namespace BlockSimSharp.BitcoinBurn.SimulationStatistics;
 public class Statistics
 {
     private readonly Nodes _nodes;
-    private readonly Consensus _consensus;
+    private readonly GlobalBlockChain _globalBlockChain;
 
-    public Statistics(Configuration configuration, Nodes nodes, Difficulty difficulty, Consensus consensus)
+    public Statistics(Configuration configuration, Nodes nodes, Difficulty difficulty, GlobalBlockChain globalBlockChain)
     {
         _nodes = nodes;
-        _consensus = consensus;
+        _globalBlockChain = globalBlockChain;
         Configuration = configuration;
         Difficulty = difficulty;
         BlockStatistics = new List<BlockStatistics>();
@@ -49,7 +49,7 @@ public class Statistics
         
         CalculateTotals();
         CalculateSimulationStatistics();
-        // CalculateBlockStatistics(context);
+        CalculateBlockStatistics();
         // CalculateProfitStatistics(context);
     }
 
@@ -66,33 +66,30 @@ public class Statistics
 
     private void CalculateSimulationStatistics()
     {
-        MainBlocks = _consensus.GlobalBlockChain.Count - 1;
+        MainBlocks = _globalBlockChain.BlockChain.Count - 1;
         StaleBlocks = TotalBlocks - MainBlocks;
         StaleRate = Math.Round((double)StaleBlocks / TotalBlocks, 2);
         
         
-        for (var blockIndex = _consensus.GlobalBlockChain.Count - 1; blockIndex > 0; blockIndex--)
+        for (var blockIndex = _globalBlockChain.BlockChain.Count - 1; blockIndex > 0; blockIndex--)
         {
-            var currentBlock = _consensus.GlobalBlockChain[blockIndex];
-            var previousBlock = _consensus.GlobalBlockChain[blockIndex - 1];
+            var currentBlock = _globalBlockChain.BlockChain[blockIndex];
+            var previousBlock = _globalBlockChain.BlockChain[blockIndex - 1];
             AverageBlockMiningTimeInSeconds += currentBlock.MinedAt - previousBlock.MinedAt;
         }
         
-        AverageBlockMiningTimeInSeconds /= (_consensus.GlobalBlockChain.Count - 1);
+        AverageBlockMiningTimeInSeconds /= (_globalBlockChain.BlockChain.Count - 1);
     }
 
     private void CalculateBlockStatistics()
     {
-        // var consensus = contextOld.Get<Consensus>();
-        // BlockStatistics = consensus.GlobalBlockChain.Select(block => new BlockStatistics
-        // {
-        //     Depth = block.Depth,
-        //     BlockId = block.BlockId,
-        //     PreviousBlockId = block.PreviousBlock?.BlockId ?? -1,
-        //     Timestamp = block.ExecutedAt,
-        //     TransactionCount = block.Transactions.Count,
-        //     SizeInMb = block.SizeInMb
-        // }).ToList();
+        BlockStatistics = _globalBlockChain.BlockChain.Select(block => new BlockStatistics
+        {
+            Depth = block.Depth,
+            BlockId = block.BlockId,
+            PreviousBlockId = block.PreviousBlock?.BlockId ?? -1,
+            Timestamp = block.MinedAt
+        }).ToList();
     }
 
     private void CalculateProfitStatistics()

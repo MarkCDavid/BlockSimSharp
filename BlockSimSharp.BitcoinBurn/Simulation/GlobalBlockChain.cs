@@ -3,48 +3,22 @@ using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
-public sealed class Consensus
+public sealed class GlobalBlockChain
 {
-    public List<Block> GlobalBlockChain { get; private set; }
-    
-    private readonly Configuration _configuration;
-    private readonly Randomness _randomness;
-    private readonly Nodes _nodes;
-    private readonly Difficulty _difficulty;
+    public List<Block> BlockChain { get; private set; } = new();
 
-    public Consensus(
-        Configuration configuration,
-        Randomness randomness,
-        Nodes nodes,
-        Difficulty difficulty)
+    public void ResolveForks(Nodes nodes)
     {
-        _configuration = configuration;
-        _randomness = randomness;
-        _nodes = nodes;
-        _difficulty = difficulty;
-
-        GlobalBlockChain = new List<Block>();
-    }
+        var maximumBlockChainLength = nodes.MaximumBlockChainLength;
     
-    public double Protocol(Node miner)
-    {
-        var relativeHashPower = _difficulty.GetRelativeHashPower(miner);
-        var blockRate = 1.0 / _configuration.Block.AverageIntervalInSeconds;
-        return _randomness.Expovariate(relativeHashPower * blockRate);
-    }
-    
-    public void ResolveForks()
-    {
-        var maximumBlockChainLength = _nodes.MaximumBlockChainLength;
-    
-        var minersWithBlockChainsOfMaximumLength = _nodes
+        var minersWithBlockChainsOfMaximumLength = nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
                 .Select(node => node.NodeId)
                 .ToList();
     
         if (minersWithBlockChainsOfMaximumLength.Count > 1)
         {
-            var groupedByMiner = _nodes
+            var groupedByMiner = nodes
                 .Where(node => node.BlockChainLength == maximumBlockChainLength)
                 .GroupBy(node => node.LastBlock.Miner!.NodeId)
                 .Select(group => new { Miner = group.Key, Count = group.Count() })
@@ -60,13 +34,23 @@ public sealed class Consensus
     
         var minerWithBlockChainOfMaxLength = minersWithBlockChainsOfMaximumLength.FirstOrDefault(-1);
     
-        foreach (var node in _nodes)
+        foreach (var node in nodes)
         {
             if (node.BlockChainLength == maximumBlockChainLength &&
                 node.LastBlock.Miner?.NodeId == minerWithBlockChainOfMaxLength)
             {
-                GlobalBlockChain = node.BlockChain.ToList();
+                BlockChain = node.BlockChain.ToList();
             }
         }
     }
+    
+    public void DistributeRewards(Configuration configuration)
+    {
+        foreach (var block in BlockChain.Where(block => block.Miner is not null))
+        {
+            block.Miner!.Blocks += 1;
+            block.Miner!.Balance += configuration.Block.Reward;
+        }
+    }
+    
 }

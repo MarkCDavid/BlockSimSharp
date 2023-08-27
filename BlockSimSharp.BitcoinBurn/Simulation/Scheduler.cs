@@ -7,37 +7,63 @@ public sealed class Scheduler
 {
     public Scheduler(
         SimulationEventPool simulationEventPool,
-        Randomness randomness, 
-        Network network,
-        Nodes nodes,
-        Consensus consensus)
+        EventTimeDeltas eventTimeDeltas,
+        Randomness randomness,
+        Nodes nodes)
     {
         _simulationEventPool = simulationEventPool;
+        _eventTimeDeltas = eventTimeDeltas;
         _randomness = randomness;
-        _network = network;
         _nodes = nodes;
-        _consensus = consensus;
     }
 
-    public void OnBlockMined(SimulationEvent simulationEvent)
+    public void ScheduleInitialEvents()
+    {
+        foreach (var node in _nodes)
+        {
+            var simulationEvent = new BlockMinedSimulationEvent()
+            {
+                Node = node,
+                EventTime = 0
+            };
+            
+            ScheduleMineBlockEvent(simulationEvent);
+        }
+    }
+
+    public void OnBlockMined(BlockMinedSimulationEvent simulationEvent)
     {
         ScheduleReceiveBlockEvents(simulationEvent);
-        ScheduleMineBlockEvent(simulationEvent, simulationEvent.Node);
+        ScheduleMineBlockEvent(simulationEvent);
     }
 
-    public void OnBlockReceived(SimulationEvent simulationEvent)
+    public void OnBlockReceived(BlockReceivedSimulationEvent simulationEvent)
     {
-        ScheduleMineBlockEvent(simulationEvent, simulationEvent.Node);
+        // Given that we were mining a block when we received another block,
+        // we could have accepted that block (or the entire chain), which
+        // would have changed the block that our currently mined block is
+        // based on. If that is the case, we need to start mining a new
+        // block. If not - we continue mining the previous block.
+        var recipient = simulationEvent.Recipient;
+        var minedBlock = recipient.CurrentlyMinedBlock;
+        if (recipient.LastBlock.Equals(minedBlock?.PreviousBlock))
+        {
+            return;
+        }
+        
+        ScheduleMineBlockEvent(simulationEvent);
     }
 
-    
-    public void ScheduleMineBlockEvent(SimulationEvent? sourceEvent, Node miner)
+
+    private void ScheduleMineBlockEvent(SimulationEvent sourceEvent)
     {
+        var miner = sourceEvent.Node;
+        
         if (miner.HashPower <= 0)
             return;
 
-        var scheduledEventTime = sourceEvent?.EventTime ?? 0;
-        var eventTime = scheduledEventTime + _consensus.Protocol(miner);
+        var eventScheduleTime = sourceEvent.EventTime;
+        var eventTime = eventScheduleTime + _eventTimeDeltas.BlockMiningTimeDelta(miner);
 
         var block = new Block
         {
@@ -45,33 +71,34 @@ public sealed class Scheduler
             PreviousBlock = miner.LastBlock,
             Miner = miner,
             Depth = miner.BlockChain.Count,
-            ScheduledAt = scheduledEventTime,
+            ScheduledAt = eventScheduleTime,
             MinedAt = eventTime
         };
 
         miner.CurrentlyMinedBlock = block;
         
-        var @event = new BlockMinedSimulationEvent
+        var simulationEvent = new BlockMinedSimulationEvent
         {
             Node = miner,
             EventTime = eventTime,
             Block = block,
         };
         
-        _simulationEventPool.Enqueue(@event);
+        _simulationEventPool.Enqueue(simulationEvent);
     }
-    
-    public void ScheduleReceiveBlockEvents(SimulationEvent sourceSimulationEvent)
+
+    private void ScheduleReceiveBlockEvents(SimulationEvent simulationEvent)
     {
-        foreach (var receiver in _nodes.Without(sourceSimulationEvent.Block.Miner!.NodeId))
+        foreach (var receiver in _nodes.Without(simulationEvent.Block.Miner!.NodeId))
         {
-            ScheduleReceiveBlockEvent(sourceSimulationEvent, receiver);
+            ScheduleReceiveBlockEvent(simulationEvent, receiver);
         }
     }
 
-    public void ScheduleReceiveBlockEvent(SimulationEvent sourceSimulationEvent, Node receiver)
+    private void ScheduleReceiveBlockEvent(SimulationEvent sourceSimulationEvent, Node receiver)
     {
-        var eventTime = sourceSimulationEvent.EventTime + _network.BlockPropogationDelay();
+        var eventTime = sourceSimulationEvent.EventTime + _eventTimeDeltas.BlockPropogationTimeDelta();
+        
         var @event = new BlockReceivedSimulationEvent
         {
             Node = receiver,
@@ -84,7 +111,6 @@ public sealed class Scheduler
     
     private readonly SimulationEventPool _simulationEventPool;
     private readonly Randomness _randomness;
-    private readonly Network _network;
     private readonly Nodes _nodes;
-    private readonly Consensus _consensus;
+    private readonly EventTimeDeltas _eventTimeDeltas;
 }

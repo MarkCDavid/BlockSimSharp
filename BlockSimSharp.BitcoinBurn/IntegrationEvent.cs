@@ -1,30 +1,43 @@
-namespace BlockSimSharp.BitcoinBurn
+namespace BlockSimSharp.BitcoinBurn;
+
+public class IntegrationEvent: BaseIntegrationEvent<Action>
 {
-    public class IntegrationEvent<TArguments>
+    public void Invoke()
     {
-        public void Invoke(TArguments arguments)
+        foreach (var integrationEvent in IntegrationEvents)
         {
-            var integrationEvents 
-                = _integrationEvents.SelectMany(priorityDelegates => priorityDelegates.Value);
-            
-            foreach (var integrationEvent in integrationEvents)
-            {
-                integrationEvent.DynamicInvoke(arguments);
-            }
+            integrationEvent.Invoke();
         }
-
-        public void Subscribe(Action<TArguments> handler, int priority)
-        {
-            if (_integrationEvents.TryGetValue(priority, out var handlers))
-            {
-                handlers.Add(handler);
-            }
-            else
-            {
-                _integrationEvents[priority] = new List<Action<TArguments>> { handler };
-            }
-        }
-
-        private readonly SortedDictionary<int, List<Action<TArguments>>> _integrationEvents = new();
     }
+}
+    
+public class IntegrationEvent<TArguments>: BaseIntegrationEvent<Action<TArguments>>
+{
+    public void Invoke(TArguments arguments)
+    {
+        foreach (var integrationEvent in IntegrationEvents)
+        {
+            integrationEvent.Invoke(arguments);
+        }
+    }
+}
+    
+public abstract class BaseIntegrationEvent<T> where T: Delegate
+{
+    public void Subscribe(T handler, int priority)
+    {
+        if (_integrationEvents.TryGetValue(priority, out var handlers))
+        {
+            handlers.Add(handler);
+        }
+        else
+        {
+            _integrationEvents[priority] = new List<T> { handler };
+        }
+    }
+
+    protected IEnumerable<T> IntegrationEvents => _integrationEvents
+        .SelectMany(priorityDelegates => priorityDelegates.Value);
+
+    private readonly SortedDictionary<int, List<T>> _integrationEvents = new();
 }

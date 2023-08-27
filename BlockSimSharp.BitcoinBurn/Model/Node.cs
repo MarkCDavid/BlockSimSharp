@@ -50,7 +50,7 @@ public class Node
     public int BlockChainLength => BlockChain.Count - 1;
     public Block LastBlock => BlockChain[BlockChainLength];
 
-    public void UpdateLocalBlockChain(Node sourceBaseNode, int depth)
+    public void UpdateLocalBlockChain(Node sourceNode, int depth)
     {
         // Say NodeA has a BlockChain of [b0, b1, b2] and then they mine Block b3.
         // A receive event for NodeB is scheduled some time in the future.
@@ -63,9 +63,13 @@ public class Node
         for (var index = 0; index < depth; index++)
         {
             if (index < BlockChain.Count)
-                BlockChain[index] = sourceBaseNode.BlockChain[index];
+            {
+                BlockChain[index] = sourceNode.BlockChain[index];
+            }
             else
-                BlockChain.Add(sourceBaseNode.BlockChain[index]);
+            {
+                BlockChain.Add(sourceNode.BlockChain[index]);
+            }
         }
     }
 }

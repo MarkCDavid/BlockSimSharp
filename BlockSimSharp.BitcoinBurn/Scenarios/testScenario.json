@@ -1,7 +1,6 @@
 {
   "ScenarioName": "TestScenario",
   "Block": {
-    "SizeInMb": 1.0,
     "Reward": 12.5,
     "AverageIntervalInSeconds": 600,
     "AveragePropogationDelay": 0
@@ -20,11 +19,11 @@
     "DecreaseAmountLowBound": 2
   },
   "Simulation": {
-    "LengthInSeconds": 100000000
+    "LengthInSeconds": 1000000
   },
   "Node": {
-    "StartingNodeCount": 500,
-    "StandardDeviationOfHashRate": 100,
+    "StartingNodeCount": 50,
+    "StandardDeviationOfHashRate": 200,
     "AverageHashRate": 1000
   }
 }

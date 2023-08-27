@@ -35,7 +35,6 @@ public sealed class Difficulty
 
     public double PercievedHashPower(Node miner)
     {
-        return miner.HashPower;
         if (!_configuration.Difficulty.DecreaseByBurnEnabled)
         {
             return miner.HashPower;
@@ -86,7 +85,6 @@ public sealed class Difficulty
 
     private double CalculateAdjustedDifficulty(Node miner)
     {
-        return CurrentDifficulty;
         var lastBlockOfCurrentEpoch = 
             miner.LastBlock;
         
