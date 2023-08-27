@@ -1,13 +1,13 @@
 using BlockSimSharp.BitcoinBurn.Model;
 using BlockSimSharp.BitcoinBurn.Simulation.Events;
 using BlockSimSharp.BitcoinBurn.SimulationConfiguration;
+using BlockSimSharp.BitcoinBurn.Utility;
 
 namespace BlockSimSharp.BitcoinBurn.Simulation;
 
 public sealed class Difficulty
 {
     public IntegrationEvent<double> DifficultyChangeIntegrationEvent { get; } = new();
-    public IntegrationEvent EpochChangeIntegrationEvent { get; } = new();
 
     private double CurrentDifficulty
     {
@@ -16,7 +16,6 @@ public sealed class Difficulty
         {
             _difficulty = value;
             DifficultyChangeIntegrationEvent.Invoke(value);
-            EpochChangeIntegrationEvent.Invoke();
         }
     }
     

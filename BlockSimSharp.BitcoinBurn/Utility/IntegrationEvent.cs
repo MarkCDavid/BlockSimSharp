@@ -1,4 +1,4 @@
-namespace BlockSimSharp.BitcoinBurn;
+namespace BlockSimSharp.BitcoinBurn.Utility;
 
 public class IntegrationEvent: BaseIntegrationEvent<Action>
 {

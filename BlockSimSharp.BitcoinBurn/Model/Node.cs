@@ -1,3 +1,5 @@
+using BlockSimSharp.BitcoinBurn.Utility;
+
 namespace BlockSimSharp.BitcoinBurn.Model;
 
 public class Node

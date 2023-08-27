@@ -14,8 +14,8 @@
   },
   "Difficulty": {
     "AdjustmentFrequencyInBlocks": 2016,
-    "DecreaseByBurnEnabled": true,
-    "ProbabilityForParticipationThisEpoch": 0.1,
+    "DecreaseByBurnEnabled": false,
+    "ProbabilityForParticipationThisEpoch": 0.2,
     "ReductionHighBound": 2,
     "ReductionLowBound": 16
   },
